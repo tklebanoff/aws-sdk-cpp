@@ -1,3 +1,4 @@
+#[[
 add_project(polly_sample
     "Sample driver app for polly app."
     aws-cpp-sdk-text-to-speech
@@ -14,3 +15,4 @@ set_compiler_flags(${PROJECT_NAME})
 set_compiler_warnings(${PROJECT_NAME})
 
 target_link_libraries(${PROJECT_NAME} ${PLATFORM_DEP_LIBS} ${PROJECT_LIBS})
+#]]
