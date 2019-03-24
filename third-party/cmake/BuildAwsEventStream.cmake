@@ -1,6 +1,8 @@
 # All the dependencies(aws-c-common and aws-checksums) should live in the same directory as aws-c-event-stream,
 # therefore we set rpath for aws-c-event-stream to "$ORIGIN".
 set(DEPS_RPATH "$ORIGIN")
+execute_process(COMMAND sh -c "${CMAKE_SOURCE_DIR}/../get_my_os" OUTPUT_VARIABLE MYOS)
+message(STATUS "MYOS: X${MYOS}X") #why the fuck cant I string compare this
 
 if(${TARGET_ARCH} STREQUAL ANDROID)
     ExternalProject_Add(AwsCEventStream
@@ -43,12 +45,7 @@ elseif(TARGET_ARCH STREQUAL "APPLE" AND DEFINED CMAKE_OSX_ARCHITECTURES AND NOT 
         -DCMAKE_C_FLAGS=${CMAKE_C_FLAGS}
         )
 
-
-else()
-    execute_process(COMMAND sh -c "${CMAKE_SOURCE_DIR}/../get_my_os" OUTPUT_VARIABLE MYOS)
-    message(STATUS "MYOS: X${MYOS}X") #why the fuck cant I string compare this
-
-    if(MYOS STREQUAL "Alpine_Linux")
+elseif(MYOS STREQUAL "Alpine_Linux")
         #tklebanoff added -DCMAKE_C_STANDARD_LIBRARIES="/usr/lib/libexecinfo.a" for Alpine
         message(STATUS "We are Alpine")
         ExternalProject_Add(AwsCEventStream
@@ -67,7 +64,7 @@ else()
             -DCMAKE_TOOLCHAIN_FILE=${CMAKE_TOOLCHAIN_FILE}
             -DCMAKE_RUNTIME_OUTPUT_DIRECTORY=${CMAKE_RUNTIME_OUTPUT_DIRECTORY}
             )
-    else()
+else()
         ExternalProject_Add(AwsCEventStream
             PREFIX ${AWS_DEPS_BUILD_DIR}
             GIT_REPOSITORY ${AWS_EVENT_STREAM_URL}
@@ -83,5 +80,4 @@ else()
             -DCMAKE_TOOLCHAIN_FILE=${CMAKE_TOOLCHAIN_FILE}
             -DCMAKE_RUNTIME_OUTPUT_DIRECTORY=${CMAKE_RUNTIME_OUTPUT_DIRECTORY}
             )
-    endif()
 endif()
