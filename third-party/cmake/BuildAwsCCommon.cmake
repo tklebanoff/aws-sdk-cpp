@@ -1,4 +1,4 @@
-execute_process(COMMAND sh -c "${CMAKE_SOURCE_DIR}/get_my_os.sh" OUTPUT_VARIABLE MYOS)
+execute_process(COMMAND sh -c "${CMAKE_SOURCE_DIR}/../get_my_os.sh" OUTPUT_VARIABLE MYOS)
 message(STATUS "MYOS: ${MYOS}")
 
 if(${TARGET_ARCH} STREQUAL ANDROID)
