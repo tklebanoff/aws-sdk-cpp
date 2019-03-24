@@ -39,7 +39,7 @@ else()
     execute_process(COMMAND sh -c "${CMAKE_SOURCE_DIR}/../get_my_os.sh" OUTPUT_VARIABLE MYOS)
     message(STATUS "MYOS: ${MYOS}")
 
-    if(${MYOS} STREQUAL "Alpine_Linux")
+    if(MYOS STREQUAL "Alpine_Linux")
         #tklebanoff: added /usr/lib/libexecinfo.a for Alpine, backtrace symbol
         message(STATUS "We are Alpine")
         ExternalProject_Add(AwsCCommon

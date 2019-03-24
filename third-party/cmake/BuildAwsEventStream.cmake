@@ -48,7 +48,7 @@ else()
     execute_process(COMMAND sh -c "${CMAKE_SOURCE_DIR}/../get_my_os.sh" OUTPUT_VARIABLE MYOS)
     message(STATUS "MYOS: ${MYOS}")
 
-    if(${MYOS} STREQUAL "Alpine_Linux")
+    if(MYOS STREQUAL "Alpine_Linux")
         #tklebanoff added -DCMAKE_C_STANDARD_LIBRARIES="/usr/lib/libexecinfo.a" for Alpine
         message(STATUS "We are Alpine")
         ExternalProject_Add(AwsCEventStream
