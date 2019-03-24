@@ -53,12 +53,13 @@ else()
     ]]
     #tklebanoff: added /usr/lib/libexecinfo.a for Alpine, backtrace symbol
     set(MY_AWS_C_COMMON_URL https://github.com/tklebanoff/aws-c-common.git)
+    set(MY_AWS_C_COMMON_TAG master)
     message(STATUS "ExternalProject_Add AwsCCommon, url: ${MY_AWS_C_COMMON_URL}")
     message(STATUS "testing 123")
     ExternalProject_Add(AwsCCommon
         PREFIX ${AWS_DEPS_BUILD_DIR}
         GIT_REPOSITORY ${MY_AWS_C_COMMON_URL}
-        GIT_TAG ${AWS_C_COMMON_TAG}
+        GIT_TAG ${MY_AWS_C_COMMON_TAG}
         BUILD_IN_SOURCE 0
         UPDATE_COMMAND ""
         CMAKE_ARGS
