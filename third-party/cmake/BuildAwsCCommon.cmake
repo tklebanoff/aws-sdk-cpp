@@ -37,7 +37,7 @@ elseif(TARGET_ARCH STREQUAL "APPLE" AND DEFINED CMAKE_OSX_ARCHITECTURES AND NOT 
         )
 else()
     #tklebanoff: added /usr/lib/libexecinfo.a for Alpine, backtrace symbol
-    message(STATUS "hi mom!")
+    message(STATUS "ExternalProject_Add AwsCCommon, url: ${AWS_C_COMMON_URL}")
     ExternalProject_Add(AwsCCommon
         PREFIX ${AWS_DEPS_BUILD_DIR}
         GIT_REPOSITORY ${AWS_C_COMMON_URL}
