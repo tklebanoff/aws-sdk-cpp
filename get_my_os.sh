@@ -1,9 +1,7 @@
-#!/usr/bin/env sh
+#!/usr/bin/env python3
 
-#<--gets the OS from /etc/os-release and strips the quotes-->
-
-OS=`cat /etc/os-release | grep '^NAME' | cut -d= -f2`
-temp="${OS%\"}"
-temp="${temp#\"}"
-temp="${temp#\n}"
-echo ${temp// /_}
+with open("/etc/os-release", "r") as f:
+    lines = [line for line in f.readlines() if line.startswith("NAME")]
+    name = lines[0].split("=")[-1].strip("\n")
+    name = re.sub(r'^"|"$', '', name)
+    print(name)
