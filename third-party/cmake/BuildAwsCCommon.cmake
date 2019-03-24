@@ -38,7 +38,7 @@ elseif(TARGET_ARCH STREQUAL "APPLE" AND DEFINED CMAKE_OSX_ARCHITECTURES AND NOT 
         -DCMAKE_SYSTEM_NAME=${CMAKE_SYSTEM_NAME}
         -DCMAKE_C_FLAGS=${CMAKE_C_FLAGS}
         )
-elseif(${MYOS} STREQUAL "Alpine Linux")
+elseif(MYOS STREQUAL "Alpine Linux")
     #tklebanoff: added /usr/lib/libexecinfo.a for Alpine, backtrace symbol
     ExternalProject_Add(AwsCCommon
         PREFIX ${AWS_DEPS_BUILD_DIR}
