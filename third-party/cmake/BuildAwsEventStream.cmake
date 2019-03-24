@@ -45,7 +45,7 @@ elseif(TARGET_ARCH STREQUAL "APPLE" AND DEFINED CMAKE_OSX_ARCHITECTURES AND NOT 
 
 
 else()
-    execute_process(COMMAND sh -c "${CMAKE_SOURCE_DIR}/../get_my_os.sh" OUTPUT_VARIABLE MYOS)
+    execute_process(COMMAND sh -c "${CMAKE_SOURCE_DIR}/../get_my_os" OUTPUT_VARIABLE MYOS)
     message(STATUS "MYOS: X${MYOS}X") #why the fuck cant I string compare this
 
     if(MYOS STREQUAL "Alpine_Linux")
