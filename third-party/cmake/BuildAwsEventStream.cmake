@@ -48,6 +48,7 @@ elseif(TARGET_ARCH STREQUAL "APPLE" AND DEFINED CMAKE_OSX_ARCHITECTURES AND NOT 
 
 elseif(MYOS STREQUAL "Alpine Linux")
     #tklebanoff added -DCMAKE_C_STANDARD_LIBRARIES="/usr/lib/libexecinfo.a" for Alpine
+    message(STATUS "we are Alpine")
     ExternalProject_Add(AwsCEventStream
         PREFIX ${AWS_DEPS_BUILD_DIR}
         GIT_REPOSITORY ${AWS_EVENT_STREAM_URL}

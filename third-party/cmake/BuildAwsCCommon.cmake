@@ -40,6 +40,7 @@ elseif(TARGET_ARCH STREQUAL "APPLE" AND DEFINED CMAKE_OSX_ARCHITECTURES AND NOT 
         )
 elseif(MYOS STREQUAL "Alpine Linux")
     #tklebanoff: added /usr/lib/libexecinfo.a for Alpine, backtrace symbol
+    message(STATUS "we are Alpine")
     ExternalProject_Add(AwsCCommon
         PREFIX ${AWS_DEPS_BUILD_DIR}
         GIT_REPOSITORY ${AWS_C_COMMON_URL}
