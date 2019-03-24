@@ -1,5 +1,4 @@
 execute_process(COMMAND sh -c "${CMAKE_SOURCE_DIR}/../get_my_os.sh" OUTPUT_VARIABLE MYOS)
-message(STATUS "MYOS: ${MYOS}")
 
 if(${TARGET_ARCH} STREQUAL ANDROID)
     ExternalProject_Add(AwsCCommon
@@ -38,9 +37,9 @@ elseif(TARGET_ARCH STREQUAL "APPLE" AND DEFINED CMAKE_OSX_ARCHITECTURES AND NOT 
         -DCMAKE_SYSTEM_NAME=${CMAKE_SYSTEM_NAME}
         -DCMAKE_C_FLAGS=${CMAKE_C_FLAGS}
         )
-elseif(${MYOS} STREQUAL "Alpine Linux")
+elseif(MYOS STREQUAL "Alpine Linux")
     #tklebanoff: added /usr/lib/libexecinfo.a for Alpine, backtrace symbol
-    message(STATUS "we are Alpine")
+    message(STATUS "We are Alpine")
     ExternalProject_Add(AwsCCommon
         PREFIX ${AWS_DEPS_BUILD_DIR}
         GIT_REPOSITORY ${AWS_C_COMMON_URL}

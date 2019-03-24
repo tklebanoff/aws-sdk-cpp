@@ -3,7 +3,6 @@
 set(DEPS_RPATH "$ORIGIN")
 
 execute_process(COMMAND sh -c "${CMAKE_SOURCE_DIR}/../get_my_os.sh" OUTPUT_VARIABLE MYOS)
-message(STATUS "MYOS: ${MYOS}")
 
 if(${TARGET_ARCH} STREQUAL ANDROID)
     ExternalProject_Add(AwsCEventStream
@@ -46,9 +45,9 @@ elseif(TARGET_ARCH STREQUAL "APPLE" AND DEFINED CMAKE_OSX_ARCHITECTURES AND NOT 
         -DCMAKE_C_FLAGS=${CMAKE_C_FLAGS}
         )
 
-elseif(${MYOS} STREQUAL "Alpine Linux")
+elseif(MYOS STREQUAL "Alpine Linux")
     #tklebanoff added -DCMAKE_C_STANDARD_LIBRARIES="/usr/lib/libexecinfo.a" for Alpine
-    message(STATUS "we are Alpine")
+    message(STATUS "We are Alpine")
     ExternalProject_Add(AwsCEventStream
         PREFIX ${AWS_DEPS_BUILD_DIR}
         GIT_REPOSITORY ${AWS_EVENT_STREAM_URL}
