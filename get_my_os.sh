@@ -5,4 +5,4 @@
 OS=`cat /etc/os-release | grep '^NAME' | cut -d= -f2`
 temp="${OS%\"}"
 temp="${temp#\"}"
-echo ${temp}
+echo ${temp// /_}
