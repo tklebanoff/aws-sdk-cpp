@@ -2,7 +2,7 @@
 # therefore we set rpath for aws-c-event-stream to "$ORIGIN".
 set(DEPS_RPATH "$ORIGIN")
 
-execute_process(COMMAND cat /etc/os-release | grep '^NAME' | cut -d= -f2 OUTPUT_VARIABLE MYOS)
+execute_process(COMMAND ${PROJECT_SOURCE_DIR}/get_my_os.sh OUTPUT_VARIABLE MYOS)
 message(STATUS "MYOS: ${MYOS}")
 
 if(${TARGET_ARCH} STREQUAL ANDROID)
