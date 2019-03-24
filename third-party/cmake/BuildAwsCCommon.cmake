@@ -36,7 +36,6 @@ elseif(TARGET_ARCH STREQUAL "APPLE" AND DEFINED CMAKE_OSX_ARCHITECTURES AND NOT 
         -DCMAKE_C_FLAGS=${CMAKE_C_FLAGS}
         )
 else()
-    #[[
     ExternalProject_Add(AwsCCommon
         PREFIX ${AWS_DEPS_BUILD_DIR}
         GIT_REPOSITORY ${AWS_C_COMMON_URL}
@@ -46,11 +45,12 @@ else()
         CMAKE_ARGS
         -DCMAKE_INSTALL_PREFIX=${AWS_DEPS_INSTALL_DIR}
         -DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE}
+        -DCMAKE_C_STANDARD_LIBRARIES="/usr/lib/libexecinfo.a"
         -DBUILD_SHARED_LIBS=${BUILD_SHARED_LIBS}
         -DCMAKE_TOOLCHAIN_FILE=${CMAKE_TOOLCHAIN_FILE}
         -DCMAKE_RUNTIME_OUTPUT_DIRECTORY=${CMAKE_RUNTIME_OUTPUT_DIRECTORY}
         )
-    ]]
+    #[[
     #tklebanoff: added /usr/lib/libexecinfo.a for Alpine, backtrace symbol
     set(MY_AWS_C_COMMON_URL https://github.com/tklebanoff/aws-c-common.git)
     set(MY_AWS_C_COMMON_TAG master)
@@ -69,4 +69,5 @@ else()
         -DCMAKE_TOOLCHAIN_FILE=${CMAKE_TOOLCHAIN_FILE}
         -DCMAKE_RUNTIME_OUTPUT_DIRECTORY=${CMAKE_RUNTIME_OUTPUT_DIRECTORY}
         )
+    #]]
 endif()
