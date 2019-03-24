@@ -46,7 +46,7 @@ elseif(TARGET_ARCH STREQUAL "APPLE" AND DEFINED CMAKE_OSX_ARCHITECTURES AND NOT 
         -DCMAKE_C_FLAGS=${CMAKE_C_FLAGS}
         )
 
-elseif(MYOS STREQUAL "Alpine_Linux")
+elseif(${MYOS} STREQUAL "Alpine_Linux")
     #tklebanoff added -DCMAKE_C_STANDARD_LIBRARIES="/usr/lib/libexecinfo.a" for Alpine
     message(STATUS "We are Alpine")
     ExternalProject_Add(AwsCEventStream
