@@ -133,42 +133,42 @@ namespace Model
 
 
     /**
-     * <p>The association document verions.</p>
+     * <p>The association document versions.</p>
      */
     inline const Aws::String& GetDocumentVersion() const{ return m_documentVersion; }
 
     /**
-     * <p>The association document verions.</p>
+     * <p>The association document versions.</p>
      */
     inline bool DocumentVersionHasBeenSet() const { return m_documentVersionHasBeenSet; }
 
     /**
-     * <p>The association document verions.</p>
+     * <p>The association document versions.</p>
      */
     inline void SetDocumentVersion(const Aws::String& value) { m_documentVersionHasBeenSet = true; m_documentVersion = value; }
 
     /**
-     * <p>The association document verions.</p>
+     * <p>The association document versions.</p>
      */
     inline void SetDocumentVersion(Aws::String&& value) { m_documentVersionHasBeenSet = true; m_documentVersion = std::move(value); }
 
     /**
-     * <p>The association document verions.</p>
+     * <p>The association document versions.</p>
      */
     inline void SetDocumentVersion(const char* value) { m_documentVersionHasBeenSet = true; m_documentVersion.assign(value); }
 
     /**
-     * <p>The association document verions.</p>
+     * <p>The association document versions.</p>
      */
     inline InstanceAssociationStatusInfo& WithDocumentVersion(const Aws::String& value) { SetDocumentVersion(value); return *this;}
 
     /**
-     * <p>The association document verions.</p>
+     * <p>The association document versions.</p>
      */
     inline InstanceAssociationStatusInfo& WithDocumentVersion(Aws::String&& value) { SetDocumentVersion(std::move(value)); return *this;}
 
     /**
-     * <p>The association document verions.</p>
+     * <p>The association document versions.</p>
      */
     inline InstanceAssociationStatusInfo& WithDocumentVersion(const char* value) { SetDocumentVersion(value); return *this;}
 
@@ -256,32 +256,32 @@ namespace Model
 
 
     /**
-     * <p>The date the instance association executed. </p>
+     * <p>The date the instance association ran. </p>
      */
     inline const Aws::Utils::DateTime& GetExecutionDate() const{ return m_executionDate; }
 
     /**
-     * <p>The date the instance association executed. </p>
+     * <p>The date the instance association ran. </p>
      */
     inline bool ExecutionDateHasBeenSet() const { return m_executionDateHasBeenSet; }
 
     /**
-     * <p>The date the instance association executed. </p>
+     * <p>The date the instance association ran. </p>
      */
     inline void SetExecutionDate(const Aws::Utils::DateTime& value) { m_executionDateHasBeenSet = true; m_executionDate = value; }
 
     /**
-     * <p>The date the instance association executed. </p>
+     * <p>The date the instance association ran. </p>
      */
     inline void SetExecutionDate(Aws::Utils::DateTime&& value) { m_executionDateHasBeenSet = true; m_executionDate = std::move(value); }
 
     /**
-     * <p>The date the instance association executed. </p>
+     * <p>The date the instance association ran. </p>
      */
     inline InstanceAssociationStatusInfo& WithExecutionDate(const Aws::Utils::DateTime& value) { SetExecutionDate(value); return *this;}
 
     /**
-     * <p>The date the instance association executed. </p>
+     * <p>The date the instance association ran. </p>
      */
     inline InstanceAssociationStatusInfo& WithExecutionDate(Aws::Utils::DateTime&& value) { SetExecutionDate(std::move(value)); return *this;}
 

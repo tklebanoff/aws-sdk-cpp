@@ -136,7 +136,6 @@ namespace Http
 namespace Utils
 {
   template< typename R, typename E> class Outcome;
-
 namespace Threading
 {
   class Executor;
@@ -755,7 +754,8 @@ namespace Model
         /**
          * <p>Returns a list of resource metadata for a given list of crawler names. After
          * calling the <code>ListCrawlers</code> operation, you can call this operation to
-         * access the data to which you have been granted permissions to based on
+         * access the data to which you have been granted permissions. This operation
+         * supports all IAM permissions, including permission conditions that uses
          * tags.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/BatchGetCrawlers">AWS
          * API Reference</a></p>
@@ -765,7 +765,8 @@ namespace Model
         /**
          * <p>Returns a list of resource metadata for a given list of crawler names. After
          * calling the <code>ListCrawlers</code> operation, you can call this operation to
-         * access the data to which you have been granted permissions to based on
+         * access the data to which you have been granted permissions. This operation
+         * supports all IAM permissions, including permission conditions that uses
          * tags.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/BatchGetCrawlers">AWS
          * API Reference</a></p>
@@ -777,7 +778,8 @@ namespace Model
         /**
          * <p>Returns a list of resource metadata for a given list of crawler names. After
          * calling the <code>ListCrawlers</code> operation, you can call this operation to
-         * access the data to which you have been granted permissions to based on
+         * access the data to which you have been granted permissions. This operation
+         * supports all IAM permissions, including permission conditions that uses
          * tags.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/BatchGetCrawlers">AWS
          * API Reference</a></p>
@@ -951,20 +953,20 @@ namespace Model
         virtual void BatchStopJobRunAsync(const Model::BatchStopJobRunRequest& request, const BatchStopJobRunResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Creates a classifier in the user's account. This may be a
-         * <code>GrokClassifier</code>, an <code>XMLClassifier</code>, or abbrev
-         * <code>JsonClassifier</code>, depending on which field of the request is
-         * present.</p><p><h3>See Also:</h3>   <a
+         * <p>Creates a classifier in the user's account. This can be a
+         * <code>GrokClassifier</code>, an <code>XMLClassifier</code>, a
+         * <code>JsonClassifier</code>, or a <code>CsvClassifier</code>, depending on which
+         * field of the request is present.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CreateClassifier">AWS
          * API Reference</a></p>
          */
         virtual Model::CreateClassifierOutcome CreateClassifier(const Model::CreateClassifierRequest& request) const;
 
         /**
-         * <p>Creates a classifier in the user's account. This may be a
-         * <code>GrokClassifier</code>, an <code>XMLClassifier</code>, or abbrev
-         * <code>JsonClassifier</code>, depending on which field of the request is
-         * present.</p><p><h3>See Also:</h3>   <a
+         * <p>Creates a classifier in the user's account. This can be a
+         * <code>GrokClassifier</code>, an <code>XMLClassifier</code>, a
+         * <code>JsonClassifier</code>, or a <code>CsvClassifier</code>, depending on which
+         * field of the request is present.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CreateClassifier">AWS
          * API Reference</a></p>
          *
@@ -973,10 +975,10 @@ namespace Model
         virtual Model::CreateClassifierOutcomeCallable CreateClassifierCallable(const Model::CreateClassifierRequest& request) const;
 
         /**
-         * <p>Creates a classifier in the user's account. This may be a
-         * <code>GrokClassifier</code>, an <code>XMLClassifier</code>, or abbrev
-         * <code>JsonClassifier</code>, depending on which field of the request is
-         * present.</p><p><h3>See Also:</h3>   <a
+         * <p>Creates a classifier in the user's account. This can be a
+         * <code>GrokClassifier</code>, an <code>XMLClassifier</code>, a
+         * <code>JsonClassifier</code>, or a <code>CsvClassifier</code>, depending on which
+         * field of the request is present.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CreateClassifier">AWS
          * API Reference</a></p>
          *
@@ -1015,8 +1017,8 @@ namespace Model
         /**
          * <p>Creates a new crawler with specified targets, role, configuration, and
          * optional schedule. At least one crawl target must be specified, in the
-         * <i>s3Targets</i> field, the <i>jdbcTargets</i> field, or the
-         * <i>DynamoDBTargets</i> field.</p><p><h3>See Also:</h3>   <a
+         * <code>s3Targets</code> field, the <code>jdbcTargets</code> field, or the
+         * <code>DynamoDBTargets</code> field.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CreateCrawler">AWS
          * API Reference</a></p>
          */
@@ -1025,8 +1027,8 @@ namespace Model
         /**
          * <p>Creates a new crawler with specified targets, role, configuration, and
          * optional schedule. At least one crawl target must be specified, in the
-         * <i>s3Targets</i> field, the <i>jdbcTargets</i> field, or the
-         * <i>DynamoDBTargets</i> field.</p><p><h3>See Also:</h3>   <a
+         * <code>s3Targets</code> field, the <code>jdbcTargets</code> field, or the
+         * <code>DynamoDBTargets</code> field.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CreateCrawler">AWS
          * API Reference</a></p>
          *
@@ -1037,8 +1039,8 @@ namespace Model
         /**
          * <p>Creates a new crawler with specified targets, role, configuration, and
          * optional schedule. At least one crawl target must be specified, in the
-         * <i>s3Targets</i> field, the <i>jdbcTargets</i> field, or the
-         * <i>DynamoDBTargets</i> field.</p><p><h3>See Also:</h3>   <a
+         * <code>s3Targets</code> field, the <code>jdbcTargets</code> field, or the
+         * <code>DynamoDBTargets</code> field.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CreateCrawler">AWS
          * API Reference</a></p>
          *
@@ -1328,16 +1330,16 @@ namespace Model
         virtual void DeleteConnectionAsync(const Model::DeleteConnectionRequest& request, const DeleteConnectionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Removes a specified crawler from the Data Catalog, unless the crawler state
-         * is <code>RUNNING</code>.</p><p><h3>See Also:</h3>   <a
+         * <p>Removes a specified crawler from the AWS Glue Data Catalog, unless the
+         * crawler state is <code>RUNNING</code>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteCrawler">AWS
          * API Reference</a></p>
          */
         virtual Model::DeleteCrawlerOutcome DeleteCrawler(const Model::DeleteCrawlerRequest& request) const;
 
         /**
-         * <p>Removes a specified crawler from the Data Catalog, unless the crawler state
-         * is <code>RUNNING</code>.</p><p><h3>See Also:</h3>   <a
+         * <p>Removes a specified crawler from the AWS Glue Data Catalog, unless the
+         * crawler state is <code>RUNNING</code>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteCrawler">AWS
          * API Reference</a></p>
          *
@@ -1346,8 +1348,8 @@ namespace Model
         virtual Model::DeleteCrawlerOutcomeCallable DeleteCrawlerCallable(const Model::DeleteCrawlerRequest& request) const;
 
         /**
-         * <p>Removes a specified crawler from the Data Catalog, unless the crawler state
-         * is <code>RUNNING</code>.</p><p><h3>See Also:</h3>   <a
+         * <p>Removes a specified crawler from the AWS Glue Data Catalog, unless the
+         * crawler state is <code>RUNNING</code>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteCrawler">AWS
          * API Reference</a></p>
          *
@@ -2622,9 +2624,9 @@ namespace Model
          * <p>Retrieves the names of all crawler resources in this AWS account, or the
          * resources with the specified tag. This operation allows you to see which
          * resources are available in your account, and their names.</p> <p>This operation
-         * takes the optional <code>Tags</code> field which you can use as a filter on the
+         * takes the optional <code>Tags</code> field, which you can use as a filter on the
          * response so that tagged resources can be retrieved as a group. If you choose to
-         * use tags filtering, only resources with the tag will be retrieved.</p><p><h3>See
+         * use tags filtering, only resources with the tag are retrieved.</p><p><h3>See
          * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListCrawlers">AWS
          * API Reference</a></p>
@@ -2635,9 +2637,9 @@ namespace Model
          * <p>Retrieves the names of all crawler resources in this AWS account, or the
          * resources with the specified tag. This operation allows you to see which
          * resources are available in your account, and their names.</p> <p>This operation
-         * takes the optional <code>Tags</code> field which you can use as a filter on the
+         * takes the optional <code>Tags</code> field, which you can use as a filter on the
          * response so that tagged resources can be retrieved as a group. If you choose to
-         * use tags filtering, only resources with the tag will be retrieved.</p><p><h3>See
+         * use tags filtering, only resources with the tag are retrieved.</p><p><h3>See
          * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListCrawlers">AWS
          * API Reference</a></p>
@@ -2650,9 +2652,9 @@ namespace Model
          * <p>Retrieves the names of all crawler resources in this AWS account, or the
          * resources with the specified tag. This operation allows you to see which
          * resources are available in your account, and their names.</p> <p>This operation
-         * takes the optional <code>Tags</code> field which you can use as a filter on the
+         * takes the optional <code>Tags</code> field, which you can use as a filter on the
          * response so that tagged resources can be retrieved as a group. If you choose to
-         * use tags filtering, only resources with the tag will be retrieved.</p><p><h3>See
+         * use tags filtering, only resources with the tag are retrieved.</p><p><h3>See
          * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListCrawlers">AWS
          * API Reference</a></p>
@@ -2662,26 +2664,26 @@ namespace Model
         virtual void ListCrawlersAsync(const Model::ListCrawlersRequest& request, const ListCrawlersResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Retrieves the names of all DevEndpoint resources in this AWS account, or the
-         * resources with the specified tag. This operation allows you to see which
-         * resources are available in your account, and their names.</p> <p>This operation
-         * takes the optional <code>Tags</code> field which you can use as a filter on the
-         * response so that tagged resources can be retrieved as a group. If you choose to
-         * use tags filtering, only resources with the tag will be retrieved.</p><p><h3>See
-         * Also:</h3>   <a
+         * <p>Retrieves the names of all <code>DevEndpoint</code> resources in this AWS
+         * account, or the resources with the specified tag. This operation allows you to
+         * see which resources are available in your account, and their names.</p> <p>This
+         * operation takes the optional <code>Tags</code> field, which you can use as a
+         * filter on the response so that tagged resources can be retrieved as a group. If
+         * you choose to use tags filtering, only resources with the tag are
+         * retrieved.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListDevEndpoints">AWS
          * API Reference</a></p>
          */
         virtual Model::ListDevEndpointsOutcome ListDevEndpoints(const Model::ListDevEndpointsRequest& request) const;
 
         /**
-         * <p>Retrieves the names of all DevEndpoint resources in this AWS account, or the
-         * resources with the specified tag. This operation allows you to see which
-         * resources are available in your account, and their names.</p> <p>This operation
-         * takes the optional <code>Tags</code> field which you can use as a filter on the
-         * response so that tagged resources can be retrieved as a group. If you choose to
-         * use tags filtering, only resources with the tag will be retrieved.</p><p><h3>See
-         * Also:</h3>   <a
+         * <p>Retrieves the names of all <code>DevEndpoint</code> resources in this AWS
+         * account, or the resources with the specified tag. This operation allows you to
+         * see which resources are available in your account, and their names.</p> <p>This
+         * operation takes the optional <code>Tags</code> field, which you can use as a
+         * filter on the response so that tagged resources can be retrieved as a group. If
+         * you choose to use tags filtering, only resources with the tag are
+         * retrieved.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListDevEndpoints">AWS
          * API Reference</a></p>
          *
@@ -2690,13 +2692,13 @@ namespace Model
         virtual Model::ListDevEndpointsOutcomeCallable ListDevEndpointsCallable(const Model::ListDevEndpointsRequest& request) const;
 
         /**
-         * <p>Retrieves the names of all DevEndpoint resources in this AWS account, or the
-         * resources with the specified tag. This operation allows you to see which
-         * resources are available in your account, and their names.</p> <p>This operation
-         * takes the optional <code>Tags</code> field which you can use as a filter on the
-         * response so that tagged resources can be retrieved as a group. If you choose to
-         * use tags filtering, only resources with the tag will be retrieved.</p><p><h3>See
-         * Also:</h3>   <a
+         * <p>Retrieves the names of all <code>DevEndpoint</code> resources in this AWS
+         * account, or the resources with the specified tag. This operation allows you to
+         * see which resources are available in your account, and their names.</p> <p>This
+         * operation takes the optional <code>Tags</code> field, which you can use as a
+         * filter on the response so that tagged resources can be retrieved as a group. If
+         * you choose to use tags filtering, only resources with the tag are
+         * retrieved.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListDevEndpoints">AWS
          * API Reference</a></p>
          *
@@ -2708,9 +2710,9 @@ namespace Model
          * <p>Retrieves the names of all job resources in this AWS account, or the
          * resources with the specified tag. This operation allows you to see which
          * resources are available in your account, and their names.</p> <p>This operation
-         * takes the optional <code>Tags</code> field which you can use as a filter on the
+         * takes the optional <code>Tags</code> field, which you can use as a filter on the
          * response so that tagged resources can be retrieved as a group. If you choose to
-         * use tags filtering, only resources with the tag will be retrieved.</p><p><h3>See
+         * use tags filtering, only resources with the tag are retrieved.</p><p><h3>See
          * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListJobs">AWS API
          * Reference</a></p>
@@ -2721,9 +2723,9 @@ namespace Model
          * <p>Retrieves the names of all job resources in this AWS account, or the
          * resources with the specified tag. This operation allows you to see which
          * resources are available in your account, and their names.</p> <p>This operation
-         * takes the optional <code>Tags</code> field which you can use as a filter on the
+         * takes the optional <code>Tags</code> field, which you can use as a filter on the
          * response so that tagged resources can be retrieved as a group. If you choose to
-         * use tags filtering, only resources with the tag will be retrieved.</p><p><h3>See
+         * use tags filtering, only resources with the tag are retrieved.</p><p><h3>See
          * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListJobs">AWS API
          * Reference</a></p>
@@ -2736,9 +2738,9 @@ namespace Model
          * <p>Retrieves the names of all job resources in this AWS account, or the
          * resources with the specified tag. This operation allows you to see which
          * resources are available in your account, and their names.</p> <p>This operation
-         * takes the optional <code>Tags</code> field which you can use as a filter on the
+         * takes the optional <code>Tags</code> field, which you can use as a filter on the
          * response so that tagged resources can be retrieved as a group. If you choose to
-         * use tags filtering, only resources with the tag will be retrieved.</p><p><h3>See
+         * use tags filtering, only resources with the tag are retrieved.</p><p><h3>See
          * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListJobs">AWS API
          * Reference</a></p>
@@ -2751,9 +2753,9 @@ namespace Model
          * <p>Retrieves the names of all trigger resources in this AWS account, or the
          * resources with the specified tag. This operation allows you to see which
          * resources are available in your account, and their names.</p> <p>This operation
-         * takes the optional <code>Tags</code> field which you can use as a filter on the
+         * takes the optional <code>Tags</code> field, which you can use as a filter on the
          * response so that tagged resources can be retrieved as a group. If you choose to
-         * use tags filtering, only resources with the tag will be retrieved.</p><p><h3>See
+         * use tags filtering, only resources with the tag are retrieved.</p><p><h3>See
          * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListTriggers">AWS
          * API Reference</a></p>
@@ -2764,9 +2766,9 @@ namespace Model
          * <p>Retrieves the names of all trigger resources in this AWS account, or the
          * resources with the specified tag. This operation allows you to see which
          * resources are available in your account, and their names.</p> <p>This operation
-         * takes the optional <code>Tags</code> field which you can use as a filter on the
+         * takes the optional <code>Tags</code> field, which you can use as a filter on the
          * response so that tagged resources can be retrieved as a group. If you choose to
-         * use tags filtering, only resources with the tag will be retrieved.</p><p><h3>See
+         * use tags filtering, only resources with the tag are retrieved.</p><p><h3>See
          * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListTriggers">AWS
          * API Reference</a></p>
@@ -2779,9 +2781,9 @@ namespace Model
          * <p>Retrieves the names of all trigger resources in this AWS account, or the
          * resources with the specified tag. This operation allows you to see which
          * resources are available in your account, and their names.</p> <p>This operation
-         * takes the optional <code>Tags</code> field which you can use as a filter on the
+         * takes the optional <code>Tags</code> field, which you can use as a filter on the
          * response so that tagged resources can be retrieved as a group. If you choose to
-         * use tags filtering, only resources with the tag will be retrieved.</p><p><h3>See
+         * use tags filtering, only resources with the tag are retrieved.</p><p><h3>See
          * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListTriggers">AWS
          * API Reference</a></p>
@@ -2966,7 +2968,7 @@ namespace Model
 
         /**
          * <p>Starts an existing trigger. See <a
-         * href="http://docs.aws.amazon.com/glue/latest/dg/trigger-job.html">Triggering
+         * href="https://docs.aws.amazon.com/glue/latest/dg/trigger-job.html">Triggering
          * Jobs</a> for information about how different types of trigger are
          * started.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/StartTrigger">AWS
@@ -2976,7 +2978,7 @@ namespace Model
 
         /**
          * <p>Starts an existing trigger. See <a
-         * href="http://docs.aws.amazon.com/glue/latest/dg/trigger-job.html">Triggering
+         * href="https://docs.aws.amazon.com/glue/latest/dg/trigger-job.html">Triggering
          * Jobs</a> for information about how different types of trigger are
          * started.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/StartTrigger">AWS
@@ -2988,7 +2990,7 @@ namespace Model
 
         /**
          * <p>Starts an existing trigger. See <a
-         * href="http://docs.aws.amazon.com/glue/latest/dg/trigger-job.html">Triggering
+         * href="https://docs.aws.amazon.com/glue/latest/dg/trigger-job.html">Triggering
          * Jobs</a> for information about how different types of trigger are
          * started.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/StartTrigger">AWS
@@ -3086,7 +3088,7 @@ namespace Model
          * <p>Adds tags to a resource. A tag is a label you can assign to an AWS resource.
          * In AWS Glue, you can tag only certain resources. For information about what
          * resources you can tag, see <a
-         * href="http://docs.aws.amazon.com/glue/latest/dg/monitor-tags.html">AWS Tags in
+         * href="https://docs.aws.amazon.com/glue/latest/dg/monitor-tags.html">AWS Tags in
          * AWS Glue</a>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/TagResource">AWS
          * API Reference</a></p>
@@ -3097,7 +3099,7 @@ namespace Model
          * <p>Adds tags to a resource. A tag is a label you can assign to an AWS resource.
          * In AWS Glue, you can tag only certain resources. For information about what
          * resources you can tag, see <a
-         * href="http://docs.aws.amazon.com/glue/latest/dg/monitor-tags.html">AWS Tags in
+         * href="https://docs.aws.amazon.com/glue/latest/dg/monitor-tags.html">AWS Tags in
          * AWS Glue</a>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/TagResource">AWS
          * API Reference</a></p>
@@ -3110,7 +3112,7 @@ namespace Model
          * <p>Adds tags to a resource. A tag is a label you can assign to an AWS resource.
          * In AWS Glue, you can tag only certain resources. For information about what
          * resources you can tag, see <a
-         * href="http://docs.aws.amazon.com/glue/latest/dg/monitor-tags.html">AWS Tags in
+         * href="https://docs.aws.amazon.com/glue/latest/dg/monitor-tags.html">AWS Tags in
          * AWS Glue</a>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/TagResource">AWS
          * API Reference</a></p>
@@ -3145,18 +3147,20 @@ namespace Model
         virtual void UntagResourceAsync(const Model::UntagResourceRequest& request, const UntagResourceResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Modifies an existing classifier (a <code>GrokClassifier</code>,
-         * <code>XMLClassifier</code>, or <code>JsonClassifier</code>, depending on which
-         * field is present).</p><p><h3>See Also:</h3>   <a
+         * <p>Modifies an existing classifier (a <code>GrokClassifier</code>, an
+         * <code>XMLClassifier</code>, a <code>JsonClassifier</code>, or a
+         * <code>CsvClassifier</code>, depending on which field is present).</p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/UpdateClassifier">AWS
          * API Reference</a></p>
          */
         virtual Model::UpdateClassifierOutcome UpdateClassifier(const Model::UpdateClassifierRequest& request) const;
 
         /**
-         * <p>Modifies an existing classifier (a <code>GrokClassifier</code>,
-         * <code>XMLClassifier</code>, or <code>JsonClassifier</code>, depending on which
-         * field is present).</p><p><h3>See Also:</h3>   <a
+         * <p>Modifies an existing classifier (a <code>GrokClassifier</code>, an
+         * <code>XMLClassifier</code>, a <code>JsonClassifier</code>, or a
+         * <code>CsvClassifier</code>, depending on which field is present).</p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/UpdateClassifier">AWS
          * API Reference</a></p>
          *
@@ -3165,9 +3169,10 @@ namespace Model
         virtual Model::UpdateClassifierOutcomeCallable UpdateClassifierCallable(const Model::UpdateClassifierRequest& request) const;
 
         /**
-         * <p>Modifies an existing classifier (a <code>GrokClassifier</code>,
-         * <code>XMLClassifier</code>, or <code>JsonClassifier</code>, depending on which
-         * field is present).</p><p><h3>See Also:</h3>   <a
+         * <p>Modifies an existing classifier (a <code>GrokClassifier</code>, an
+         * <code>XMLClassifier</code>, a <code>JsonClassifier</code>, or a
+         * <code>CsvClassifier</code>, depending on which field is present).</p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/UpdateClassifier">AWS
          * API Reference</a></p>
          *
@@ -3440,11 +3445,10 @@ namespace Model
          */
         virtual void UpdateUserDefinedFunctionAsync(const Model::UpdateUserDefinedFunctionRequest& request, const UpdateUserDefinedFunctionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
-      
+
       void OverrideEndpoint(const Aws::String& endpoint);
     private:
       void init(const Aws::Client::ClientConfiguration& clientConfiguration);
-        /**Async helpers**/
         void BatchCreatePartitionAsyncHelper(const Model::BatchCreatePartitionRequest& request, const BatchCreatePartitionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void BatchDeleteConnectionAsyncHelper(const Model::BatchDeleteConnectionRequest& request, const BatchDeleteConnectionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void BatchDeletePartitionAsyncHelper(const Model::BatchDeletePartitionRequest& request, const BatchDeletePartitionResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;

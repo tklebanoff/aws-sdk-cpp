@@ -80,12 +80,15 @@ namespace Model
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon
      * EBS Volume Types</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
      * <p>Constraints: Range is 100-16,000 IOPS for <code>gp2</code> volumes and 100 to
-     * 64,000IOPS for <code>io1</code> volumes, in most Regions. The maximum IOPS for
-     * <code>io1</code> of 64,000 is guaranteed only on <a
+     * 64,000IOPS for <code>io1</code> volumes in most Regions. Maximum
+     * <code>io1</code> IOPS of 64,000 is guaranteed only on <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances">Nitro-based
-     * instances</a>. Other instance families guarantee performance up to 32,000
-     * IOPS.</p> <p>Condition: This parameter is required for requests to create
-     * <code>io1</code> volumes; it is not used in requests to create <code>gp2</code>,
+     * instances</a>. Other instance families guarantee performance up to 32,000 IOPS.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon
+     * EBS Volume Types</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
+     * <p>Condition: This parameter is required for requests to create <code>io1</code>
+     * volumes; it is not used in requests to create <code>gp2</code>,
      * <code>st1</code>, <code>sc1</code>, or <code>standard</code> volumes.</p>
      */
     inline int GetIops() const{ return m_iops; }
@@ -99,12 +102,15 @@ namespace Model
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon
      * EBS Volume Types</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
      * <p>Constraints: Range is 100-16,000 IOPS for <code>gp2</code> volumes and 100 to
-     * 64,000IOPS for <code>io1</code> volumes, in most Regions. The maximum IOPS for
-     * <code>io1</code> of 64,000 is guaranteed only on <a
+     * 64,000IOPS for <code>io1</code> volumes in most Regions. Maximum
+     * <code>io1</code> IOPS of 64,000 is guaranteed only on <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances">Nitro-based
-     * instances</a>. Other instance families guarantee performance up to 32,000
-     * IOPS.</p> <p>Condition: This parameter is required for requests to create
-     * <code>io1</code> volumes; it is not used in requests to create <code>gp2</code>,
+     * instances</a>. Other instance families guarantee performance up to 32,000 IOPS.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon
+     * EBS Volume Types</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
+     * <p>Condition: This parameter is required for requests to create <code>io1</code>
+     * volumes; it is not used in requests to create <code>gp2</code>,
      * <code>st1</code>, <code>sc1</code>, or <code>standard</code> volumes.</p>
      */
     inline bool IopsHasBeenSet() const { return m_iopsHasBeenSet; }
@@ -118,12 +124,15 @@ namespace Model
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon
      * EBS Volume Types</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
      * <p>Constraints: Range is 100-16,000 IOPS for <code>gp2</code> volumes and 100 to
-     * 64,000IOPS for <code>io1</code> volumes, in most Regions. The maximum IOPS for
-     * <code>io1</code> of 64,000 is guaranteed only on <a
+     * 64,000IOPS for <code>io1</code> volumes in most Regions. Maximum
+     * <code>io1</code> IOPS of 64,000 is guaranteed only on <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances">Nitro-based
-     * instances</a>. Other instance families guarantee performance up to 32,000
-     * IOPS.</p> <p>Condition: This parameter is required for requests to create
-     * <code>io1</code> volumes; it is not used in requests to create <code>gp2</code>,
+     * instances</a>. Other instance families guarantee performance up to 32,000 IOPS.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon
+     * EBS Volume Types</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
+     * <p>Condition: This parameter is required for requests to create <code>io1</code>
+     * volumes; it is not used in requests to create <code>gp2</code>,
      * <code>st1</code>, <code>sc1</code>, or <code>standard</code> volumes.</p>
      */
     inline void SetIops(int value) { m_iopsHasBeenSet = true; m_iops = value; }
@@ -137,12 +146,15 @@ namespace Model
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon
      * EBS Volume Types</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
      * <p>Constraints: Range is 100-16,000 IOPS for <code>gp2</code> volumes and 100 to
-     * 64,000IOPS for <code>io1</code> volumes, in most Regions. The maximum IOPS for
-     * <code>io1</code> of 64,000 is guaranteed only on <a
+     * 64,000IOPS for <code>io1</code> volumes in most Regions. Maximum
+     * <code>io1</code> IOPS of 64,000 is guaranteed only on <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances">Nitro-based
-     * instances</a>. Other instance families guarantee performance up to 32,000
-     * IOPS.</p> <p>Condition: This parameter is required for requests to create
-     * <code>io1</code> volumes; it is not used in requests to create <code>gp2</code>,
+     * instances</a>. Other instance families guarantee performance up to 32,000 IOPS.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon
+     * EBS Volume Types</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
+     * <p>Condition: This parameter is required for requests to create <code>io1</code>
+     * volumes; it is not used in requests to create <code>gp2</code>,
      * <code>st1</code>, <code>sc1</code>, or <code>standard</code> volumes.</p>
      */
     inline EbsBlockDevice& WithIops(int value) { SetIops(value); return *this;}
@@ -190,142 +202,168 @@ namespace Model
 
 
     /**
-     * <p>The size of the volume, in GiB.</p> <p>Constraints: 1-16384 for General
-     * Purpose SSD (<code>gp2</code>), 4-16384 for Provisioned IOPS SSD
-     * (<code>io1</code>), 500-16384 for Throughput Optimized HDD (<code>st1</code>),
-     * 500-16384 for Cold HDD (<code>sc1</code>), and 1-1024 for Magnetic
-     * (<code>standard</code>) volumes. If you specify a snapshot, the volume size must
-     * be equal to or larger than the snapshot size.</p> <p>Default: If you're creating
-     * the volume from a snapshot and don't specify a volume size, the default is the
-     * snapshot size.</p>
+     * <p>The size of the volume, in GiB.</p> <p>Default: If you're creating the volume
+     * from a snapshot and don't specify a volume size, the default is the snapshot
+     * size.</p> <p>Constraints: 1-16384 for General Purpose SSD (<code>gp2</code>),
+     * 4-16384 for Provisioned IOPS SSD (<code>io1</code>), 500-16384 for Throughput
+     * Optimized HDD (<code>st1</code>), 500-16384 for Cold HDD (<code>sc1</code>), and
+     * 1-1024 for Magnetic (<code>standard</code>) volumes. If you specify a snapshot,
+     * the volume size must be equal to or larger than the snapshot size.</p>
      */
     inline int GetVolumeSize() const{ return m_volumeSize; }
 
     /**
-     * <p>The size of the volume, in GiB.</p> <p>Constraints: 1-16384 for General
-     * Purpose SSD (<code>gp2</code>), 4-16384 for Provisioned IOPS SSD
-     * (<code>io1</code>), 500-16384 for Throughput Optimized HDD (<code>st1</code>),
-     * 500-16384 for Cold HDD (<code>sc1</code>), and 1-1024 for Magnetic
-     * (<code>standard</code>) volumes. If you specify a snapshot, the volume size must
-     * be equal to or larger than the snapshot size.</p> <p>Default: If you're creating
-     * the volume from a snapshot and don't specify a volume size, the default is the
-     * snapshot size.</p>
+     * <p>The size of the volume, in GiB.</p> <p>Default: If you're creating the volume
+     * from a snapshot and don't specify a volume size, the default is the snapshot
+     * size.</p> <p>Constraints: 1-16384 for General Purpose SSD (<code>gp2</code>),
+     * 4-16384 for Provisioned IOPS SSD (<code>io1</code>), 500-16384 for Throughput
+     * Optimized HDD (<code>st1</code>), 500-16384 for Cold HDD (<code>sc1</code>), and
+     * 1-1024 for Magnetic (<code>standard</code>) volumes. If you specify a snapshot,
+     * the volume size must be equal to or larger than the snapshot size.</p>
      */
     inline bool VolumeSizeHasBeenSet() const { return m_volumeSizeHasBeenSet; }
 
     /**
-     * <p>The size of the volume, in GiB.</p> <p>Constraints: 1-16384 for General
-     * Purpose SSD (<code>gp2</code>), 4-16384 for Provisioned IOPS SSD
-     * (<code>io1</code>), 500-16384 for Throughput Optimized HDD (<code>st1</code>),
-     * 500-16384 for Cold HDD (<code>sc1</code>), and 1-1024 for Magnetic
-     * (<code>standard</code>) volumes. If you specify a snapshot, the volume size must
-     * be equal to or larger than the snapshot size.</p> <p>Default: If you're creating
-     * the volume from a snapshot and don't specify a volume size, the default is the
-     * snapshot size.</p>
+     * <p>The size of the volume, in GiB.</p> <p>Default: If you're creating the volume
+     * from a snapshot and don't specify a volume size, the default is the snapshot
+     * size.</p> <p>Constraints: 1-16384 for General Purpose SSD (<code>gp2</code>),
+     * 4-16384 for Provisioned IOPS SSD (<code>io1</code>), 500-16384 for Throughput
+     * Optimized HDD (<code>st1</code>), 500-16384 for Cold HDD (<code>sc1</code>), and
+     * 1-1024 for Magnetic (<code>standard</code>) volumes. If you specify a snapshot,
+     * the volume size must be equal to or larger than the snapshot size.</p>
      */
     inline void SetVolumeSize(int value) { m_volumeSizeHasBeenSet = true; m_volumeSize = value; }
 
     /**
-     * <p>The size of the volume, in GiB.</p> <p>Constraints: 1-16384 for General
-     * Purpose SSD (<code>gp2</code>), 4-16384 for Provisioned IOPS SSD
-     * (<code>io1</code>), 500-16384 for Throughput Optimized HDD (<code>st1</code>),
-     * 500-16384 for Cold HDD (<code>sc1</code>), and 1-1024 for Magnetic
-     * (<code>standard</code>) volumes. If you specify a snapshot, the volume size must
-     * be equal to or larger than the snapshot size.</p> <p>Default: If you're creating
-     * the volume from a snapshot and don't specify a volume size, the default is the
-     * snapshot size.</p>
+     * <p>The size of the volume, in GiB.</p> <p>Default: If you're creating the volume
+     * from a snapshot and don't specify a volume size, the default is the snapshot
+     * size.</p> <p>Constraints: 1-16384 for General Purpose SSD (<code>gp2</code>),
+     * 4-16384 for Provisioned IOPS SSD (<code>io1</code>), 500-16384 for Throughput
+     * Optimized HDD (<code>st1</code>), 500-16384 for Cold HDD (<code>sc1</code>), and
+     * 1-1024 for Magnetic (<code>standard</code>) volumes. If you specify a snapshot,
+     * the volume size must be equal to or larger than the snapshot size.</p>
      */
     inline EbsBlockDevice& WithVolumeSize(int value) { SetVolumeSize(value); return *this;}
 
 
     /**
-     * <p>The volume type: <code>gp2</code>, <code>io1</code>, <code>st1</code>,
-     * <code>sc1</code>, or <code>standard</code>.</p> <p>Default:
-     * <code>standard</code> </p>
+     * <p>The volume type. If you set the type to <code>io1</code>, you must also set
+     * the <b>Iops</b> property.</p> <p>Default: <code>standard</code> </p>
      */
     inline const VolumeType& GetVolumeType() const{ return m_volumeType; }
 
     /**
-     * <p>The volume type: <code>gp2</code>, <code>io1</code>, <code>st1</code>,
-     * <code>sc1</code>, or <code>standard</code>.</p> <p>Default:
-     * <code>standard</code> </p>
+     * <p>The volume type. If you set the type to <code>io1</code>, you must also set
+     * the <b>Iops</b> property.</p> <p>Default: <code>standard</code> </p>
      */
     inline bool VolumeTypeHasBeenSet() const { return m_volumeTypeHasBeenSet; }
 
     /**
-     * <p>The volume type: <code>gp2</code>, <code>io1</code>, <code>st1</code>,
-     * <code>sc1</code>, or <code>standard</code>.</p> <p>Default:
-     * <code>standard</code> </p>
+     * <p>The volume type. If you set the type to <code>io1</code>, you must also set
+     * the <b>Iops</b> property.</p> <p>Default: <code>standard</code> </p>
      */
     inline void SetVolumeType(const VolumeType& value) { m_volumeTypeHasBeenSet = true; m_volumeType = value; }
 
     /**
-     * <p>The volume type: <code>gp2</code>, <code>io1</code>, <code>st1</code>,
-     * <code>sc1</code>, or <code>standard</code>.</p> <p>Default:
-     * <code>standard</code> </p>
+     * <p>The volume type. If you set the type to <code>io1</code>, you must also set
+     * the <b>Iops</b> property.</p> <p>Default: <code>standard</code> </p>
      */
     inline void SetVolumeType(VolumeType&& value) { m_volumeTypeHasBeenSet = true; m_volumeType = std::move(value); }
 
     /**
-     * <p>The volume type: <code>gp2</code>, <code>io1</code>, <code>st1</code>,
-     * <code>sc1</code>, or <code>standard</code>.</p> <p>Default:
-     * <code>standard</code> </p>
+     * <p>The volume type. If you set the type to <code>io1</code>, you must also set
+     * the <b>Iops</b> property.</p> <p>Default: <code>standard</code> </p>
      */
     inline EbsBlockDevice& WithVolumeType(const VolumeType& value) { SetVolumeType(value); return *this;}
 
     /**
-     * <p>The volume type: <code>gp2</code>, <code>io1</code>, <code>st1</code>,
-     * <code>sc1</code>, or <code>standard</code>.</p> <p>Default:
-     * <code>standard</code> </p>
+     * <p>The volume type. If you set the type to <code>io1</code>, you must also set
+     * the <b>Iops</b> property.</p> <p>Default: <code>standard</code> </p>
      */
     inline EbsBlockDevice& WithVolumeType(VolumeType&& value) { SetVolumeType(std::move(value)); return *this;}
 
 
     /**
-     * <p>Indicates whether the EBS volume is encrypted. Encrypted volumes can only be
-     * attached to instances that support Amazon EBS encryption.</p> <p>If you are
-     * creating a volume from a snapshot, you cannot specify an encryption value. This
-     * is because only blank volumes can be encrypted on creation. If you are creating
-     * a snapshot from an existing EBS volume, you cannot specify an encryption value
-     * that differs from that of the EBS volume. We recommend that you omit the
-     * encryption value from the block device mappings when creating an image from an
-     * instance.</p>
+     * <p>Indicates whether the encryption state of an EBS volume is changed while
+     * being restored from a backing snapshot. The default effect of setting the
+     * <code>Encrypted</code> parameter to <code>true</code> through the console, API,
+     * or CLI depends on the volume's origin (new or from a snapshot), starting
+     * encryption state, ownership, and whether <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/account-level-encryption.html">account-level
+     * encryption</a> is enabled. Each default case can be overridden by specifying a
+     * customer master key (CMK) with the <code>KmsKeyId</code> parameter in addition
+     * to setting <code>Encrypted</code> to <code>true</code>. For a complete list of
+     * possible encryption cases, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#encryption-parameters">Amazon
+     * EBS Encryption</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
+     * <p>In no case can you remove encryption from an encrypted volume.</p>
+     * <p>Encrypted volumes can only be attached to instances that support Amazon EBS
+     * encryption. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances">Supported
+     * Instance Types</a>.</p>
      */
     inline bool GetEncrypted() const{ return m_encrypted; }
 
     /**
-     * <p>Indicates whether the EBS volume is encrypted. Encrypted volumes can only be
-     * attached to instances that support Amazon EBS encryption.</p> <p>If you are
-     * creating a volume from a snapshot, you cannot specify an encryption value. This
-     * is because only blank volumes can be encrypted on creation. If you are creating
-     * a snapshot from an existing EBS volume, you cannot specify an encryption value
-     * that differs from that of the EBS volume. We recommend that you omit the
-     * encryption value from the block device mappings when creating an image from an
-     * instance.</p>
+     * <p>Indicates whether the encryption state of an EBS volume is changed while
+     * being restored from a backing snapshot. The default effect of setting the
+     * <code>Encrypted</code> parameter to <code>true</code> through the console, API,
+     * or CLI depends on the volume's origin (new or from a snapshot), starting
+     * encryption state, ownership, and whether <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/account-level-encryption.html">account-level
+     * encryption</a> is enabled. Each default case can be overridden by specifying a
+     * customer master key (CMK) with the <code>KmsKeyId</code> parameter in addition
+     * to setting <code>Encrypted</code> to <code>true</code>. For a complete list of
+     * possible encryption cases, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#encryption-parameters">Amazon
+     * EBS Encryption</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
+     * <p>In no case can you remove encryption from an encrypted volume.</p>
+     * <p>Encrypted volumes can only be attached to instances that support Amazon EBS
+     * encryption. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances">Supported
+     * Instance Types</a>.</p>
      */
     inline bool EncryptedHasBeenSet() const { return m_encryptedHasBeenSet; }
 
     /**
-     * <p>Indicates whether the EBS volume is encrypted. Encrypted volumes can only be
-     * attached to instances that support Amazon EBS encryption.</p> <p>If you are
-     * creating a volume from a snapshot, you cannot specify an encryption value. This
-     * is because only blank volumes can be encrypted on creation. If you are creating
-     * a snapshot from an existing EBS volume, you cannot specify an encryption value
-     * that differs from that of the EBS volume. We recommend that you omit the
-     * encryption value from the block device mappings when creating an image from an
-     * instance.</p>
+     * <p>Indicates whether the encryption state of an EBS volume is changed while
+     * being restored from a backing snapshot. The default effect of setting the
+     * <code>Encrypted</code> parameter to <code>true</code> through the console, API,
+     * or CLI depends on the volume's origin (new or from a snapshot), starting
+     * encryption state, ownership, and whether <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/account-level-encryption.html">account-level
+     * encryption</a> is enabled. Each default case can be overridden by specifying a
+     * customer master key (CMK) with the <code>KmsKeyId</code> parameter in addition
+     * to setting <code>Encrypted</code> to <code>true</code>. For a complete list of
+     * possible encryption cases, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#encryption-parameters">Amazon
+     * EBS Encryption</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
+     * <p>In no case can you remove encryption from an encrypted volume.</p>
+     * <p>Encrypted volumes can only be attached to instances that support Amazon EBS
+     * encryption. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances">Supported
+     * Instance Types</a>.</p>
      */
     inline void SetEncrypted(bool value) { m_encryptedHasBeenSet = true; m_encrypted = value; }
 
     /**
-     * <p>Indicates whether the EBS volume is encrypted. Encrypted volumes can only be
-     * attached to instances that support Amazon EBS encryption.</p> <p>If you are
-     * creating a volume from a snapshot, you cannot specify an encryption value. This
-     * is because only blank volumes can be encrypted on creation. If you are creating
-     * a snapshot from an existing EBS volume, you cannot specify an encryption value
-     * that differs from that of the EBS volume. We recommend that you omit the
-     * encryption value from the block device mappings when creating an image from an
-     * instance.</p>
+     * <p>Indicates whether the encryption state of an EBS volume is changed while
+     * being restored from a backing snapshot. The default effect of setting the
+     * <code>Encrypted</code> parameter to <code>true</code> through the console, API,
+     * or CLI depends on the volume's origin (new or from a snapshot), starting
+     * encryption state, ownership, and whether <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/account-level-encryption.html">account-level
+     * encryption</a> is enabled. Each default case can be overridden by specifying a
+     * customer master key (CMK) with the <code>KmsKeyId</code> parameter in addition
+     * to setting <code>Encrypted</code> to <code>true</code>. For a complete list of
+     * possible encryption cases, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#encryption-parameters">Amazon
+     * EBS Encryption</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
+     * <p>In no case can you remove encryption from an encrypted volume.</p>
+     * <p>Encrypted volumes can only be attached to instances that support Amazon EBS
+     * encryption. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances">Supported
+     * Instance Types</a>.</p>
      */
     inline EbsBlockDevice& WithEncrypted(bool value) { SetEncrypted(value); return *this;}
 

@@ -34,7 +34,7 @@ namespace Model
   {
   public:
     CreateRoleRequest();
-    
+
     // Service request name is the Operation name which will send this request out,
     // each operation should has unique request name, so that we can get operation's name from this request.
     // Note: this is not true for response, multiple operations may have the same response name,
@@ -50,7 +50,7 @@ namespace Model
 
     /**
      * <p> The path to the role. For more information about paths, see <a
-     * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM
      * Identifiers</a> in the <i>IAM User Guide</i>.</p> <p>This parameter is optional.
      * If it is not included, it defaults to a slash (/).</p> <p>This parameter allows
      * (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a
@@ -64,7 +64,7 @@ namespace Model
 
     /**
      * <p> The path to the role. For more information about paths, see <a
-     * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM
      * Identifiers</a> in the <i>IAM User Guide</i>.</p> <p>This parameter is optional.
      * If it is not included, it defaults to a slash (/).</p> <p>This parameter allows
      * (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a
@@ -78,7 +78,7 @@ namespace Model
 
     /**
      * <p> The path to the role. For more information about paths, see <a
-     * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM
      * Identifiers</a> in the <i>IAM User Guide</i>.</p> <p>This parameter is optional.
      * If it is not included, it defaults to a slash (/).</p> <p>This parameter allows
      * (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a
@@ -92,7 +92,7 @@ namespace Model
 
     /**
      * <p> The path to the role. For more information about paths, see <a
-     * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM
      * Identifiers</a> in the <i>IAM User Guide</i>.</p> <p>This parameter is optional.
      * If it is not included, it defaults to a slash (/).</p> <p>This parameter allows
      * (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a
@@ -106,7 +106,7 @@ namespace Model
 
     /**
      * <p> The path to the role. For more information about paths, see <a
-     * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM
      * Identifiers</a> in the <i>IAM User Guide</i>.</p> <p>This parameter is optional.
      * If it is not included, it defaults to a slash (/).</p> <p>This parameter allows
      * (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a
@@ -120,7 +120,7 @@ namespace Model
 
     /**
      * <p> The path to the role. For more information about paths, see <a
-     * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM
      * Identifiers</a> in the <i>IAM User Guide</i>.</p> <p>This parameter is optional.
      * If it is not included, it defaults to a slash (/).</p> <p>This parameter allows
      * (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a
@@ -134,7 +134,7 @@ namespace Model
 
     /**
      * <p> The path to the role. For more information about paths, see <a
-     * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM
      * Identifiers</a> in the <i>IAM User Guide</i>.</p> <p>This parameter is optional.
      * If it is not included, it defaults to a slash (/).</p> <p>This parameter allows
      * (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a
@@ -148,7 +148,7 @@ namespace Model
 
     /**
      * <p> The path to the role. For more information about paths, see <a
-     * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM
      * Identifiers</a> in the <i>IAM User Guide</i>.</p> <p>This parameter is optional.
      * If it is not included, it defaults to a slash (/).</p> <p>This parameter allows
      * (through its <a href="http://wikipedia.org/wiki/regex">regex pattern</a>) a
@@ -162,179 +162,203 @@ namespace Model
 
 
     /**
-     * <p>The name of the role to create.</p> <p>This parameter allows (through its <a
-     * href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters
-     * consisting of upper and lowercase alphanumeric characters with no spaces. You
-     * can also include any of the following characters: _+=,.@-</p> <p>Role names are
-     * not distinguished by case. For example, you cannot create roles named both
-     * "PRODROLE" and "prodrole".</p>
+     * <p>The name of the role to create.</p> <p>IAM user, group, role, and policy
+     * names must be unique within the account. Names are not distinguished by case.
+     * For example, you cannot create resources named both "MyResource" and
+     * "myresource".</p>
      */
     inline const Aws::String& GetRoleName() const{ return m_roleName; }
 
     /**
-     * <p>The name of the role to create.</p> <p>This parameter allows (through its <a
-     * href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters
-     * consisting of upper and lowercase alphanumeric characters with no spaces. You
-     * can also include any of the following characters: _+=,.@-</p> <p>Role names are
-     * not distinguished by case. For example, you cannot create roles named both
-     * "PRODROLE" and "prodrole".</p>
+     * <p>The name of the role to create.</p> <p>IAM user, group, role, and policy
+     * names must be unique within the account. Names are not distinguished by case.
+     * For example, you cannot create resources named both "MyResource" and
+     * "myresource".</p>
      */
     inline bool RoleNameHasBeenSet() const { return m_roleNameHasBeenSet; }
 
     /**
-     * <p>The name of the role to create.</p> <p>This parameter allows (through its <a
-     * href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters
-     * consisting of upper and lowercase alphanumeric characters with no spaces. You
-     * can also include any of the following characters: _+=,.@-</p> <p>Role names are
-     * not distinguished by case. For example, you cannot create roles named both
-     * "PRODROLE" and "prodrole".</p>
+     * <p>The name of the role to create.</p> <p>IAM user, group, role, and policy
+     * names must be unique within the account. Names are not distinguished by case.
+     * For example, you cannot create resources named both "MyResource" and
+     * "myresource".</p>
      */
     inline void SetRoleName(const Aws::String& value) { m_roleNameHasBeenSet = true; m_roleName = value; }
 
     /**
-     * <p>The name of the role to create.</p> <p>This parameter allows (through its <a
-     * href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters
-     * consisting of upper and lowercase alphanumeric characters with no spaces. You
-     * can also include any of the following characters: _+=,.@-</p> <p>Role names are
-     * not distinguished by case. For example, you cannot create roles named both
-     * "PRODROLE" and "prodrole".</p>
+     * <p>The name of the role to create.</p> <p>IAM user, group, role, and policy
+     * names must be unique within the account. Names are not distinguished by case.
+     * For example, you cannot create resources named both "MyResource" and
+     * "myresource".</p>
      */
     inline void SetRoleName(Aws::String&& value) { m_roleNameHasBeenSet = true; m_roleName = std::move(value); }
 
     /**
-     * <p>The name of the role to create.</p> <p>This parameter allows (through its <a
-     * href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters
-     * consisting of upper and lowercase alphanumeric characters with no spaces. You
-     * can also include any of the following characters: _+=,.@-</p> <p>Role names are
-     * not distinguished by case. For example, you cannot create roles named both
-     * "PRODROLE" and "prodrole".</p>
+     * <p>The name of the role to create.</p> <p>IAM user, group, role, and policy
+     * names must be unique within the account. Names are not distinguished by case.
+     * For example, you cannot create resources named both "MyResource" and
+     * "myresource".</p>
      */
     inline void SetRoleName(const char* value) { m_roleNameHasBeenSet = true; m_roleName.assign(value); }
 
     /**
-     * <p>The name of the role to create.</p> <p>This parameter allows (through its <a
-     * href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters
-     * consisting of upper and lowercase alphanumeric characters with no spaces. You
-     * can also include any of the following characters: _+=,.@-</p> <p>Role names are
-     * not distinguished by case. For example, you cannot create roles named both
-     * "PRODROLE" and "prodrole".</p>
+     * <p>The name of the role to create.</p> <p>IAM user, group, role, and policy
+     * names must be unique within the account. Names are not distinguished by case.
+     * For example, you cannot create resources named both "MyResource" and
+     * "myresource".</p>
      */
     inline CreateRoleRequest& WithRoleName(const Aws::String& value) { SetRoleName(value); return *this;}
 
     /**
-     * <p>The name of the role to create.</p> <p>This parameter allows (through its <a
-     * href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters
-     * consisting of upper and lowercase alphanumeric characters with no spaces. You
-     * can also include any of the following characters: _+=,.@-</p> <p>Role names are
-     * not distinguished by case. For example, you cannot create roles named both
-     * "PRODROLE" and "prodrole".</p>
+     * <p>The name of the role to create.</p> <p>IAM user, group, role, and policy
+     * names must be unique within the account. Names are not distinguished by case.
+     * For example, you cannot create resources named both "MyResource" and
+     * "myresource".</p>
      */
     inline CreateRoleRequest& WithRoleName(Aws::String&& value) { SetRoleName(std::move(value)); return *this;}
 
     /**
-     * <p>The name of the role to create.</p> <p>This parameter allows (through its <a
-     * href="http://wikipedia.org/wiki/regex">regex pattern</a>) a string of characters
-     * consisting of upper and lowercase alphanumeric characters with no spaces. You
-     * can also include any of the following characters: _+=,.@-</p> <p>Role names are
-     * not distinguished by case. For example, you cannot create roles named both
-     * "PRODROLE" and "prodrole".</p>
+     * <p>The name of the role to create.</p> <p>IAM user, group, role, and policy
+     * names must be unique within the account. Names are not distinguished by case.
+     * For example, you cannot create resources named both "MyResource" and
+     * "myresource".</p>
      */
     inline CreateRoleRequest& WithRoleName(const char* value) { SetRoleName(value); return *this;}
 
 
     /**
      * <p>The trust relationship policy document that grants an entity permission to
-     * assume the role.</p> <p>The <a href="http://wikipedia.org/wiki/regex">regex
-     * pattern</a> used to validate this parameter is a string of characters consisting
-     * of the following:</p> <ul> <li> <p>Any printable ASCII character ranging from
-     * the space character (\u0020) through the end of the ASCII character range</p>
-     * </li> <li> <p>The printable characters in the Basic Latin and Latin-1 Supplement
-     * character set (through \u00FF)</p> </li> <li> <p>The special characters tab
-     * (\u0009), line feed (\u000A), and carriage return (\u000D)</p> </li> </ul>
+     * assume the role.</p> <p>in IAM, you must provide a JSON policy that has been
+     * converted to a string. However, for AWS CloudFormation templates formatted in
+     * YAML, you can provide the policy in JSON or YAML format. AWS CloudFormation
+     * always converts a YAML policy to JSON format before submitting it to IAM.</p>
+     * <p>The <a href="http://wikipedia.org/wiki/regex">regex pattern</a> used to
+     * validate this parameter is a string of characters consisting of the
+     * following:</p> <ul> <li> <p>Any printable ASCII character ranging from the space
+     * character (\u0020) through the end of the ASCII character range</p> </li> <li>
+     * <p>The printable characters in the Basic Latin and Latin-1 Supplement character
+     * set (through \u00FF)</p> </li> <li> <p>The special characters tab (\u0009), line
+     * feed (\u000A), and carriage return (\u000D)</p> </li> </ul> <p> Upon success,
+     * the response includes the same trust policy as a URL-encoded JSON string.</p>
      */
     inline const Aws::String& GetAssumeRolePolicyDocument() const{ return m_assumeRolePolicyDocument; }
 
     /**
      * <p>The trust relationship policy document that grants an entity permission to
-     * assume the role.</p> <p>The <a href="http://wikipedia.org/wiki/regex">regex
-     * pattern</a> used to validate this parameter is a string of characters consisting
-     * of the following:</p> <ul> <li> <p>Any printable ASCII character ranging from
-     * the space character (\u0020) through the end of the ASCII character range</p>
-     * </li> <li> <p>The printable characters in the Basic Latin and Latin-1 Supplement
-     * character set (through \u00FF)</p> </li> <li> <p>The special characters tab
-     * (\u0009), line feed (\u000A), and carriage return (\u000D)</p> </li> </ul>
+     * assume the role.</p> <p>in IAM, you must provide a JSON policy that has been
+     * converted to a string. However, for AWS CloudFormation templates formatted in
+     * YAML, you can provide the policy in JSON or YAML format. AWS CloudFormation
+     * always converts a YAML policy to JSON format before submitting it to IAM.</p>
+     * <p>The <a href="http://wikipedia.org/wiki/regex">regex pattern</a> used to
+     * validate this parameter is a string of characters consisting of the
+     * following:</p> <ul> <li> <p>Any printable ASCII character ranging from the space
+     * character (\u0020) through the end of the ASCII character range</p> </li> <li>
+     * <p>The printable characters in the Basic Latin and Latin-1 Supplement character
+     * set (through \u00FF)</p> </li> <li> <p>The special characters tab (\u0009), line
+     * feed (\u000A), and carriage return (\u000D)</p> </li> </ul> <p> Upon success,
+     * the response includes the same trust policy as a URL-encoded JSON string.</p>
      */
     inline bool AssumeRolePolicyDocumentHasBeenSet() const { return m_assumeRolePolicyDocumentHasBeenSet; }
 
     /**
      * <p>The trust relationship policy document that grants an entity permission to
-     * assume the role.</p> <p>The <a href="http://wikipedia.org/wiki/regex">regex
-     * pattern</a> used to validate this parameter is a string of characters consisting
-     * of the following:</p> <ul> <li> <p>Any printable ASCII character ranging from
-     * the space character (\u0020) through the end of the ASCII character range</p>
-     * </li> <li> <p>The printable characters in the Basic Latin and Latin-1 Supplement
-     * character set (through \u00FF)</p> </li> <li> <p>The special characters tab
-     * (\u0009), line feed (\u000A), and carriage return (\u000D)</p> </li> </ul>
+     * assume the role.</p> <p>in IAM, you must provide a JSON policy that has been
+     * converted to a string. However, for AWS CloudFormation templates formatted in
+     * YAML, you can provide the policy in JSON or YAML format. AWS CloudFormation
+     * always converts a YAML policy to JSON format before submitting it to IAM.</p>
+     * <p>The <a href="http://wikipedia.org/wiki/regex">regex pattern</a> used to
+     * validate this parameter is a string of characters consisting of the
+     * following:</p> <ul> <li> <p>Any printable ASCII character ranging from the space
+     * character (\u0020) through the end of the ASCII character range</p> </li> <li>
+     * <p>The printable characters in the Basic Latin and Latin-1 Supplement character
+     * set (through \u00FF)</p> </li> <li> <p>The special characters tab (\u0009), line
+     * feed (\u000A), and carriage return (\u000D)</p> </li> </ul> <p> Upon success,
+     * the response includes the same trust policy as a URL-encoded JSON string.</p>
      */
     inline void SetAssumeRolePolicyDocument(const Aws::String& value) { m_assumeRolePolicyDocumentHasBeenSet = true; m_assumeRolePolicyDocument = value; }
 
     /**
      * <p>The trust relationship policy document that grants an entity permission to
-     * assume the role.</p> <p>The <a href="http://wikipedia.org/wiki/regex">regex
-     * pattern</a> used to validate this parameter is a string of characters consisting
-     * of the following:</p> <ul> <li> <p>Any printable ASCII character ranging from
-     * the space character (\u0020) through the end of the ASCII character range</p>
-     * </li> <li> <p>The printable characters in the Basic Latin and Latin-1 Supplement
-     * character set (through \u00FF)</p> </li> <li> <p>The special characters tab
-     * (\u0009), line feed (\u000A), and carriage return (\u000D)</p> </li> </ul>
+     * assume the role.</p> <p>in IAM, you must provide a JSON policy that has been
+     * converted to a string. However, for AWS CloudFormation templates formatted in
+     * YAML, you can provide the policy in JSON or YAML format. AWS CloudFormation
+     * always converts a YAML policy to JSON format before submitting it to IAM.</p>
+     * <p>The <a href="http://wikipedia.org/wiki/regex">regex pattern</a> used to
+     * validate this parameter is a string of characters consisting of the
+     * following:</p> <ul> <li> <p>Any printable ASCII character ranging from the space
+     * character (\u0020) through the end of the ASCII character range</p> </li> <li>
+     * <p>The printable characters in the Basic Latin and Latin-1 Supplement character
+     * set (through \u00FF)</p> </li> <li> <p>The special characters tab (\u0009), line
+     * feed (\u000A), and carriage return (\u000D)</p> </li> </ul> <p> Upon success,
+     * the response includes the same trust policy as a URL-encoded JSON string.</p>
      */
     inline void SetAssumeRolePolicyDocument(Aws::String&& value) { m_assumeRolePolicyDocumentHasBeenSet = true; m_assumeRolePolicyDocument = std::move(value); }
 
     /**
      * <p>The trust relationship policy document that grants an entity permission to
-     * assume the role.</p> <p>The <a href="http://wikipedia.org/wiki/regex">regex
-     * pattern</a> used to validate this parameter is a string of characters consisting
-     * of the following:</p> <ul> <li> <p>Any printable ASCII character ranging from
-     * the space character (\u0020) through the end of the ASCII character range</p>
-     * </li> <li> <p>The printable characters in the Basic Latin and Latin-1 Supplement
-     * character set (through \u00FF)</p> </li> <li> <p>The special characters tab
-     * (\u0009), line feed (\u000A), and carriage return (\u000D)</p> </li> </ul>
+     * assume the role.</p> <p>in IAM, you must provide a JSON policy that has been
+     * converted to a string. However, for AWS CloudFormation templates formatted in
+     * YAML, you can provide the policy in JSON or YAML format. AWS CloudFormation
+     * always converts a YAML policy to JSON format before submitting it to IAM.</p>
+     * <p>The <a href="http://wikipedia.org/wiki/regex">regex pattern</a> used to
+     * validate this parameter is a string of characters consisting of the
+     * following:</p> <ul> <li> <p>Any printable ASCII character ranging from the space
+     * character (\u0020) through the end of the ASCII character range</p> </li> <li>
+     * <p>The printable characters in the Basic Latin and Latin-1 Supplement character
+     * set (through \u00FF)</p> </li> <li> <p>The special characters tab (\u0009), line
+     * feed (\u000A), and carriage return (\u000D)</p> </li> </ul> <p> Upon success,
+     * the response includes the same trust policy as a URL-encoded JSON string.</p>
      */
     inline void SetAssumeRolePolicyDocument(const char* value) { m_assumeRolePolicyDocumentHasBeenSet = true; m_assumeRolePolicyDocument.assign(value); }
 
     /**
      * <p>The trust relationship policy document that grants an entity permission to
-     * assume the role.</p> <p>The <a href="http://wikipedia.org/wiki/regex">regex
-     * pattern</a> used to validate this parameter is a string of characters consisting
-     * of the following:</p> <ul> <li> <p>Any printable ASCII character ranging from
-     * the space character (\u0020) through the end of the ASCII character range</p>
-     * </li> <li> <p>The printable characters in the Basic Latin and Latin-1 Supplement
-     * character set (through \u00FF)</p> </li> <li> <p>The special characters tab
-     * (\u0009), line feed (\u000A), and carriage return (\u000D)</p> </li> </ul>
+     * assume the role.</p> <p>in IAM, you must provide a JSON policy that has been
+     * converted to a string. However, for AWS CloudFormation templates formatted in
+     * YAML, you can provide the policy in JSON or YAML format. AWS CloudFormation
+     * always converts a YAML policy to JSON format before submitting it to IAM.</p>
+     * <p>The <a href="http://wikipedia.org/wiki/regex">regex pattern</a> used to
+     * validate this parameter is a string of characters consisting of the
+     * following:</p> <ul> <li> <p>Any printable ASCII character ranging from the space
+     * character (\u0020) through the end of the ASCII character range</p> </li> <li>
+     * <p>The printable characters in the Basic Latin and Latin-1 Supplement character
+     * set (through \u00FF)</p> </li> <li> <p>The special characters tab (\u0009), line
+     * feed (\u000A), and carriage return (\u000D)</p> </li> </ul> <p> Upon success,
+     * the response includes the same trust policy as a URL-encoded JSON string.</p>
      */
     inline CreateRoleRequest& WithAssumeRolePolicyDocument(const Aws::String& value) { SetAssumeRolePolicyDocument(value); return *this;}
 
     /**
      * <p>The trust relationship policy document that grants an entity permission to
-     * assume the role.</p> <p>The <a href="http://wikipedia.org/wiki/regex">regex
-     * pattern</a> used to validate this parameter is a string of characters consisting
-     * of the following:</p> <ul> <li> <p>Any printable ASCII character ranging from
-     * the space character (\u0020) through the end of the ASCII character range</p>
-     * </li> <li> <p>The printable characters in the Basic Latin and Latin-1 Supplement
-     * character set (through \u00FF)</p> </li> <li> <p>The special characters tab
-     * (\u0009), line feed (\u000A), and carriage return (\u000D)</p> </li> </ul>
+     * assume the role.</p> <p>in IAM, you must provide a JSON policy that has been
+     * converted to a string. However, for AWS CloudFormation templates formatted in
+     * YAML, you can provide the policy in JSON or YAML format. AWS CloudFormation
+     * always converts a YAML policy to JSON format before submitting it to IAM.</p>
+     * <p>The <a href="http://wikipedia.org/wiki/regex">regex pattern</a> used to
+     * validate this parameter is a string of characters consisting of the
+     * following:</p> <ul> <li> <p>Any printable ASCII character ranging from the space
+     * character (\u0020) through the end of the ASCII character range</p> </li> <li>
+     * <p>The printable characters in the Basic Latin and Latin-1 Supplement character
+     * set (through \u00FF)</p> </li> <li> <p>The special characters tab (\u0009), line
+     * feed (\u000A), and carriage return (\u000D)</p> </li> </ul> <p> Upon success,
+     * the response includes the same trust policy as a URL-encoded JSON string.</p>
      */
     inline CreateRoleRequest& WithAssumeRolePolicyDocument(Aws::String&& value) { SetAssumeRolePolicyDocument(std::move(value)); return *this;}
 
     /**
      * <p>The trust relationship policy document that grants an entity permission to
-     * assume the role.</p> <p>The <a href="http://wikipedia.org/wiki/regex">regex
-     * pattern</a> used to validate this parameter is a string of characters consisting
-     * of the following:</p> <ul> <li> <p>Any printable ASCII character ranging from
-     * the space character (\u0020) through the end of the ASCII character range</p>
-     * </li> <li> <p>The printable characters in the Basic Latin and Latin-1 Supplement
-     * character set (through \u00FF)</p> </li> <li> <p>The special characters tab
-     * (\u0009), line feed (\u000A), and carriage return (\u000D)</p> </li> </ul>
+     * assume the role.</p> <p>in IAM, you must provide a JSON policy that has been
+     * converted to a string. However, for AWS CloudFormation templates formatted in
+     * YAML, you can provide the policy in JSON or YAML format. AWS CloudFormation
+     * always converts a YAML policy to JSON format before submitting it to IAM.</p>
+     * <p>The <a href="http://wikipedia.org/wiki/regex">regex pattern</a> used to
+     * validate this parameter is a string of characters consisting of the
+     * following:</p> <ul> <li> <p>Any printable ASCII character ranging from the space
+     * character (\u0020) through the end of the ASCII character range</p> </li> <li>
+     * <p>The printable characters in the Basic Latin and Latin-1 Supplement character
+     * set (through \u00FF)</p> </li> <li> <p>The special characters tab (\u0009), line
+     * feed (\u000A), and carriage return (\u000D)</p> </li> </ul> <p> Upon success,
+     * the response includes the same trust policy as a URL-encoded JSON string.</p>
      */
     inline CreateRoleRequest& WithAssumeRolePolicyDocument(const char* value) { SetAssumeRolePolicyDocument(value); return *this;}
 
@@ -394,7 +418,7 @@ namespace Model
      * operations or the <code>assume-role*</code> CLI operations but does not apply
      * when you use those operations to create a console URL. For more information, see
      * <a
-     * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use.html">Using
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use.html">Using
      * IAM Roles</a> in the <i>IAM User Guide</i>.</p>
      */
     inline int GetMaxSessionDuration() const{ return m_maxSessionDuration; }
@@ -413,7 +437,7 @@ namespace Model
      * operations or the <code>assume-role*</code> CLI operations but does not apply
      * when you use those operations to create a console URL. For more information, see
      * <a
-     * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use.html">Using
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use.html">Using
      * IAM Roles</a> in the <i>IAM User Guide</i>.</p>
      */
     inline bool MaxSessionDurationHasBeenSet() const { return m_maxSessionDurationHasBeenSet; }
@@ -432,7 +456,7 @@ namespace Model
      * operations or the <code>assume-role*</code> CLI operations but does not apply
      * when you use those operations to create a console URL. For more information, see
      * <a
-     * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use.html">Using
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use.html">Using
      * IAM Roles</a> in the <i>IAM User Guide</i>.</p>
      */
     inline void SetMaxSessionDuration(int value) { m_maxSessionDurationHasBeenSet = true; m_maxSessionDuration = value; }
@@ -451,7 +475,7 @@ namespace Model
      * operations or the <code>assume-role*</code> CLI operations but does not apply
      * when you use those operations to create a console URL. For more information, see
      * <a
-     * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use.html">Using
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use.html">Using
      * IAM Roles</a> in the <i>IAM User Guide</i>.</p>
      */
     inline CreateRoleRequest& WithMaxSessionDuration(int value) { SetMaxSessionDuration(value); return *this;}
@@ -510,7 +534,7 @@ namespace Model
      * <p>A list of tags that you want to attach to the newly created role. Each tag
      * consists of a key name and an associated value. For more information about
      * tagging, see <a
-     * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_tags.html">Tagging IAM
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_tags.html">Tagging IAM
      * Identities</a> in the <i>IAM User Guide</i>.</p> <note> <p>If any one of the
      * tags is invalid or if you exceed the allowed number of tags per role, then the
      * entire request fails and the role is not created.</p> </note>
@@ -521,7 +545,7 @@ namespace Model
      * <p>A list of tags that you want to attach to the newly created role. Each tag
      * consists of a key name and an associated value. For more information about
      * tagging, see <a
-     * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_tags.html">Tagging IAM
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_tags.html">Tagging IAM
      * Identities</a> in the <i>IAM User Guide</i>.</p> <note> <p>If any one of the
      * tags is invalid or if you exceed the allowed number of tags per role, then the
      * entire request fails and the role is not created.</p> </note>
@@ -532,7 +556,7 @@ namespace Model
      * <p>A list of tags that you want to attach to the newly created role. Each tag
      * consists of a key name and an associated value. For more information about
      * tagging, see <a
-     * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_tags.html">Tagging IAM
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_tags.html">Tagging IAM
      * Identities</a> in the <i>IAM User Guide</i>.</p> <note> <p>If any one of the
      * tags is invalid or if you exceed the allowed number of tags per role, then the
      * entire request fails and the role is not created.</p> </note>
@@ -543,7 +567,7 @@ namespace Model
      * <p>A list of tags that you want to attach to the newly created role. Each tag
      * consists of a key name and an associated value. For more information about
      * tagging, see <a
-     * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_tags.html">Tagging IAM
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_tags.html">Tagging IAM
      * Identities</a> in the <i>IAM User Guide</i>.</p> <note> <p>If any one of the
      * tags is invalid or if you exceed the allowed number of tags per role, then the
      * entire request fails and the role is not created.</p> </note>
@@ -554,7 +578,7 @@ namespace Model
      * <p>A list of tags that you want to attach to the newly created role. Each tag
      * consists of a key name and an associated value. For more information about
      * tagging, see <a
-     * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_tags.html">Tagging IAM
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_tags.html">Tagging IAM
      * Identities</a> in the <i>IAM User Guide</i>.</p> <note> <p>If any one of the
      * tags is invalid or if you exceed the allowed number of tags per role, then the
      * entire request fails and the role is not created.</p> </note>
@@ -565,7 +589,7 @@ namespace Model
      * <p>A list of tags that you want to attach to the newly created role. Each tag
      * consists of a key name and an associated value. For more information about
      * tagging, see <a
-     * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_tags.html">Tagging IAM
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_tags.html">Tagging IAM
      * Identities</a> in the <i>IAM User Guide</i>.</p> <note> <p>If any one of the
      * tags is invalid or if you exceed the allowed number of tags per role, then the
      * entire request fails and the role is not created.</p> </note>
@@ -576,7 +600,7 @@ namespace Model
      * <p>A list of tags that you want to attach to the newly created role. Each tag
      * consists of a key name and an associated value. For more information about
      * tagging, see <a
-     * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_tags.html">Tagging IAM
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_tags.html">Tagging IAM
      * Identities</a> in the <i>IAM User Guide</i>.</p> <note> <p>If any one of the
      * tags is invalid or if you exceed the allowed number of tags per role, then the
      * entire request fails and the role is not created.</p> </note>
@@ -587,7 +611,7 @@ namespace Model
      * <p>A list of tags that you want to attach to the newly created role. Each tag
      * consists of a key name and an associated value. For more information about
      * tagging, see <a
-     * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_tags.html">Tagging IAM
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_tags.html">Tagging IAM
      * Identities</a> in the <i>IAM User Guide</i>.</p> <note> <p>If any one of the
      * tags is invalid or if you exceed the allowed number of tags per role, then the
      * entire request fails and the role is not created.</p> </note>

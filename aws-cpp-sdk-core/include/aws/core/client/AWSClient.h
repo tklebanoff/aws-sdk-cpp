@@ -25,6 +25,8 @@
 #include <memory>
 #include <atomic>
 
+struct aws_array_list;
+
 namespace Aws
 {
     namespace Utils
@@ -142,7 +144,7 @@ namespace Aws
 
             Aws::String GeneratePresignedUrl(const Aws::AmazonWebServiceRequest& request, Aws::Http::URI& uri, Aws::Http::HttpMethod method, const char* region, const char* serviceName,
                 const Aws::Http::QueryStringParameterCollection& extraParams = Aws::Http::QueryStringParameterCollection(), long long expirationInSeconds = 0) const;
-            
+
             Aws::String GeneratePresignedUrl(const Aws::AmazonWebServiceRequest& request, Aws::Http::URI& uri, Aws::Http::HttpMethod method, const char* region,
                 const Aws::Http::QueryStringParameterCollection& extraParams = Aws::Http::QueryStringParameterCollection(), long long expirationInSeconds = 0) const;
 
@@ -235,7 +237,23 @@ namespace Aws
              * Gets the corresonding signer from the signers map by name.
              */
             Aws::Client::AWSAuthSigner* GetSignerByName(const char* name) const;
+        protected:
 
+            /**
+              * Creates an HttpRequest instance with the given URI and sets the proper headers from the
+              * AmazonWebRequest, and finally signs that request with the given the signer.
+              * The similar member function BuildHttpRequest() does not sign the request.
+              * This member function is used internally only by clients that perform requests (input operations) using
+              * event-streams.
+              */
+            std::shared_ptr<Aws::Http::HttpRequest> BuildAndSignHttpRequest(const Aws::Http::URI& uri,
+                                                    const Aws::AmazonWebServiceRequest& request,
+                                                    Http::HttpMethod method, const char* signerName) const;
+
+            /**
+             * Performs the HTTP request via the HTTP client while enforcing rate limiters
+             */
+            std::shared_ptr<Aws::Http::HttpResponse> MakeHttpRequest(std::shared_ptr<Aws::Http::HttpRequest>& request) const;
         private:
             /**
              * Try to adjust signer's clock
@@ -243,8 +261,8 @@ namespace Aws
              */
             bool AdjustClockSkew(HttpResponseOutcome& outcome, const char* signerName) const;
             void AddHeadersToRequest(const std::shared_ptr<Aws::Http::HttpRequest>& httpRequest, const Http::HeaderValueCollection& headerValues) const;
-            void AddContentBodyToRequest(const std::shared_ptr<Aws::Http::HttpRequest>& httpRequest,
-                                         const std::shared_ptr<Aws::IOStream>& body, bool needsContentMd5 = false) const;
+            void AddContentBodyToRequest(const std::shared_ptr<Aws::Http::HttpRequest>& httpRequest, const std::shared_ptr<Aws::IOStream>& body,
+                                         bool needsContentMd5 = false, bool isChunked = false) const;
             void AddCommonHeaders(Aws::Http::HttpRequest& httpRequest) const;
             void InitializeGlobalStatics();
             std::shared_ptr<Aws::Http::HttpRequest> ConvertToRequestForPresigning(const Aws::AmazonWebServiceRequest& request, Aws::Http::URI& uri,
@@ -262,6 +280,7 @@ namespace Aws
         };
 
         typedef Utils::Outcome<AmazonWebServiceResult<Utils::Json::JsonValue>, AWSError<CoreErrors>> JsonOutcome;
+        AWS_CORE_API Aws::String GetAuthorizationHeader(const Aws::Http::HttpRequest& httpRequest);
 
         /**
          *  AWSClient that handles marshalling json response bodies. You would inherit from this class
@@ -315,6 +334,8 @@ namespace Aws
                 Http::HttpMethod method = Http::HttpMethod::HTTP_POST,
                 const char* signerName = Aws::Auth::SIGV4_SIGNER,
                 const char* requestName = nullptr) const;
+
+            JsonOutcome MakeEventStreamRequest(std::shared_ptr<Aws::Http::HttpRequest>& request) const;
         };
 
         typedef Utils::Outcome<AmazonWebServiceResult<Utils::Xml::XmlDocument>, AWSError<CoreErrors>> XmlOutcome;

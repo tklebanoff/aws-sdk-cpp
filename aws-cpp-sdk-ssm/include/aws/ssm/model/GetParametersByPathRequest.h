@@ -34,7 +34,7 @@ namespace Model
   {
   public:
     GetParametersByPathRequest();
-    
+
     // Service request name is the Operation name which will send this request out,
     // each operation should has unique request name, so that we can get operation's name from this request.
     // Note: this is not true for response, multiple operations may have the same response name,
@@ -114,9 +114,10 @@ namespace Model
     /**
      * <p>Retrieve all parameters within a hierarchy.</p> <important> <p>If a user has
      * access to a path, then the user can access all levels of that path. For example,
-     * if a user has permission to access path /a, then the user can also access /a/b.
-     * Even if a user has explicitly been denied access in IAM for parameter /a, they
-     * can still call the GetParametersByPath API action recursively and view /a/b.</p>
+     * if a user has permission to access path <code>/a</code>, then the user can also
+     * access <code>/a/b</code>. Even if a user has explicitly been denied access in
+     * IAM for parameter <code>/a/b</code>, they can still call the GetParametersByPath
+     * API action recursively for <code>/a</code> and view <code>/a/b</code>.</p>
      * </important>
      */
     inline bool GetRecursive() const{ return m_recursive; }
@@ -124,9 +125,10 @@ namespace Model
     /**
      * <p>Retrieve all parameters within a hierarchy.</p> <important> <p>If a user has
      * access to a path, then the user can access all levels of that path. For example,
-     * if a user has permission to access path /a, then the user can also access /a/b.
-     * Even if a user has explicitly been denied access in IAM for parameter /a, they
-     * can still call the GetParametersByPath API action recursively and view /a/b.</p>
+     * if a user has permission to access path <code>/a</code>, then the user can also
+     * access <code>/a/b</code>. Even if a user has explicitly been denied access in
+     * IAM for parameter <code>/a/b</code>, they can still call the GetParametersByPath
+     * API action recursively for <code>/a</code> and view <code>/a/b</code>.</p>
      * </important>
      */
     inline bool RecursiveHasBeenSet() const { return m_recursiveHasBeenSet; }
@@ -134,9 +136,10 @@ namespace Model
     /**
      * <p>Retrieve all parameters within a hierarchy.</p> <important> <p>If a user has
      * access to a path, then the user can access all levels of that path. For example,
-     * if a user has permission to access path /a, then the user can also access /a/b.
-     * Even if a user has explicitly been denied access in IAM for parameter /a, they
-     * can still call the GetParametersByPath API action recursively and view /a/b.</p>
+     * if a user has permission to access path <code>/a</code>, then the user can also
+     * access <code>/a/b</code>. Even if a user has explicitly been denied access in
+     * IAM for parameter <code>/a/b</code>, they can still call the GetParametersByPath
+     * API action recursively for <code>/a</code> and view <code>/a/b</code>.</p>
      * </important>
      */
     inline void SetRecursive(bool value) { m_recursiveHasBeenSet = true; m_recursive = value; }
@@ -144,9 +147,10 @@ namespace Model
     /**
      * <p>Retrieve all parameters within a hierarchy.</p> <important> <p>If a user has
      * access to a path, then the user can access all levels of that path. For example,
-     * if a user has permission to access path /a, then the user can also access /a/b.
-     * Even if a user has explicitly been denied access in IAM for parameter /a, they
-     * can still call the GetParametersByPath API action recursively and view /a/b.</p>
+     * if a user has permission to access path <code>/a</code>, then the user can also
+     * access <code>/a/b</code>. Even if a user has explicitly been denied access in
+     * IAM for parameter <code>/a/b</code>, they can still call the GetParametersByPath
+     * API action recursively for <code>/a</code> and view <code>/a/b</code>.</p>
      * </important>
      */
     inline GetParametersByPathRequest& WithRecursive(bool value) { SetRecursive(value); return *this;}

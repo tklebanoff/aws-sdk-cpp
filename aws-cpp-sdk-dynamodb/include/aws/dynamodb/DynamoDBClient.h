@@ -74,7 +74,6 @@ namespace Http
 namespace Utils
 {
   template< typename R, typename E> class Outcome;
-
 namespace Threading
 {
   class Executor;
@@ -324,7 +323,7 @@ namespace Model
          * can still fail due to throttling on the individual tables. If you delay the
          * batch operation using exponential backoff, the individual requests in the batch
          * are much more likely to succeed.</p> <p>For more information, see <a
-         * href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ErrorHandling.html#BatchOperations">Batch
+         * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ErrorHandling.html#BatchOperations">Batch
          * Operations and Error Handling</a> in the <i>Amazon DynamoDB Developer
          * Guide</i>.</p> </important> <p>By default, <code>BatchGetItem</code> performs
          * eventually consistent reads on every table in the request. If you want strongly
@@ -338,7 +337,7 @@ namespace Model
          * exist, it is not returned in the result. Requests for nonexistent items consume
          * the minimum read capacity units according to the type of read. For more
          * information, see <a
-         * href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithTables.html#CapacityUnitCalculations">Capacity
+         * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithTables.html#CapacityUnitCalculations">Capacity
          * Units Calculations</a> in the <i>Amazon DynamoDB Developer
          * Guide</i>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/BatchGetItem">AWS
@@ -375,7 +374,7 @@ namespace Model
          * can still fail due to throttling on the individual tables. If you delay the
          * batch operation using exponential backoff, the individual requests in the batch
          * are much more likely to succeed.</p> <p>For more information, see <a
-         * href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ErrorHandling.html#BatchOperations">Batch
+         * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ErrorHandling.html#BatchOperations">Batch
          * Operations and Error Handling</a> in the <i>Amazon DynamoDB Developer
          * Guide</i>.</p> </important> <p>By default, <code>BatchGetItem</code> performs
          * eventually consistent reads on every table in the request. If you want strongly
@@ -389,7 +388,7 @@ namespace Model
          * exist, it is not returned in the result. Requests for nonexistent items consume
          * the minimum read capacity units according to the type of read. For more
          * information, see <a
-         * href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithTables.html#CapacityUnitCalculations">Capacity
+         * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithTables.html#CapacityUnitCalculations">Capacity
          * Units Calculations</a> in the <i>Amazon DynamoDB Developer
          * Guide</i>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/BatchGetItem">AWS
@@ -428,7 +427,7 @@ namespace Model
          * can still fail due to throttling on the individual tables. If you delay the
          * batch operation using exponential backoff, the individual requests in the batch
          * are much more likely to succeed.</p> <p>For more information, see <a
-         * href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ErrorHandling.html#BatchOperations">Batch
+         * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ErrorHandling.html#BatchOperations">Batch
          * Operations and Error Handling</a> in the <i>Amazon DynamoDB Developer
          * Guide</i>.</p> </important> <p>By default, <code>BatchGetItem</code> performs
          * eventually consistent reads on every table in the request. If you want strongly
@@ -442,7 +441,7 @@ namespace Model
          * exist, it is not returned in the result. Requests for nonexistent items consume
          * the minimum read capacity units according to the type of read. For more
          * information, see <a
-         * href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithTables.html#CapacityUnitCalculations">Capacity
+         * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithTables.html#CapacityUnitCalculations">Capacity
          * Units Calculations</a> in the <i>Amazon DynamoDB Developer
          * Guide</i>.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/BatchGetItem">AWS
@@ -478,7 +477,7 @@ namespace Model
          * throttling on the individual tables. If you delay the batch operation using
          * exponential backoff, the individual requests in the batch are much more likely
          * to succeed.</p> <p>For more information, see <a
-         * href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ErrorHandling.html#BatchOperations">Batch
+         * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ErrorHandling.html#BatchOperations">Batch
          * Operations and Error Handling</a> in the <i>Amazon DynamoDB Developer
          * Guide</i>.</p> </important> <p>With <code>BatchWriteItem</code>, you can
          * efficiently write or delete large amounts of data, such as from Amazon Elastic
@@ -542,7 +541,7 @@ namespace Model
          * throttling on the individual tables. If you delay the batch operation using
          * exponential backoff, the individual requests in the batch are much more likely
          * to succeed.</p> <p>For more information, see <a
-         * href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ErrorHandling.html#BatchOperations">Batch
+         * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ErrorHandling.html#BatchOperations">Batch
          * Operations and Error Handling</a> in the <i>Amazon DynamoDB Developer
          * Guide</i>.</p> </important> <p>With <code>BatchWriteItem</code>, you can
          * efficiently write or delete large amounts of data, such as from Amazon Elastic
@@ -608,7 +607,7 @@ namespace Model
          * throttling on the individual tables. If you delay the batch operation using
          * exponential backoff, the individual requests in the batch are much more likely
          * to succeed.</p> <p>For more information, see <a
-         * href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ErrorHandling.html#BatchOperations">Batch
+         * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ErrorHandling.html#BatchOperations">Batch
          * Operations and Error Handling</a> in the <i>Amazon DynamoDB Developer
          * Guide</i>.</p> </important> <p>With <code>BatchWriteItem</code>, you can
          * efficiently write or delete large amounts of data, such as from Amazon Elastic
@@ -1207,7 +1206,7 @@ namespace Model
          * provision across all of your DynamoDB tables in a given region. Also, there are
          * per-table limits that apply when you create a table there. For more information,
          * see <a
-         * href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html">Limits</a>
+         * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html">Limits</a>
          * page in the <i>Amazon DynamoDB Developer Guide</i>.</p> <p>Although you can
          * increase these limits by filing a case at <a
          * href="https://console.aws.amazon.com/support/home#/">AWS Support Center</a>,
@@ -1254,7 +1253,7 @@ namespace Model
          * provision across all of your DynamoDB tables in a given region. Also, there are
          * per-table limits that apply when you create a table there. For more information,
          * see <a
-         * href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html">Limits</a>
+         * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html">Limits</a>
          * page in the <i>Amazon DynamoDB Developer Guide</i>.</p> <p>Although you can
          * increase these limits by filing a case at <a
          * href="https://console.aws.amazon.com/support/home#/">AWS Support Center</a>,
@@ -1303,7 +1302,7 @@ namespace Model
          * provision across all of your DynamoDB tables in a given region. Also, there are
          * per-table limits that apply when you create a table there. For more information,
          * see <a
-         * href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html">Limits</a>
+         * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html">Limits</a>
          * page in the <i>Amazon DynamoDB Developer Guide</i>.</p> <p>Although you can
          * increase these limits by filing a case at <a
          * href="https://console.aws.amazon.com/support/home#/">AWS Support Center</a>,
@@ -1576,7 +1575,7 @@ namespace Model
          * <p>List all tags on an Amazon DynamoDB resource. You can call ListTagsOfResource
          * up to 10 times per second, per account.</p> <p>For an overview on tagging
          * DynamoDB resources, see <a
-         * href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Tagging.html">Tagging
+         * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Tagging.html">Tagging
          * for DynamoDB</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p><p><h3>See
          * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/ListTagsOfResource">AWS
@@ -1588,7 +1587,7 @@ namespace Model
          * <p>List all tags on an Amazon DynamoDB resource. You can call ListTagsOfResource
          * up to 10 times per second, per account.</p> <p>For an overview on tagging
          * DynamoDB resources, see <a
-         * href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Tagging.html">Tagging
+         * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Tagging.html">Tagging
          * for DynamoDB</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p><p><h3>See
          * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/ListTagsOfResource">AWS
@@ -1602,7 +1601,7 @@ namespace Model
          * <p>List all tags on an Amazon DynamoDB resource. You can call ListTagsOfResource
          * up to 10 times per second, per account.</p> <p>For an overview on tagging
          * DynamoDB resources, see <a
-         * href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Tagging.html">Tagging
+         * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Tagging.html">Tagging
          * for DynamoDB</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p><p><h3>See
          * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/ListTagsOfResource">AWS
@@ -1651,7 +1650,7 @@ namespace Model
          * table. Since every record must contain that attribute, the
          * <code>attribute_not_exists</code> function will only succeed if no matching item
          * exists.</p> </note> <p>For more information about <code>PutItem</code>, see <a
-         * href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithItems.html">Working
+         * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithItems.html">Working
          * with Items</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p><p><h3>See
          * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/PutItem">AWS
@@ -1698,7 +1697,7 @@ namespace Model
          * table. Since every record must contain that attribute, the
          * <code>attribute_not_exists</code> function will only succeed if no matching item
          * exists.</p> </note> <p>For more information about <code>PutItem</code>, see <a
-         * href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithItems.html">Working
+         * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithItems.html">Working
          * with Items</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p><p><h3>See
          * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/PutItem">AWS
@@ -1747,7 +1746,7 @@ namespace Model
          * table. Since every record must contain that attribute, the
          * <code>attribute_not_exists</code> function will only succeed if no matching item
          * exists.</p> </note> <p>For more information about <code>PutItem</code>, see <a
-         * href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithItems.html">Working
+         * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithItems.html">Working
          * with Items</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p><p><h3>See
          * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/PutItem">AWS
@@ -1788,7 +1787,7 @@ namespace Model
          * apply any filtering to the results using <code>FilterExpression</code>. If
          * <code>LastEvaluatedKey</code> is present in the response, you will need to
          * paginate the result set. For more information, see <a
-         * href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Query.html#Query.Pagination">Paginating
+         * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Query.html#Query.Pagination">Paginating
          * the Results</a> in the <i>Amazon DynamoDB Developer Guide</i>. </p> <p>
          * <code>FilterExpression</code> is applied after a <code>Query</code> finishes,
          * but before the results are returned. A <code>FilterExpression</code> cannot
@@ -1838,7 +1837,7 @@ namespace Model
          * apply any filtering to the results using <code>FilterExpression</code>. If
          * <code>LastEvaluatedKey</code> is present in the response, you will need to
          * paginate the result set. For more information, see <a
-         * href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Query.html#Query.Pagination">Paginating
+         * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Query.html#Query.Pagination">Paginating
          * the Results</a> in the <i>Amazon DynamoDB Developer Guide</i>. </p> <p>
          * <code>FilterExpression</code> is applied after a <code>Query</code> finishes,
          * but before the results are returned. A <code>FilterExpression</code> cannot
@@ -1890,7 +1889,7 @@ namespace Model
          * apply any filtering to the results using <code>FilterExpression</code>. If
          * <code>LastEvaluatedKey</code> is present in the response, you will need to
          * paginate the result set. For more information, see <a
-         * href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Query.html#Query.Pagination">Paginating
+         * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Query.html#Query.Pagination">Paginating
          * the Results</a> in the <i>Amazon DynamoDB Developer Guide</i>. </p> <p>
          * <code>FilterExpression</code> is applied after a <code>Query</code> finishes,
          * but before the results are returned. A <code>FilterExpression</code> cannot
@@ -2047,13 +2046,13 @@ namespace Model
          * apply any filtering to the results using <code>FilterExpression</code>. If
          * <code>LastEvaluatedKey</code> is present in the response, you will need to
          * paginate the result set. For more information, see <a
-         * href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Scan.html#Scan.Pagination">Paginating
+         * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Scan.html#Scan.Pagination">Paginating
          * the Results</a> in the <i>Amazon DynamoDB Developer Guide</i>. </p> <p>
          * <code>Scan</code> operations proceed sequentially; however, for faster
          * performance on a large table or secondary index, applications can request a
          * parallel <code>Scan</code> operation by providing the <code>Segment</code> and
          * <code>TotalSegments</code> parameters. For more information, see <a
-         * href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Scan.html#Scan.ParallelScan">Parallel
+         * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Scan.html#Scan.ParallelScan">Parallel
          * Scan</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p> <p>
          * <code>Scan</code> uses eventually consistent reads when accessing the data in a
          * table; therefore, the result set might not include the changes to data in the
@@ -2080,13 +2079,13 @@ namespace Model
          * apply any filtering to the results using <code>FilterExpression</code>. If
          * <code>LastEvaluatedKey</code> is present in the response, you will need to
          * paginate the result set. For more information, see <a
-         * href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Scan.html#Scan.Pagination">Paginating
+         * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Scan.html#Scan.Pagination">Paginating
          * the Results</a> in the <i>Amazon DynamoDB Developer Guide</i>. </p> <p>
          * <code>Scan</code> operations proceed sequentially; however, for faster
          * performance on a large table or secondary index, applications can request a
          * parallel <code>Scan</code> operation by providing the <code>Segment</code> and
          * <code>TotalSegments</code> parameters. For more information, see <a
-         * href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Scan.html#Scan.ParallelScan">Parallel
+         * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Scan.html#Scan.ParallelScan">Parallel
          * Scan</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p> <p>
          * <code>Scan</code> uses eventually consistent reads when accessing the data in a
          * table; therefore, the result set might not include the changes to data in the
@@ -2115,13 +2114,13 @@ namespace Model
          * apply any filtering to the results using <code>FilterExpression</code>. If
          * <code>LastEvaluatedKey</code> is present in the response, you will need to
          * paginate the result set. For more information, see <a
-         * href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Scan.html#Scan.Pagination">Paginating
+         * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Scan.html#Scan.Pagination">Paginating
          * the Results</a> in the <i>Amazon DynamoDB Developer Guide</i>. </p> <p>
          * <code>Scan</code> operations proceed sequentially; however, for faster
          * performance on a large table or secondary index, applications can request a
          * parallel <code>Scan</code> operation by providing the <code>Segment</code> and
          * <code>TotalSegments</code> parameters. For more information, see <a
-         * href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Scan.html#Scan.ParallelScan">Parallel
+         * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Scan.html#Scan.ParallelScan">Parallel
          * Scan</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p> <p>
          * <code>Scan</code> uses eventually consistent reads when accessing the data in a
          * table; therefore, the result set might not include the changes to data in the
@@ -2142,7 +2141,7 @@ namespace Model
          * Management console for cost allocation tracking. You can call TagResource up to
          * 5 times per second, per account. </p> <p>For an overview on tagging DynamoDB
          * resources, see <a
-         * href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Tagging.html">Tagging
+         * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Tagging.html">Tagging
          * for DynamoDB</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p><p><h3>See
          * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/TagResource">AWS
@@ -2156,7 +2155,7 @@ namespace Model
          * Management console for cost allocation tracking. You can call TagResource up to
          * 5 times per second, per account. </p> <p>For an overview on tagging DynamoDB
          * resources, see <a
-         * href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Tagging.html">Tagging
+         * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Tagging.html">Tagging
          * for DynamoDB</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p><p><h3>See
          * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/TagResource">AWS
@@ -2172,7 +2171,7 @@ namespace Model
          * Management console for cost allocation tracking. You can call TagResource up to
          * 5 times per second, per account. </p> <p>For an overview on tagging DynamoDB
          * resources, see <a
-         * href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Tagging.html">Tagging
+         * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Tagging.html">Tagging
          * for DynamoDB</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p><p><h3>See
          * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/TagResource">AWS
@@ -2380,7 +2379,7 @@ namespace Model
          * <p>Removes the association of tags from an Amazon DynamoDB resource. You can
          * call UntagResource up to 5 times per second, per account. </p> <p>For an
          * overview on tagging DynamoDB resources, see <a
-         * href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Tagging.html">Tagging
+         * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Tagging.html">Tagging
          * for DynamoDB</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p><p><h3>See
          * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/UntagResource">AWS
@@ -2392,7 +2391,7 @@ namespace Model
          * <p>Removes the association of tags from an Amazon DynamoDB resource. You can
          * call UntagResource up to 5 times per second, per account. </p> <p>For an
          * overview on tagging DynamoDB resources, see <a
-         * href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Tagging.html">Tagging
+         * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Tagging.html">Tagging
          * for DynamoDB</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p><p><h3>See
          * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/UntagResource">AWS
@@ -2406,7 +2405,7 @@ namespace Model
          * <p>Removes the association of tags from an Amazon DynamoDB resource. You can
          * call UntagResource up to 5 times per second, per account. </p> <p>For an
          * overview on tagging DynamoDB resources, see <a
-         * href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Tagging.html">Tagging
+         * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Tagging.html">Tagging
          * for DynamoDB</a> in the <i>Amazon DynamoDB Developer Guide</i>.</p><p><h3>See
          * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/UntagResource">AWS
@@ -2684,7 +2683,7 @@ namespace Model
          * deleted, they are removed from any Local Secondary Index and Global Secondary
          * Index immediately in the same eventually consistent way as a standard delete
          * operation.</p> <p>For more information, see <a
-         * href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/TTL.html">Time
+         * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/TTL.html">Time
          * To Live</a> in the Amazon DynamoDB Developer Guide. </p><p><h3>See Also:</h3>  
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/UpdateTimeToLive">AWS
@@ -2712,7 +2711,7 @@ namespace Model
          * deleted, they are removed from any Local Secondary Index and Global Secondary
          * Index immediately in the same eventually consistent way as a standard delete
          * operation.</p> <p>For more information, see <a
-         * href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/TTL.html">Time
+         * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/TTL.html">Time
          * To Live</a> in the Amazon DynamoDB Developer Guide. </p><p><h3>See Also:</h3>  
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/UpdateTimeToLive">AWS
@@ -2742,7 +2741,7 @@ namespace Model
          * deleted, they are removed from any Local Secondary Index and Global Secondary
          * Index immediately in the same eventually consistent way as a standard delete
          * operation.</p> <p>For more information, see <a
-         * href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/TTL.html">Time
+         * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/TTL.html">Time
          * To Live</a> in the Amazon DynamoDB Developer Guide. </p><p><h3>See Also:</h3>  
          * <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/dynamodb-2012-08-10/UpdateTimeToLive">AWS
@@ -2752,11 +2751,10 @@ namespace Model
          */
         virtual void UpdateTimeToLiveAsync(const Model::UpdateTimeToLiveRequest& request, const UpdateTimeToLiveResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
-      
+
       void OverrideEndpoint(const Aws::String& endpoint);
     private:
       void init(const Aws::Client::ClientConfiguration& clientConfiguration);
-        /**Async helpers**/
         void BatchGetItemAsyncHelper(const Model::BatchGetItemRequest& request, const BatchGetItemResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void BatchWriteItemAsyncHelper(const Model::BatchWriteItemRequest& request, const BatchWriteItemResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void CreateBackupAsyncHelper(const Model::CreateBackupRequest& request, const CreateBackupResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;

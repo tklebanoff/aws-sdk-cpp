@@ -39,7 +39,7 @@ namespace Model
   {
   public:
     ListVirtualRoutersRequest();
-    
+
     // Service request name is the Operation name which will send this request out,
     // each operation should has unique request name, so that we can get operation's name from this request.
     // Note: this is not true for response, multiple operations may have the same response name,
@@ -59,13 +59,13 @@ namespace Model
             <code>limit</code>
      * results in a single page along with a <code>nextToken</code> response
         
-     * element. You can see the remaining results of the initial request  by sending
+     * element. You can see the remaining results of the initial request by sending
      * another
             <code>ListVirtualRouters</code> request with the returned
      * <code>nextToken</code> value.
          This value can be between 1 and 100. If
-     * you don't use this parameter, 
-         <code>ListVirtualRouters</code> returns
+     * you don't use this
+         parameter, <code>ListVirtualRouters</code> returns
      * up to 100 results and
          a <code>nextToken</code> value if applicable.</p>
      */
@@ -79,13 +79,13 @@ namespace Model
             <code>limit</code>
      * results in a single page along with a <code>nextToken</code> response
         
-     * element. You can see the remaining results of the initial request  by sending
+     * element. You can see the remaining results of the initial request by sending
      * another
             <code>ListVirtualRouters</code> request with the returned
      * <code>nextToken</code> value.
          This value can be between 1 and 100. If
-     * you don't use this parameter, 
-         <code>ListVirtualRouters</code> returns
+     * you don't use this
+         parameter, <code>ListVirtualRouters</code> returns
      * up to 100 results and
          a <code>nextToken</code> value if applicable.</p>
      */
@@ -99,13 +99,13 @@ namespace Model
             <code>limit</code>
      * results in a single page along with a <code>nextToken</code> response
         
-     * element. You can see the remaining results of the initial request  by sending
+     * element. You can see the remaining results of the initial request by sending
      * another
             <code>ListVirtualRouters</code> request with the returned
      * <code>nextToken</code> value.
          This value can be between 1 and 100. If
-     * you don't use this parameter, 
-         <code>ListVirtualRouters</code> returns
+     * you don't use this
+         parameter, <code>ListVirtualRouters</code> returns
      * up to 100 results and
          a <code>nextToken</code> value if applicable.</p>
      */
@@ -119,13 +119,13 @@ namespace Model
             <code>limit</code>
      * results in a single page along with a <code>nextToken</code> response
         
-     * element. You can see the remaining results of the initial request  by sending
+     * element. You can see the remaining results of the initial request by sending
      * another
             <code>ListVirtualRouters</code> request with the returned
      * <code>nextToken</code> value.
          This value can be between 1 and 100. If
-     * you don't use this parameter, 
-         <code>ListVirtualRouters</code> returns
+     * you don't use this
+         parameter, <code>ListVirtualRouters</code> returns
      * up to 100 results and
          a <code>nextToken</code> value if applicable.</p>
      */
@@ -175,7 +175,7 @@ namespace Model
 
     /**
      * <p>The <code>nextToken</code> value returned from a previous paginated
-        
+         
      * <code>ListVirtualRouters</code> request where <code>limit</code> was used and
      * the
          results exceeded the value of that parameter. Pagination continues
@@ -187,7 +187,7 @@ namespace Model
 
     /**
      * <p>The <code>nextToken</code> value returned from a previous paginated
-        
+         
      * <code>ListVirtualRouters</code> request where <code>limit</code> was used and
      * the
          results exceeded the value of that parameter. Pagination continues
@@ -199,7 +199,7 @@ namespace Model
 
     /**
      * <p>The <code>nextToken</code> value returned from a previous paginated
-        
+         
      * <code>ListVirtualRouters</code> request where <code>limit</code> was used and
      * the
          results exceeded the value of that parameter. Pagination continues
@@ -211,7 +211,7 @@ namespace Model
 
     /**
      * <p>The <code>nextToken</code> value returned from a previous paginated
-        
+         
      * <code>ListVirtualRouters</code> request where <code>limit</code> was used and
      * the
          results exceeded the value of that parameter. Pagination continues
@@ -223,7 +223,7 @@ namespace Model
 
     /**
      * <p>The <code>nextToken</code> value returned from a previous paginated
-        
+         
      * <code>ListVirtualRouters</code> request where <code>limit</code> was used and
      * the
          results exceeded the value of that parameter. Pagination continues
@@ -235,7 +235,7 @@ namespace Model
 
     /**
      * <p>The <code>nextToken</code> value returned from a previous paginated
-        
+         
      * <code>ListVirtualRouters</code> request where <code>limit</code> was used and
      * the
          results exceeded the value of that parameter. Pagination continues
@@ -247,7 +247,7 @@ namespace Model
 
     /**
      * <p>The <code>nextToken</code> value returned from a previous paginated
-        
+         
      * <code>ListVirtualRouters</code> request where <code>limit</code> was used and
      * the
          results exceeded the value of that parameter. Pagination continues
@@ -259,7 +259,7 @@ namespace Model
 
     /**
      * <p>The <code>nextToken</code> value returned from a previous paginated
-        
+         
      * <code>ListVirtualRouters</code> request where <code>limit</code> was used and
      * the
          results exceeded the value of that parameter. Pagination continues

@@ -18,6 +18,7 @@
 #include <aws/eks/EKSRequest.h>
 #include <aws/core/utils/memory/stl/AWSString.h>
 #include <aws/eks/model/VpcConfigRequest.h>
+#include <aws/eks/model/Logging.h>
 #include <utility>
 #include <aws/core/utils/UUID.h>
 
@@ -34,7 +35,7 @@ namespace Model
   {
   public:
     CreateClusterRequest();
-    
+
     // Service request name is the Operation name which will send this request out,
     // each operation should has unique request name, so that we can get operation's name from this request.
     // Note: this is not true for response, multiple operations may have the same response name,
@@ -86,50 +87,50 @@ namespace Model
 
 
     /**
-     * <p>The desired Kubernetes version for your cluster. If you do not specify a
-     * value here, the latest version available in Amazon EKS is used.</p>
+     * <p>The desired Kubernetes version for your cluster. If you don't specify a value
+     * here, the latest version available in Amazon EKS is used.</p>
      */
     inline const Aws::String& GetVersion() const{ return m_version; }
 
     /**
-     * <p>The desired Kubernetes version for your cluster. If you do not specify a
-     * value here, the latest version available in Amazon EKS is used.</p>
+     * <p>The desired Kubernetes version for your cluster. If you don't specify a value
+     * here, the latest version available in Amazon EKS is used.</p>
      */
     inline bool VersionHasBeenSet() const { return m_versionHasBeenSet; }
 
     /**
-     * <p>The desired Kubernetes version for your cluster. If you do not specify a
-     * value here, the latest version available in Amazon EKS is used.</p>
+     * <p>The desired Kubernetes version for your cluster. If you don't specify a value
+     * here, the latest version available in Amazon EKS is used.</p>
      */
     inline void SetVersion(const Aws::String& value) { m_versionHasBeenSet = true; m_version = value; }
 
     /**
-     * <p>The desired Kubernetes version for your cluster. If you do not specify a
-     * value here, the latest version available in Amazon EKS is used.</p>
+     * <p>The desired Kubernetes version for your cluster. If you don't specify a value
+     * here, the latest version available in Amazon EKS is used.</p>
      */
     inline void SetVersion(Aws::String&& value) { m_versionHasBeenSet = true; m_version = std::move(value); }
 
     /**
-     * <p>The desired Kubernetes version for your cluster. If you do not specify a
-     * value here, the latest version available in Amazon EKS is used.</p>
+     * <p>The desired Kubernetes version for your cluster. If you don't specify a value
+     * here, the latest version available in Amazon EKS is used.</p>
      */
     inline void SetVersion(const char* value) { m_versionHasBeenSet = true; m_version.assign(value); }
 
     /**
-     * <p>The desired Kubernetes version for your cluster. If you do not specify a
-     * value here, the latest version available in Amazon EKS is used.</p>
+     * <p>The desired Kubernetes version for your cluster. If you don't specify a value
+     * here, the latest version available in Amazon EKS is used.</p>
      */
     inline CreateClusterRequest& WithVersion(const Aws::String& value) { SetVersion(value); return *this;}
 
     /**
-     * <p>The desired Kubernetes version for your cluster. If you do not specify a
-     * value here, the latest version available in Amazon EKS is used.</p>
+     * <p>The desired Kubernetes version for your cluster. If you don't specify a value
+     * here, the latest version available in Amazon EKS is used.</p>
      */
     inline CreateClusterRequest& WithVersion(Aws::String&& value) { SetVersion(std::move(value)); return *this;}
 
     /**
-     * <p>The desired Kubernetes version for your cluster. If you do not specify a
-     * value here, the latest version available in Amazon EKS is used.</p>
+     * <p>The desired Kubernetes version for your cluster. If you don't specify a value
+     * here, the latest version available in Amazon EKS is used.</p>
      */
     inline CreateClusterRequest& WithVersion(const char* value) { SetVersion(value); return *this;}
 
@@ -215,7 +216,7 @@ namespace Model
      * VPC Considerations</a> and <a
      * href="https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html">Cluster
      * Security Group Considerations</a> in the <i>Amazon EKS User Guide</i>. You must
-     * specify at least two subnets. You may specify up to five security groups, but we
+     * specify at least two subnets. You can specify up to five security groups, but we
      * recommend that you use a dedicated security group for your cluster control
      * plane.</p>
      */
@@ -229,7 +230,7 @@ namespace Model
      * VPC Considerations</a> and <a
      * href="https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html">Cluster
      * Security Group Considerations</a> in the <i>Amazon EKS User Guide</i>. You must
-     * specify at least two subnets. You may specify up to five security groups, but we
+     * specify at least two subnets. You can specify up to five security groups, but we
      * recommend that you use a dedicated security group for your cluster control
      * plane.</p>
      */
@@ -243,7 +244,7 @@ namespace Model
      * VPC Considerations</a> and <a
      * href="https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html">Cluster
      * Security Group Considerations</a> in the <i>Amazon EKS User Guide</i>. You must
-     * specify at least two subnets. You may specify up to five security groups, but we
+     * specify at least two subnets. You can specify up to five security groups, but we
      * recommend that you use a dedicated security group for your cluster control
      * plane.</p>
      */
@@ -257,7 +258,7 @@ namespace Model
      * VPC Considerations</a> and <a
      * href="https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html">Cluster
      * Security Group Considerations</a> in the <i>Amazon EKS User Guide</i>. You must
-     * specify at least two subnets. You may specify up to five security groups, but we
+     * specify at least two subnets. You can specify up to five security groups, but we
      * recommend that you use a dedicated security group for your cluster control
      * plane.</p>
      */
@@ -271,7 +272,7 @@ namespace Model
      * VPC Considerations</a> and <a
      * href="https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html">Cluster
      * Security Group Considerations</a> in the <i>Amazon EKS User Guide</i>. You must
-     * specify at least two subnets. You may specify up to five security groups, but we
+     * specify at least two subnets. You can specify up to five security groups, but we
      * recommend that you use a dedicated security group for your cluster control
      * plane.</p>
      */
@@ -285,11 +286,90 @@ namespace Model
      * VPC Considerations</a> and <a
      * href="https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html">Cluster
      * Security Group Considerations</a> in the <i>Amazon EKS User Guide</i>. You must
-     * specify at least two subnets. You may specify up to five security groups, but we
+     * specify at least two subnets. You can specify up to five security groups, but we
      * recommend that you use a dedicated security group for your cluster control
      * plane.</p>
      */
     inline CreateClusterRequest& WithResourcesVpcConfig(VpcConfigRequest&& value) { SetResourcesVpcConfig(std::move(value)); return *this;}
+
+
+    /**
+     * <p>Enable or disable exporting the Kubernetes control plane logs for your
+     * cluster to CloudWatch Logs. By default, cluster control plane logs aren't
+     * exported to CloudWatch Logs. For more information, see <a
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html">Amazon
+     * EKS Cluster Control Plane Logs</a> in the <i> <i>Amazon EKS User Guide</i>
+     * </i>.</p> <note> <p>CloudWatch Logs ingestion, archive storage, and data
+     * scanning rates apply to exported control plane logs. For more information, see
+     * <a href="http://aws.amazon.com/cloudwatch/pricing/">Amazon CloudWatch
+     * Pricing</a>.</p> </note>
+     */
+    inline const Logging& GetLogging() const{ return m_logging; }
+
+    /**
+     * <p>Enable or disable exporting the Kubernetes control plane logs for your
+     * cluster to CloudWatch Logs. By default, cluster control plane logs aren't
+     * exported to CloudWatch Logs. For more information, see <a
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html">Amazon
+     * EKS Cluster Control Plane Logs</a> in the <i> <i>Amazon EKS User Guide</i>
+     * </i>.</p> <note> <p>CloudWatch Logs ingestion, archive storage, and data
+     * scanning rates apply to exported control plane logs. For more information, see
+     * <a href="http://aws.amazon.com/cloudwatch/pricing/">Amazon CloudWatch
+     * Pricing</a>.</p> </note>
+     */
+    inline bool LoggingHasBeenSet() const { return m_loggingHasBeenSet; }
+
+    /**
+     * <p>Enable or disable exporting the Kubernetes control plane logs for your
+     * cluster to CloudWatch Logs. By default, cluster control plane logs aren't
+     * exported to CloudWatch Logs. For more information, see <a
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html">Amazon
+     * EKS Cluster Control Plane Logs</a> in the <i> <i>Amazon EKS User Guide</i>
+     * </i>.</p> <note> <p>CloudWatch Logs ingestion, archive storage, and data
+     * scanning rates apply to exported control plane logs. For more information, see
+     * <a href="http://aws.amazon.com/cloudwatch/pricing/">Amazon CloudWatch
+     * Pricing</a>.</p> </note>
+     */
+    inline void SetLogging(const Logging& value) { m_loggingHasBeenSet = true; m_logging = value; }
+
+    /**
+     * <p>Enable or disable exporting the Kubernetes control plane logs for your
+     * cluster to CloudWatch Logs. By default, cluster control plane logs aren't
+     * exported to CloudWatch Logs. For more information, see <a
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html">Amazon
+     * EKS Cluster Control Plane Logs</a> in the <i> <i>Amazon EKS User Guide</i>
+     * </i>.</p> <note> <p>CloudWatch Logs ingestion, archive storage, and data
+     * scanning rates apply to exported control plane logs. For more information, see
+     * <a href="http://aws.amazon.com/cloudwatch/pricing/">Amazon CloudWatch
+     * Pricing</a>.</p> </note>
+     */
+    inline void SetLogging(Logging&& value) { m_loggingHasBeenSet = true; m_logging = std::move(value); }
+
+    /**
+     * <p>Enable or disable exporting the Kubernetes control plane logs for your
+     * cluster to CloudWatch Logs. By default, cluster control plane logs aren't
+     * exported to CloudWatch Logs. For more information, see <a
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html">Amazon
+     * EKS Cluster Control Plane Logs</a> in the <i> <i>Amazon EKS User Guide</i>
+     * </i>.</p> <note> <p>CloudWatch Logs ingestion, archive storage, and data
+     * scanning rates apply to exported control plane logs. For more information, see
+     * <a href="http://aws.amazon.com/cloudwatch/pricing/">Amazon CloudWatch
+     * Pricing</a>.</p> </note>
+     */
+    inline CreateClusterRequest& WithLogging(const Logging& value) { SetLogging(value); return *this;}
+
+    /**
+     * <p>Enable or disable exporting the Kubernetes control plane logs for your
+     * cluster to CloudWatch Logs. By default, cluster control plane logs aren't
+     * exported to CloudWatch Logs. For more information, see <a
+     * href="https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html">Amazon
+     * EKS Cluster Control Plane Logs</a> in the <i> <i>Amazon EKS User Guide</i>
+     * </i>.</p> <note> <p>CloudWatch Logs ingestion, archive storage, and data
+     * scanning rates apply to exported control plane logs. For more information, see
+     * <a href="http://aws.amazon.com/cloudwatch/pricing/">Amazon CloudWatch
+     * Pricing</a>.</p> </note>
+     */
+    inline CreateClusterRequest& WithLogging(Logging&& value) { SetLogging(std::move(value)); return *this;}
 
 
     /**
@@ -353,6 +433,9 @@ namespace Model
 
     VpcConfigRequest m_resourcesVpcConfig;
     bool m_resourcesVpcConfigHasBeenSet;
+
+    Logging m_logging;
+    bool m_loggingHasBeenSet;
 
     Aws::String m_clientRequestToken;
     bool m_clientRequestTokenHasBeenSet;

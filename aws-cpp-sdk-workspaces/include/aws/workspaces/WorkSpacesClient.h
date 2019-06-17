@@ -70,7 +70,6 @@ namespace Http
 namespace Utils
 {
   template< typename R, typename E> class Outcome;
-
 namespace Threading
 {
   class Executor;
@@ -377,16 +376,16 @@ namespace Model
         virtual void CreateIpGroupAsync(const Model::CreateIpGroupRequest& request, const CreateIpGroupResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Creates the specified tags for the specified WorkSpace.</p><p><h3>See
-         * Also:</h3>   <a
+         * <p>Creates the specified tags for the specified WorkSpaces
+         * resource.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/CreateTags">AWS
          * API Reference</a></p>
          */
         virtual Model::CreateTagsOutcome CreateTags(const Model::CreateTagsRequest& request) const;
 
         /**
-         * <p>Creates the specified tags for the specified WorkSpace.</p><p><h3>See
-         * Also:</h3>   <a
+         * <p>Creates the specified tags for the specified WorkSpaces
+         * resource.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/CreateTags">AWS
          * API Reference</a></p>
          *
@@ -395,8 +394,8 @@ namespace Model
         virtual Model::CreateTagsOutcomeCallable CreateTagsCallable(const Model::CreateTagsRequest& request) const;
 
         /**
-         * <p>Creates the specified tags for the specified WorkSpace.</p><p><h3>See
-         * Also:</h3>   <a
+         * <p>Creates the specified tags for the specified WorkSpaces
+         * resource.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/CreateTags">AWS
          * API Reference</a></p>
          *
@@ -464,16 +463,16 @@ namespace Model
         virtual void DeleteIpGroupAsync(const Model::DeleteIpGroupRequest& request, const DeleteIpGroupResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Deletes the specified tags from the specified WorkSpace.</p><p><h3>See
-         * Also:</h3>   <a
+         * <p>Deletes the specified tags from the specified WorkSpaces
+         * resource.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/DeleteTags">AWS
          * API Reference</a></p>
          */
         virtual Model::DeleteTagsOutcome DeleteTags(const Model::DeleteTagsRequest& request) const;
 
         /**
-         * <p>Deletes the specified tags from the specified WorkSpace.</p><p><h3>See
-         * Also:</h3>   <a
+         * <p>Deletes the specified tags from the specified WorkSpaces
+         * resource.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/DeleteTags">AWS
          * API Reference</a></p>
          *
@@ -482,8 +481,8 @@ namespace Model
         virtual Model::DeleteTagsOutcomeCallable DeleteTagsCallable(const Model::DeleteTagsRequest& request) const;
 
         /**
-         * <p>Deletes the specified tags from the specified WorkSpace.</p><p><h3>See
-         * Also:</h3>   <a
+         * <p>Deletes the specified tags from the specified WorkSpaces
+         * resource.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/DeleteTags">AWS
          * API Reference</a></p>
          *
@@ -635,16 +634,16 @@ namespace Model
         virtual void DescribeIpGroupsAsync(const Model::DescribeIpGroupsRequest& request, const DescribeIpGroupsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
         /**
-         * <p>Describes the specified tags for the specified WorkSpace.</p><p><h3>See
-         * Also:</h3>   <a
+         * <p>Describes the specified tags for the specified WorkSpaces
+         * resource.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/DescribeTags">AWS
          * API Reference</a></p>
          */
         virtual Model::DescribeTagsOutcome DescribeTags(const Model::DescribeTagsRequest& request) const;
 
         /**
-         * <p>Describes the specified tags for the specified WorkSpace.</p><p><h3>See
-         * Also:</h3>   <a
+         * <p>Describes the specified tags for the specified WorkSpaces
+         * resource.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/DescribeTags">AWS
          * API Reference</a></p>
          *
@@ -653,8 +652,8 @@ namespace Model
         virtual Model::DescribeTagsOutcomeCallable DescribeTagsCallable(const Model::DescribeTagsRequest& request) const;
 
         /**
-         * <p>Describes the specified tags for the specified WorkSpace.</p><p><h3>See
-         * Also:</h3>   <a
+         * <p>Describes the specified tags for the specified WorkSpaces
+         * resource.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/DescribeTags">AWS
          * API Reference</a></p>
          *
@@ -943,7 +942,7 @@ namespace Model
 
         /**
          * <p>Modifies the properties of the specified Amazon WorkSpaces
-         * client.</p><p><h3>See Also:</h3>   <a
+         * clients.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/ModifyClientProperties">AWS
          * API Reference</a></p>
          */
@@ -951,7 +950,7 @@ namespace Model
 
         /**
          * <p>Modifies the properties of the specified Amazon WorkSpaces
-         * client.</p><p><h3>See Also:</h3>   <a
+         * clients.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/ModifyClientProperties">AWS
          * API Reference</a></p>
          *
@@ -961,7 +960,7 @@ namespace Model
 
         /**
          * <p>Modifies the properties of the specified Amazon WorkSpaces
-         * client.</p><p><h3>See Also:</h3>   <a
+         * clients.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/ModifyClientProperties">AWS
          * API Reference</a></p>
          *
@@ -1074,7 +1073,7 @@ namespace Model
          * <code>UNHEALTHY</code>.</p> <p>Rebuilding a WorkSpace is a potentially
          * destructive action that can result in the loss of data. For more information,
          * see <a
-         * href="http://docs.aws.amazon.com/workspaces/latest/adminguide/reset-workspace.html">Rebuild
+         * href="https://docs.aws.amazon.com/workspaces/latest/adminguide/reset-workspace.html">Rebuild
          * a WorkSpace</a>.</p> <p>This operation is asynchronous and returns before the
          * WorkSpaces have been completely rebuilt.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/RebuildWorkspaces">AWS
@@ -1088,7 +1087,7 @@ namespace Model
          * <code>UNHEALTHY</code>.</p> <p>Rebuilding a WorkSpace is a potentially
          * destructive action that can result in the loss of data. For more information,
          * see <a
-         * href="http://docs.aws.amazon.com/workspaces/latest/adminguide/reset-workspace.html">Rebuild
+         * href="https://docs.aws.amazon.com/workspaces/latest/adminguide/reset-workspace.html">Rebuild
          * a WorkSpace</a>.</p> <p>This operation is asynchronous and returns before the
          * WorkSpaces have been completely rebuilt.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/RebuildWorkspaces">AWS
@@ -1104,7 +1103,7 @@ namespace Model
          * <code>UNHEALTHY</code>.</p> <p>Rebuilding a WorkSpace is a potentially
          * destructive action that can result in the loss of data. For more information,
          * see <a
-         * href="http://docs.aws.amazon.com/workspaces/latest/adminguide/reset-workspace.html">Rebuild
+         * href="https://docs.aws.amazon.com/workspaces/latest/adminguide/reset-workspace.html">Rebuild
          * a WorkSpace</a>.</p> <p>This operation is asynchronous and returns before the
          * WorkSpaces have been completely rebuilt.</p><p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/RebuildWorkspaces">AWS
@@ -1275,11 +1274,10 @@ namespace Model
          */
         virtual void UpdateRulesOfIpGroupAsync(const Model::UpdateRulesOfIpGroupRequest& request, const UpdateRulesOfIpGroupResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
-      
+
       void OverrideEndpoint(const Aws::String& endpoint);
     private:
       void init(const Aws::Client::ClientConfiguration& clientConfiguration);
-        /**Async helpers**/
         void AssociateIpGroupsAsyncHelper(const Model::AssociateIpGroupsRequest& request, const AssociateIpGroupsResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void AuthorizeIpRulesAsyncHelper(const Model::AuthorizeIpRulesRequest& request, const AuthorizeIpRulesResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void CreateIpGroupAsyncHelper(const Model::CreateIpGroupRequest& request, const CreateIpGroupResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;

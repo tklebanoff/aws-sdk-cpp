@@ -33,7 +33,7 @@ namespace Model
   {
   public:
     CreateOpenIDConnectProviderRequest();
-    
+
     // Service request name is the Operation name which will send this request out,
     // each operation should has unique request name, so that we can get operation's name from this request.
     // Note: this is not true for response, multiple operations may have the same response name,
@@ -285,7 +285,7 @@ namespace Model
      * string would be the hex-encoded SHA-1 hash value of the certificate used by
      * https://keys.server.example.com.</p> <p>For more information about obtaining the
      * OIDC provider's thumbprint, see <a
-     * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/identity-providers-oidc-obtain-thumbprint.html">Obtaining
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/identity-providers-oidc-obtain-thumbprint.html">Obtaining
      * the Thumbprint for an OpenID Connect Provider</a> in the <i>IAM User
      * Guide</i>.</p>
      */
@@ -306,7 +306,7 @@ namespace Model
      * string would be the hex-encoded SHA-1 hash value of the certificate used by
      * https://keys.server.example.com.</p> <p>For more information about obtaining the
      * OIDC provider's thumbprint, see <a
-     * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/identity-providers-oidc-obtain-thumbprint.html">Obtaining
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/identity-providers-oidc-obtain-thumbprint.html">Obtaining
      * the Thumbprint for an OpenID Connect Provider</a> in the <i>IAM User
      * Guide</i>.</p>
      */
@@ -327,7 +327,7 @@ namespace Model
      * string would be the hex-encoded SHA-1 hash value of the certificate used by
      * https://keys.server.example.com.</p> <p>For more information about obtaining the
      * OIDC provider's thumbprint, see <a
-     * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/identity-providers-oidc-obtain-thumbprint.html">Obtaining
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/identity-providers-oidc-obtain-thumbprint.html">Obtaining
      * the Thumbprint for an OpenID Connect Provider</a> in the <i>IAM User
      * Guide</i>.</p>
      */
@@ -348,7 +348,7 @@ namespace Model
      * string would be the hex-encoded SHA-1 hash value of the certificate used by
      * https://keys.server.example.com.</p> <p>For more information about obtaining the
      * OIDC provider's thumbprint, see <a
-     * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/identity-providers-oidc-obtain-thumbprint.html">Obtaining
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/identity-providers-oidc-obtain-thumbprint.html">Obtaining
      * the Thumbprint for an OpenID Connect Provider</a> in the <i>IAM User
      * Guide</i>.</p>
      */
@@ -369,7 +369,7 @@ namespace Model
      * string would be the hex-encoded SHA-1 hash value of the certificate used by
      * https://keys.server.example.com.</p> <p>For more information about obtaining the
      * OIDC provider's thumbprint, see <a
-     * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/identity-providers-oidc-obtain-thumbprint.html">Obtaining
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/identity-providers-oidc-obtain-thumbprint.html">Obtaining
      * the Thumbprint for an OpenID Connect Provider</a> in the <i>IAM User
      * Guide</i>.</p>
      */
@@ -390,7 +390,7 @@ namespace Model
      * string would be the hex-encoded SHA-1 hash value of the certificate used by
      * https://keys.server.example.com.</p> <p>For more information about obtaining the
      * OIDC provider's thumbprint, see <a
-     * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/identity-providers-oidc-obtain-thumbprint.html">Obtaining
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/identity-providers-oidc-obtain-thumbprint.html">Obtaining
      * the Thumbprint for an OpenID Connect Provider</a> in the <i>IAM User
      * Guide</i>.</p>
      */
@@ -411,7 +411,7 @@ namespace Model
      * string would be the hex-encoded SHA-1 hash value of the certificate used by
      * https://keys.server.example.com.</p> <p>For more information about obtaining the
      * OIDC provider's thumbprint, see <a
-     * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/identity-providers-oidc-obtain-thumbprint.html">Obtaining
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/identity-providers-oidc-obtain-thumbprint.html">Obtaining
      * the Thumbprint for an OpenID Connect Provider</a> in the <i>IAM User
      * Guide</i>.</p>
      */
@@ -432,7 +432,7 @@ namespace Model
      * string would be the hex-encoded SHA-1 hash value of the certificate used by
      * https://keys.server.example.com.</p> <p>For more information about obtaining the
      * OIDC provider's thumbprint, see <a
-     * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/identity-providers-oidc-obtain-thumbprint.html">Obtaining
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/identity-providers-oidc-obtain-thumbprint.html">Obtaining
      * the Thumbprint for an OpenID Connect Provider</a> in the <i>IAM User
      * Guide</i>.</p>
      */
@@ -453,7 +453,7 @@ namespace Model
      * string would be the hex-encoded SHA-1 hash value of the certificate used by
      * https://keys.server.example.com.</p> <p>For more information about obtaining the
      * OIDC provider's thumbprint, see <a
-     * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/identity-providers-oidc-obtain-thumbprint.html">Obtaining
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/identity-providers-oidc-obtain-thumbprint.html">Obtaining
      * the Thumbprint for an OpenID Connect Provider</a> in the <i>IAM User
      * Guide</i>.</p>
      */

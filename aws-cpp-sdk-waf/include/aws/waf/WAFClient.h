@@ -111,7 +111,6 @@ namespace Http
 namespace Utils
 {
   template< typename R, typename E> class Outcome;
-
 namespace Threading
 {
   class Executor;
@@ -3226,12 +3225,14 @@ namespace Model
          * following steps:</p> <ol> <li> <p>Create an Amazon Kinesis Data Firehose . </p>
          * <p>Create the data firehose with a PUT source and in the region that you are
          * operating. However, if you are capturing logs for Amazon CloudFront, always
-         * create the firehose in US East (N. Virginia). </p> </li> <li> <p>Associate that
-         * firehose to your web ACL using a <code>PutLoggingConfiguration</code>
-         * request.</p> </li> </ol> <p>When you successfully enable logging using a
-         * <code>PutLoggingConfiguration</code> request, AWS WAF will create a service
-         * linked role with the necessary permissions to write logs to the Amazon Kinesis
-         * Data Firehose. For more information, see <a
+         * create the firehose in US East (N. Virginia). </p> <note> <p>Do not create the
+         * data firehose using a <code>Kinesis stream</code> as your source.</p> </note>
+         * </li> <li> <p>Associate that firehose to your web ACL using a
+         * <code>PutLoggingConfiguration</code> request.</p> </li> </ol> <p>When you
+         * successfully enable logging using a <code>PutLoggingConfiguration</code>
+         * request, AWS WAF will create a service linked role with the necessary
+         * permissions to write logs to the Amazon Kinesis Data Firehose. For more
+         * information, see <a
          * href="https://docs.aws.amazon.com/waf/latest/developerguide/logging.html">Logging
          * Web ACL Traffic Information</a> in the <i>AWS WAF Developer
          * Guide</i>.</p><p><h3>See Also:</h3>   <a
@@ -3246,12 +3247,14 @@ namespace Model
          * following steps:</p> <ol> <li> <p>Create an Amazon Kinesis Data Firehose . </p>
          * <p>Create the data firehose with a PUT source and in the region that you are
          * operating. However, if you are capturing logs for Amazon CloudFront, always
-         * create the firehose in US East (N. Virginia). </p> </li> <li> <p>Associate that
-         * firehose to your web ACL using a <code>PutLoggingConfiguration</code>
-         * request.</p> </li> </ol> <p>When you successfully enable logging using a
-         * <code>PutLoggingConfiguration</code> request, AWS WAF will create a service
-         * linked role with the necessary permissions to write logs to the Amazon Kinesis
-         * Data Firehose. For more information, see <a
+         * create the firehose in US East (N. Virginia). </p> <note> <p>Do not create the
+         * data firehose using a <code>Kinesis stream</code> as your source.</p> </note>
+         * </li> <li> <p>Associate that firehose to your web ACL using a
+         * <code>PutLoggingConfiguration</code> request.</p> </li> </ol> <p>When you
+         * successfully enable logging using a <code>PutLoggingConfiguration</code>
+         * request, AWS WAF will create a service linked role with the necessary
+         * permissions to write logs to the Amazon Kinesis Data Firehose. For more
+         * information, see <a
          * href="https://docs.aws.amazon.com/waf/latest/developerguide/logging.html">Logging
          * Web ACL Traffic Information</a> in the <i>AWS WAF Developer
          * Guide</i>.</p><p><h3>See Also:</h3>   <a
@@ -3268,12 +3271,14 @@ namespace Model
          * following steps:</p> <ol> <li> <p>Create an Amazon Kinesis Data Firehose . </p>
          * <p>Create the data firehose with a PUT source and in the region that you are
          * operating. However, if you are capturing logs for Amazon CloudFront, always
-         * create the firehose in US East (N. Virginia). </p> </li> <li> <p>Associate that
-         * firehose to your web ACL using a <code>PutLoggingConfiguration</code>
-         * request.</p> </li> </ol> <p>When you successfully enable logging using a
-         * <code>PutLoggingConfiguration</code> request, AWS WAF will create a service
-         * linked role with the necessary permissions to write logs to the Amazon Kinesis
-         * Data Firehose. For more information, see <a
+         * create the firehose in US East (N. Virginia). </p> <note> <p>Do not create the
+         * data firehose using a <code>Kinesis stream</code> as your source.</p> </note>
+         * </li> <li> <p>Associate that firehose to your web ACL using a
+         * <code>PutLoggingConfiguration</code> request.</p> </li> </ol> <p>When you
+         * successfully enable logging using a <code>PutLoggingConfiguration</code>
+         * request, AWS WAF will create a service linked role with the necessary
+         * permissions to write logs to the Amazon Kinesis Data Firehose. For more
+         * information, see <a
          * href="https://docs.aws.amazon.com/waf/latest/developerguide/logging.html">Logging
          * Web ACL Traffic Information</a> in the <i>AWS WAF Developer
          * Guide</i>.</p><p><h3>See Also:</h3>   <a
@@ -4650,11 +4655,10 @@ namespace Model
          */
         virtual void UpdateXssMatchSetAsync(const Model::UpdateXssMatchSetRequest& request, const UpdateXssMatchSetResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context = nullptr) const;
 
-      
+
       void OverrideEndpoint(const Aws::String& endpoint);
     private:
       void init(const Aws::Client::ClientConfiguration& clientConfiguration);
-        /**Async helpers**/
         void CreateByteMatchSetAsyncHelper(const Model::CreateByteMatchSetRequest& request, const CreateByteMatchSetResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void CreateGeoMatchSetAsyncHelper(const Model::CreateGeoMatchSetRequest& request, const CreateGeoMatchSetResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;
         void CreateIPSetAsyncHelper(const Model::CreateIPSetRequest& request, const CreateIPSetResponseReceivedHandler& handler, const std::shared_ptr<const Aws::Client::AsyncCallerContext>& context) const;

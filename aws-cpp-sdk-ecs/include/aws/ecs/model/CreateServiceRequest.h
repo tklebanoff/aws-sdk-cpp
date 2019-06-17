@@ -44,7 +44,7 @@ namespace Model
   {
   public:
     CreateServiceRequest();
-    
+
     // Service request name is the Operation name which will send this request out,
     // each operation should has unique request name, so that we can get operation's name from this request.
     // Note: this is not true for response, multiple operations may have the same response name,
@@ -115,65 +115,65 @@ namespace Model
 
     /**
      * <p>The name of your service. Up to 255 letters (uppercase and lowercase),
-     * numbers, hyphens, and underscores are allowed. Service names must be unique
-     * within a cluster, but you can have similarly named services in multiple clusters
-     * within a Region or across multiple Regions.</p>
+     * numbers, and hyphens are allowed. Service names must be unique within a cluster,
+     * but you can have similarly named services in multiple clusters within a Region
+     * or across multiple Regions.</p>
      */
     inline const Aws::String& GetServiceName() const{ return m_serviceName; }
 
     /**
      * <p>The name of your service. Up to 255 letters (uppercase and lowercase),
-     * numbers, hyphens, and underscores are allowed. Service names must be unique
-     * within a cluster, but you can have similarly named services in multiple clusters
-     * within a Region or across multiple Regions.</p>
+     * numbers, and hyphens are allowed. Service names must be unique within a cluster,
+     * but you can have similarly named services in multiple clusters within a Region
+     * or across multiple Regions.</p>
      */
     inline bool ServiceNameHasBeenSet() const { return m_serviceNameHasBeenSet; }
 
     /**
      * <p>The name of your service. Up to 255 letters (uppercase and lowercase),
-     * numbers, hyphens, and underscores are allowed. Service names must be unique
-     * within a cluster, but you can have similarly named services in multiple clusters
-     * within a Region or across multiple Regions.</p>
+     * numbers, and hyphens are allowed. Service names must be unique within a cluster,
+     * but you can have similarly named services in multiple clusters within a Region
+     * or across multiple Regions.</p>
      */
     inline void SetServiceName(const Aws::String& value) { m_serviceNameHasBeenSet = true; m_serviceName = value; }
 
     /**
      * <p>The name of your service. Up to 255 letters (uppercase and lowercase),
-     * numbers, hyphens, and underscores are allowed. Service names must be unique
-     * within a cluster, but you can have similarly named services in multiple clusters
-     * within a Region or across multiple Regions.</p>
+     * numbers, and hyphens are allowed. Service names must be unique within a cluster,
+     * but you can have similarly named services in multiple clusters within a Region
+     * or across multiple Regions.</p>
      */
     inline void SetServiceName(Aws::String&& value) { m_serviceNameHasBeenSet = true; m_serviceName = std::move(value); }
 
     /**
      * <p>The name of your service. Up to 255 letters (uppercase and lowercase),
-     * numbers, hyphens, and underscores are allowed. Service names must be unique
-     * within a cluster, but you can have similarly named services in multiple clusters
-     * within a Region or across multiple Regions.</p>
+     * numbers, and hyphens are allowed. Service names must be unique within a cluster,
+     * but you can have similarly named services in multiple clusters within a Region
+     * or across multiple Regions.</p>
      */
     inline void SetServiceName(const char* value) { m_serviceNameHasBeenSet = true; m_serviceName.assign(value); }
 
     /**
      * <p>The name of your service. Up to 255 letters (uppercase and lowercase),
-     * numbers, hyphens, and underscores are allowed. Service names must be unique
-     * within a cluster, but you can have similarly named services in multiple clusters
-     * within a Region or across multiple Regions.</p>
+     * numbers, and hyphens are allowed. Service names must be unique within a cluster,
+     * but you can have similarly named services in multiple clusters within a Region
+     * or across multiple Regions.</p>
      */
     inline CreateServiceRequest& WithServiceName(const Aws::String& value) { SetServiceName(value); return *this;}
 
     /**
      * <p>The name of your service. Up to 255 letters (uppercase and lowercase),
-     * numbers, hyphens, and underscores are allowed. Service names must be unique
-     * within a cluster, but you can have similarly named services in multiple clusters
-     * within a Region or across multiple Regions.</p>
+     * numbers, and hyphens are allowed. Service names must be unique within a cluster,
+     * but you can have similarly named services in multiple clusters within a Region
+     * or across multiple Regions.</p>
      */
     inline CreateServiceRequest& WithServiceName(Aws::String&& value) { SetServiceName(std::move(value)); return *this;}
 
     /**
      * <p>The name of your service. Up to 255 letters (uppercase and lowercase),
-     * numbers, hyphens, and underscores are allowed. Service names must be unique
-     * within a cluster, but you can have similarly named services in multiple clusters
-     * within a Region or across multiple Regions.</p>
+     * numbers, and hyphens are allowed. Service names must be unique within a cluster,
+     * but you can have similarly named services in multiple clusters within a Region
+     * or across multiple Regions.</p>
      */
     inline CreateServiceRequest& WithServiceName(const char* value) { SetServiceName(value); return *this;}
 
@@ -182,7 +182,8 @@ namespace Model
      * <p>The <code>family</code> and <code>revision</code>
      * (<code>family:revision</code>) or full ARN of the task definition to run in your
      * service. If a <code>revision</code> is not specified, the latest
-     * <code>ACTIVE</code> revision is used.</p>
+     * <code>ACTIVE</code> revision is used.</p> <p>A task definition must be specified
+     * if the service is using the <code>ECS</code> deployment controller.</p>
      */
     inline const Aws::String& GetTaskDefinition() const{ return m_taskDefinition; }
 
@@ -190,7 +191,8 @@ namespace Model
      * <p>The <code>family</code> and <code>revision</code>
      * (<code>family:revision</code>) or full ARN of the task definition to run in your
      * service. If a <code>revision</code> is not specified, the latest
-     * <code>ACTIVE</code> revision is used.</p>
+     * <code>ACTIVE</code> revision is used.</p> <p>A task definition must be specified
+     * if the service is using the <code>ECS</code> deployment controller.</p>
      */
     inline bool TaskDefinitionHasBeenSet() const { return m_taskDefinitionHasBeenSet; }
 
@@ -198,7 +200,8 @@ namespace Model
      * <p>The <code>family</code> and <code>revision</code>
      * (<code>family:revision</code>) or full ARN of the task definition to run in your
      * service. If a <code>revision</code> is not specified, the latest
-     * <code>ACTIVE</code> revision is used.</p>
+     * <code>ACTIVE</code> revision is used.</p> <p>A task definition must be specified
+     * if the service is using the <code>ECS</code> deployment controller.</p>
      */
     inline void SetTaskDefinition(const Aws::String& value) { m_taskDefinitionHasBeenSet = true; m_taskDefinition = value; }
 
@@ -206,7 +209,8 @@ namespace Model
      * <p>The <code>family</code> and <code>revision</code>
      * (<code>family:revision</code>) or full ARN of the task definition to run in your
      * service. If a <code>revision</code> is not specified, the latest
-     * <code>ACTIVE</code> revision is used.</p>
+     * <code>ACTIVE</code> revision is used.</p> <p>A task definition must be specified
+     * if the service is using the <code>ECS</code> deployment controller.</p>
      */
     inline void SetTaskDefinition(Aws::String&& value) { m_taskDefinitionHasBeenSet = true; m_taskDefinition = std::move(value); }
 
@@ -214,7 +218,8 @@ namespace Model
      * <p>The <code>family</code> and <code>revision</code>
      * (<code>family:revision</code>) or full ARN of the task definition to run in your
      * service. If a <code>revision</code> is not specified, the latest
-     * <code>ACTIVE</code> revision is used.</p>
+     * <code>ACTIVE</code> revision is used.</p> <p>A task definition must be specified
+     * if the service is using the <code>ECS</code> deployment controller.</p>
      */
     inline void SetTaskDefinition(const char* value) { m_taskDefinitionHasBeenSet = true; m_taskDefinition.assign(value); }
 
@@ -222,7 +227,8 @@ namespace Model
      * <p>The <code>family</code> and <code>revision</code>
      * (<code>family:revision</code>) or full ARN of the task definition to run in your
      * service. If a <code>revision</code> is not specified, the latest
-     * <code>ACTIVE</code> revision is used.</p>
+     * <code>ACTIVE</code> revision is used.</p> <p>A task definition must be specified
+     * if the service is using the <code>ECS</code> deployment controller.</p>
      */
     inline CreateServiceRequest& WithTaskDefinition(const Aws::String& value) { SetTaskDefinition(value); return *this;}
 
@@ -230,7 +236,8 @@ namespace Model
      * <p>The <code>family</code> and <code>revision</code>
      * (<code>family:revision</code>) or full ARN of the task definition to run in your
      * service. If a <code>revision</code> is not specified, the latest
-     * <code>ACTIVE</code> revision is used.</p>
+     * <code>ACTIVE</code> revision is used.</p> <p>A task definition must be specified
+     * if the service is using the <code>ECS</code> deployment controller.</p>
      */
     inline CreateServiceRequest& WithTaskDefinition(Aws::String&& value) { SetTaskDefinition(std::move(value)); return *this;}
 
@@ -238,7 +245,8 @@ namespace Model
      * <p>The <code>family</code> and <code>revision</code>
      * (<code>family:revision</code>) or full ARN of the task definition to run in your
      * service. If a <code>revision</code> is not specified, the latest
-     * <code>ACTIVE</code> revision is used.</p>
+     * <code>ACTIVE</code> revision is used.</p> <p>A task definition must be specified
+     * if the service is using the <code>ECS</code> deployment controller.</p>
      */
     inline CreateServiceRequest& WithTaskDefinition(const char* value) { SetTaskDefinition(value); return *this;}
 
@@ -551,10 +559,10 @@ namespace Model
     /**
      * <p>The details of the service discovery registries to assign to this service.
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html">Service
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html">Service
      * Discovery</a>.</p> <note> <p>Service discovery is supported for Fargate tasks if
      * you are using platform version v1.1.0 or later. For more information, see <a
-     * href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS
      * Fargate Platform Versions</a>.</p> </note>
      */
     inline const Aws::Vector<ServiceRegistry>& GetServiceRegistries() const{ return m_serviceRegistries; }
@@ -562,10 +570,10 @@ namespace Model
     /**
      * <p>The details of the service discovery registries to assign to this service.
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html">Service
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html">Service
      * Discovery</a>.</p> <note> <p>Service discovery is supported for Fargate tasks if
      * you are using platform version v1.1.0 or later. For more information, see <a
-     * href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS
      * Fargate Platform Versions</a>.</p> </note>
      */
     inline bool ServiceRegistriesHasBeenSet() const { return m_serviceRegistriesHasBeenSet; }
@@ -573,10 +581,10 @@ namespace Model
     /**
      * <p>The details of the service discovery registries to assign to this service.
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html">Service
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html">Service
      * Discovery</a>.</p> <note> <p>Service discovery is supported for Fargate tasks if
      * you are using platform version v1.1.0 or later. For more information, see <a
-     * href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS
      * Fargate Platform Versions</a>.</p> </note>
      */
     inline void SetServiceRegistries(const Aws::Vector<ServiceRegistry>& value) { m_serviceRegistriesHasBeenSet = true; m_serviceRegistries = value; }
@@ -584,10 +592,10 @@ namespace Model
     /**
      * <p>The details of the service discovery registries to assign to this service.
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html">Service
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html">Service
      * Discovery</a>.</p> <note> <p>Service discovery is supported for Fargate tasks if
      * you are using platform version v1.1.0 or later. For more information, see <a
-     * href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS
      * Fargate Platform Versions</a>.</p> </note>
      */
     inline void SetServiceRegistries(Aws::Vector<ServiceRegistry>&& value) { m_serviceRegistriesHasBeenSet = true; m_serviceRegistries = std::move(value); }
@@ -595,10 +603,10 @@ namespace Model
     /**
      * <p>The details of the service discovery registries to assign to this service.
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html">Service
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html">Service
      * Discovery</a>.</p> <note> <p>Service discovery is supported for Fargate tasks if
      * you are using platform version v1.1.0 or later. For more information, see <a
-     * href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS
      * Fargate Platform Versions</a>.</p> </note>
      */
     inline CreateServiceRequest& WithServiceRegistries(const Aws::Vector<ServiceRegistry>& value) { SetServiceRegistries(value); return *this;}
@@ -606,10 +614,10 @@ namespace Model
     /**
      * <p>The details of the service discovery registries to assign to this service.
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html">Service
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html">Service
      * Discovery</a>.</p> <note> <p>Service discovery is supported for Fargate tasks if
      * you are using platform version v1.1.0 or later. For more information, see <a
-     * href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS
      * Fargate Platform Versions</a>.</p> </note>
      */
     inline CreateServiceRequest& WithServiceRegistries(Aws::Vector<ServiceRegistry>&& value) { SetServiceRegistries(std::move(value)); return *this;}
@@ -617,10 +625,10 @@ namespace Model
     /**
      * <p>The details of the service discovery registries to assign to this service.
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html">Service
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html">Service
      * Discovery</a>.</p> <note> <p>Service discovery is supported for Fargate tasks if
      * you are using platform version v1.1.0 or later. For more information, see <a
-     * href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS
      * Fargate Platform Versions</a>.</p> </note>
      */
     inline CreateServiceRequest& AddServiceRegistries(const ServiceRegistry& value) { m_serviceRegistriesHasBeenSet = true; m_serviceRegistries.push_back(value); return *this; }
@@ -628,10 +636,10 @@ namespace Model
     /**
      * <p>The details of the service discovery registries to assign to this service.
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html">Service
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html">Service
      * Discovery</a>.</p> <note> <p>Service discovery is supported for Fargate tasks if
      * you are using platform version v1.1.0 or later. For more information, see <a
-     * href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS
      * Fargate Platform Versions</a>.</p> </note>
      */
     inline CreateServiceRequest& AddServiceRegistries(ServiceRegistry&& value) { m_serviceRegistriesHasBeenSet = true; m_serviceRegistries.push_back(std::move(value)); return *this; }
@@ -761,9 +769,9 @@ namespace Model
 
 
     /**
-     * <p>The platform version on which your tasks in the service are running. A
-     * platform version is only specified for tasks using the Fargate launch type. If
-     * one is not specified, the <code>LATEST</code> platform version is used by
+     * <p>The platform version that your tasks in the service are running on. A
+     * platform version is specified only for tasks using the Fargate launch type. If
+     * one isn't specified, the <code>LATEST</code> platform version is used by
      * default. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS
      * Fargate Platform Versions</a> in the <i>Amazon Elastic Container Service
@@ -772,9 +780,9 @@ namespace Model
     inline const Aws::String& GetPlatformVersion() const{ return m_platformVersion; }
 
     /**
-     * <p>The platform version on which your tasks in the service are running. A
-     * platform version is only specified for tasks using the Fargate launch type. If
-     * one is not specified, the <code>LATEST</code> platform version is used by
+     * <p>The platform version that your tasks in the service are running on. A
+     * platform version is specified only for tasks using the Fargate launch type. If
+     * one isn't specified, the <code>LATEST</code> platform version is used by
      * default. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS
      * Fargate Platform Versions</a> in the <i>Amazon Elastic Container Service
@@ -783,9 +791,9 @@ namespace Model
     inline bool PlatformVersionHasBeenSet() const { return m_platformVersionHasBeenSet; }
 
     /**
-     * <p>The platform version on which your tasks in the service are running. A
-     * platform version is only specified for tasks using the Fargate launch type. If
-     * one is not specified, the <code>LATEST</code> platform version is used by
+     * <p>The platform version that your tasks in the service are running on. A
+     * platform version is specified only for tasks using the Fargate launch type. If
+     * one isn't specified, the <code>LATEST</code> platform version is used by
      * default. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS
      * Fargate Platform Versions</a> in the <i>Amazon Elastic Container Service
@@ -794,9 +802,9 @@ namespace Model
     inline void SetPlatformVersion(const Aws::String& value) { m_platformVersionHasBeenSet = true; m_platformVersion = value; }
 
     /**
-     * <p>The platform version on which your tasks in the service are running. A
-     * platform version is only specified for tasks using the Fargate launch type. If
-     * one is not specified, the <code>LATEST</code> platform version is used by
+     * <p>The platform version that your tasks in the service are running on. A
+     * platform version is specified only for tasks using the Fargate launch type. If
+     * one isn't specified, the <code>LATEST</code> platform version is used by
      * default. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS
      * Fargate Platform Versions</a> in the <i>Amazon Elastic Container Service
@@ -805,9 +813,9 @@ namespace Model
     inline void SetPlatformVersion(Aws::String&& value) { m_platformVersionHasBeenSet = true; m_platformVersion = std::move(value); }
 
     /**
-     * <p>The platform version on which your tasks in the service are running. A
-     * platform version is only specified for tasks using the Fargate launch type. If
-     * one is not specified, the <code>LATEST</code> platform version is used by
+     * <p>The platform version that your tasks in the service are running on. A
+     * platform version is specified only for tasks using the Fargate launch type. If
+     * one isn't specified, the <code>LATEST</code> platform version is used by
      * default. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS
      * Fargate Platform Versions</a> in the <i>Amazon Elastic Container Service
@@ -816,9 +824,9 @@ namespace Model
     inline void SetPlatformVersion(const char* value) { m_platformVersionHasBeenSet = true; m_platformVersion.assign(value); }
 
     /**
-     * <p>The platform version on which your tasks in the service are running. A
-     * platform version is only specified for tasks using the Fargate launch type. If
-     * one is not specified, the <code>LATEST</code> platform version is used by
+     * <p>The platform version that your tasks in the service are running on. A
+     * platform version is specified only for tasks using the Fargate launch type. If
+     * one isn't specified, the <code>LATEST</code> platform version is used by
      * default. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS
      * Fargate Platform Versions</a> in the <i>Amazon Elastic Container Service
@@ -827,9 +835,9 @@ namespace Model
     inline CreateServiceRequest& WithPlatformVersion(const Aws::String& value) { SetPlatformVersion(value); return *this;}
 
     /**
-     * <p>The platform version on which your tasks in the service are running. A
-     * platform version is only specified for tasks using the Fargate launch type. If
-     * one is not specified, the <code>LATEST</code> platform version is used by
+     * <p>The platform version that your tasks in the service are running on. A
+     * platform version is specified only for tasks using the Fargate launch type. If
+     * one isn't specified, the <code>LATEST</code> platform version is used by
      * default. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS
      * Fargate Platform Versions</a> in the <i>Amazon Elastic Container Service
@@ -838,9 +846,9 @@ namespace Model
     inline CreateServiceRequest& WithPlatformVersion(Aws::String&& value) { SetPlatformVersion(std::move(value)); return *this;}
 
     /**
-     * <p>The platform version on which your tasks in the service are running. A
-     * platform version is only specified for tasks using the Fargate launch type. If
-     * one is not specified, the <code>LATEST</code> platform version is used by
+     * <p>The platform version that your tasks in the service are running on. A
+     * platform version is specified only for tasks using the Fargate launch type. If
+     * one isn't specified, the <code>LATEST</code> platform version is used by
      * default. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS
      * Fargate Platform Versions</a> in the <i>Amazon Elastic Container Service
@@ -860,7 +868,7 @@ namespace Model
      * for your service unless you specify a role here. The service-linked role is
      * required if your task definition uses the <code>awsvpc</code> network mode, in
      * which case you should not specify a role here. For more information, see <a
-     * href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/using-service-linked-roles.html">Using
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using-service-linked-roles.html">Using
      * Service-Linked Roles for Amazon ECS</a> in the <i>Amazon Elastic Container
      * Service Developer Guide</i>.</p> </important> <p>If your specified role has a
      * path other than <code>/</code>, then you must either specify the full role ARN
@@ -884,7 +892,7 @@ namespace Model
      * for your service unless you specify a role here. The service-linked role is
      * required if your task definition uses the <code>awsvpc</code> network mode, in
      * which case you should not specify a role here. For more information, see <a
-     * href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/using-service-linked-roles.html">Using
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using-service-linked-roles.html">Using
      * Service-Linked Roles for Amazon ECS</a> in the <i>Amazon Elastic Container
      * Service Developer Guide</i>.</p> </important> <p>If your specified role has a
      * path other than <code>/</code>, then you must either specify the full role ARN
@@ -908,7 +916,7 @@ namespace Model
      * for your service unless you specify a role here. The service-linked role is
      * required if your task definition uses the <code>awsvpc</code> network mode, in
      * which case you should not specify a role here. For more information, see <a
-     * href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/using-service-linked-roles.html">Using
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using-service-linked-roles.html">Using
      * Service-Linked Roles for Amazon ECS</a> in the <i>Amazon Elastic Container
      * Service Developer Guide</i>.</p> </important> <p>If your specified role has a
      * path other than <code>/</code>, then you must either specify the full role ARN
@@ -932,7 +940,7 @@ namespace Model
      * for your service unless you specify a role here. The service-linked role is
      * required if your task definition uses the <code>awsvpc</code> network mode, in
      * which case you should not specify a role here. For more information, see <a
-     * href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/using-service-linked-roles.html">Using
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using-service-linked-roles.html">Using
      * Service-Linked Roles for Amazon ECS</a> in the <i>Amazon Elastic Container
      * Service Developer Guide</i>.</p> </important> <p>If your specified role has a
      * path other than <code>/</code>, then you must either specify the full role ARN
@@ -956,7 +964,7 @@ namespace Model
      * for your service unless you specify a role here. The service-linked role is
      * required if your task definition uses the <code>awsvpc</code> network mode, in
      * which case you should not specify a role here. For more information, see <a
-     * href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/using-service-linked-roles.html">Using
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using-service-linked-roles.html">Using
      * Service-Linked Roles for Amazon ECS</a> in the <i>Amazon Elastic Container
      * Service Developer Guide</i>.</p> </important> <p>If your specified role has a
      * path other than <code>/</code>, then you must either specify the full role ARN
@@ -980,7 +988,7 @@ namespace Model
      * for your service unless you specify a role here. The service-linked role is
      * required if your task definition uses the <code>awsvpc</code> network mode, in
      * which case you should not specify a role here. For more information, see <a
-     * href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/using-service-linked-roles.html">Using
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using-service-linked-roles.html">Using
      * Service-Linked Roles for Amazon ECS</a> in the <i>Amazon Elastic Container
      * Service Developer Guide</i>.</p> </important> <p>If your specified role has a
      * path other than <code>/</code>, then you must either specify the full role ARN
@@ -1004,7 +1012,7 @@ namespace Model
      * for your service unless you specify a role here. The service-linked role is
      * required if your task definition uses the <code>awsvpc</code> network mode, in
      * which case you should not specify a role here. For more information, see <a
-     * href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/using-service-linked-roles.html">Using
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using-service-linked-roles.html">Using
      * Service-Linked Roles for Amazon ECS</a> in the <i>Amazon Elastic Container
      * Service Developer Guide</i>.</p> </important> <p>If your specified role has a
      * path other than <code>/</code>, then you must either specify the full role ARN
@@ -1028,7 +1036,7 @@ namespace Model
      * for your service unless you specify a role here. The service-linked role is
      * required if your task definition uses the <code>awsvpc</code> network mode, in
      * which case you should not specify a role here. For more information, see <a
-     * href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/using-service-linked-roles.html">Using
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using-service-linked-roles.html">Using
      * Service-Linked Roles for Amazon ECS</a> in the <i>Amazon Elastic Container
      * Service Developer Guide</i>.</p> </important> <p>If your specified role has a
      * path other than <code>/</code>, then you must either specify the full role ARN
@@ -1190,7 +1198,7 @@ namespace Model
      * task definitions that use the <code>awsvpc</code> network mode to receive their
      * own elastic network interface, and it is not supported for other network modes.
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html">Task
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html">Task
      * Networking</a> in the <i>Amazon Elastic Container Service Developer
      * Guide</i>.</p>
      */
@@ -1201,7 +1209,7 @@ namespace Model
      * task definitions that use the <code>awsvpc</code> network mode to receive their
      * own elastic network interface, and it is not supported for other network modes.
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html">Task
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html">Task
      * Networking</a> in the <i>Amazon Elastic Container Service Developer
      * Guide</i>.</p>
      */
@@ -1212,7 +1220,7 @@ namespace Model
      * task definitions that use the <code>awsvpc</code> network mode to receive their
      * own elastic network interface, and it is not supported for other network modes.
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html">Task
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html">Task
      * Networking</a> in the <i>Amazon Elastic Container Service Developer
      * Guide</i>.</p>
      */
@@ -1223,7 +1231,7 @@ namespace Model
      * task definitions that use the <code>awsvpc</code> network mode to receive their
      * own elastic network interface, and it is not supported for other network modes.
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html">Task
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html">Task
      * Networking</a> in the <i>Amazon Elastic Container Service Developer
      * Guide</i>.</p>
      */
@@ -1234,7 +1242,7 @@ namespace Model
      * task definitions that use the <code>awsvpc</code> network mode to receive their
      * own elastic network interface, and it is not supported for other network modes.
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html">Task
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html">Task
      * Networking</a> in the <i>Amazon Elastic Container Service Developer
      * Guide</i>.</p>
      */
@@ -1245,7 +1253,7 @@ namespace Model
      * task definitions that use the <code>awsvpc</code> network mode to receive their
      * own elastic network interface, and it is not supported for other network modes.
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html">Task
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html">Task
      * Networking</a> in the <i>Amazon Elastic Container Service Developer
      * Guide</i>.</p>
      */
@@ -1307,121 +1315,127 @@ namespace Model
 
     /**
      * <p>The scheduling strategy to use for the service. For more information, see <a
-     * href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_services.html">Services</a>.</p>
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_services.html">Services</a>.</p>
      * <p>There are two service scheduler strategies available:</p> <ul> <li> <p>
      * <code>REPLICA</code>-The replica scheduling strategy places and maintains the
      * desired number of tasks across your cluster. By default, the service scheduler
      * spreads tasks across Availability Zones. You can use task placement strategies
      * and constraints to customize task placement decisions. This scheduler strategy
-     * is required if using the <code>CODE_DEPLOY</code> deployment controller.</p>
-     * </li> <li> <p> <code>DAEMON</code>-The daemon scheduling strategy deploys
-     * exactly one task on each active container instance that meets all of the task
-     * placement constraints that you specify in your cluster. When you are using this
-     * strategy, there is no need to specify a desired number of tasks, a task
-     * placement strategy, or use Service Auto Scaling policies.</p> <note> <p>Tasks
-     * using the Fargate launch type or the <code>CODE_DEPLOY</code> deploymenet
-     * controller do not support the <code>DAEMON</code> scheduling strategy.</p>
-     * </note> </li> </ul>
+     * is required if the service is using the <code>CODE_DEPLOY</code> or
+     * <code>EXTERNAL</code> deployment controller types.</p> </li> <li> <p>
+     * <code>DAEMON</code>-The daemon scheduling strategy deploys exactly one task on
+     * each active container instance that meets all of the task placement constraints
+     * that you specify in your cluster. When you're using this strategy, you don't
+     * need to specify a desired number of tasks, a task placement strategy, or use
+     * Service Auto Scaling policies.</p> <note> <p>Tasks using the Fargate launch type
+     * or the <code>CODE_DEPLOY</code> or <code>EXTERNAL</code> deployment controller
+     * types don't support the <code>DAEMON</code> scheduling strategy.</p> </note>
+     * </li> </ul>
      */
     inline const SchedulingStrategy& GetSchedulingStrategy() const{ return m_schedulingStrategy; }
 
     /**
      * <p>The scheduling strategy to use for the service. For more information, see <a
-     * href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_services.html">Services</a>.</p>
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_services.html">Services</a>.</p>
      * <p>There are two service scheduler strategies available:</p> <ul> <li> <p>
      * <code>REPLICA</code>-The replica scheduling strategy places and maintains the
      * desired number of tasks across your cluster. By default, the service scheduler
      * spreads tasks across Availability Zones. You can use task placement strategies
      * and constraints to customize task placement decisions. This scheduler strategy
-     * is required if using the <code>CODE_DEPLOY</code> deployment controller.</p>
-     * </li> <li> <p> <code>DAEMON</code>-The daemon scheduling strategy deploys
-     * exactly one task on each active container instance that meets all of the task
-     * placement constraints that you specify in your cluster. When you are using this
-     * strategy, there is no need to specify a desired number of tasks, a task
-     * placement strategy, or use Service Auto Scaling policies.</p> <note> <p>Tasks
-     * using the Fargate launch type or the <code>CODE_DEPLOY</code> deploymenet
-     * controller do not support the <code>DAEMON</code> scheduling strategy.</p>
-     * </note> </li> </ul>
+     * is required if the service is using the <code>CODE_DEPLOY</code> or
+     * <code>EXTERNAL</code> deployment controller types.</p> </li> <li> <p>
+     * <code>DAEMON</code>-The daemon scheduling strategy deploys exactly one task on
+     * each active container instance that meets all of the task placement constraints
+     * that you specify in your cluster. When you're using this strategy, you don't
+     * need to specify a desired number of tasks, a task placement strategy, or use
+     * Service Auto Scaling policies.</p> <note> <p>Tasks using the Fargate launch type
+     * or the <code>CODE_DEPLOY</code> or <code>EXTERNAL</code> deployment controller
+     * types don't support the <code>DAEMON</code> scheduling strategy.</p> </note>
+     * </li> </ul>
      */
     inline bool SchedulingStrategyHasBeenSet() const { return m_schedulingStrategyHasBeenSet; }
 
     /**
      * <p>The scheduling strategy to use for the service. For more information, see <a
-     * href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_services.html">Services</a>.</p>
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_services.html">Services</a>.</p>
      * <p>There are two service scheduler strategies available:</p> <ul> <li> <p>
      * <code>REPLICA</code>-The replica scheduling strategy places and maintains the
      * desired number of tasks across your cluster. By default, the service scheduler
      * spreads tasks across Availability Zones. You can use task placement strategies
      * and constraints to customize task placement decisions. This scheduler strategy
-     * is required if using the <code>CODE_DEPLOY</code> deployment controller.</p>
-     * </li> <li> <p> <code>DAEMON</code>-The daemon scheduling strategy deploys
-     * exactly one task on each active container instance that meets all of the task
-     * placement constraints that you specify in your cluster. When you are using this
-     * strategy, there is no need to specify a desired number of tasks, a task
-     * placement strategy, or use Service Auto Scaling policies.</p> <note> <p>Tasks
-     * using the Fargate launch type or the <code>CODE_DEPLOY</code> deploymenet
-     * controller do not support the <code>DAEMON</code> scheduling strategy.</p>
-     * </note> </li> </ul>
+     * is required if the service is using the <code>CODE_DEPLOY</code> or
+     * <code>EXTERNAL</code> deployment controller types.</p> </li> <li> <p>
+     * <code>DAEMON</code>-The daemon scheduling strategy deploys exactly one task on
+     * each active container instance that meets all of the task placement constraints
+     * that you specify in your cluster. When you're using this strategy, you don't
+     * need to specify a desired number of tasks, a task placement strategy, or use
+     * Service Auto Scaling policies.</p> <note> <p>Tasks using the Fargate launch type
+     * or the <code>CODE_DEPLOY</code> or <code>EXTERNAL</code> deployment controller
+     * types don't support the <code>DAEMON</code> scheduling strategy.</p> </note>
+     * </li> </ul>
      */
     inline void SetSchedulingStrategy(const SchedulingStrategy& value) { m_schedulingStrategyHasBeenSet = true; m_schedulingStrategy = value; }
 
     /**
      * <p>The scheduling strategy to use for the service. For more information, see <a
-     * href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_services.html">Services</a>.</p>
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_services.html">Services</a>.</p>
      * <p>There are two service scheduler strategies available:</p> <ul> <li> <p>
      * <code>REPLICA</code>-The replica scheduling strategy places and maintains the
      * desired number of tasks across your cluster. By default, the service scheduler
      * spreads tasks across Availability Zones. You can use task placement strategies
      * and constraints to customize task placement decisions. This scheduler strategy
-     * is required if using the <code>CODE_DEPLOY</code> deployment controller.</p>
-     * </li> <li> <p> <code>DAEMON</code>-The daemon scheduling strategy deploys
-     * exactly one task on each active container instance that meets all of the task
-     * placement constraints that you specify in your cluster. When you are using this
-     * strategy, there is no need to specify a desired number of tasks, a task
-     * placement strategy, or use Service Auto Scaling policies.</p> <note> <p>Tasks
-     * using the Fargate launch type or the <code>CODE_DEPLOY</code> deploymenet
-     * controller do not support the <code>DAEMON</code> scheduling strategy.</p>
-     * </note> </li> </ul>
+     * is required if the service is using the <code>CODE_DEPLOY</code> or
+     * <code>EXTERNAL</code> deployment controller types.</p> </li> <li> <p>
+     * <code>DAEMON</code>-The daemon scheduling strategy deploys exactly one task on
+     * each active container instance that meets all of the task placement constraints
+     * that you specify in your cluster. When you're using this strategy, you don't
+     * need to specify a desired number of tasks, a task placement strategy, or use
+     * Service Auto Scaling policies.</p> <note> <p>Tasks using the Fargate launch type
+     * or the <code>CODE_DEPLOY</code> or <code>EXTERNAL</code> deployment controller
+     * types don't support the <code>DAEMON</code> scheduling strategy.</p> </note>
+     * </li> </ul>
      */
     inline void SetSchedulingStrategy(SchedulingStrategy&& value) { m_schedulingStrategyHasBeenSet = true; m_schedulingStrategy = std::move(value); }
 
     /**
      * <p>The scheduling strategy to use for the service. For more information, see <a
-     * href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_services.html">Services</a>.</p>
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_services.html">Services</a>.</p>
      * <p>There are two service scheduler strategies available:</p> <ul> <li> <p>
      * <code>REPLICA</code>-The replica scheduling strategy places and maintains the
      * desired number of tasks across your cluster. By default, the service scheduler
      * spreads tasks across Availability Zones. You can use task placement strategies
      * and constraints to customize task placement decisions. This scheduler strategy
-     * is required if using the <code>CODE_DEPLOY</code> deployment controller.</p>
-     * </li> <li> <p> <code>DAEMON</code>-The daemon scheduling strategy deploys
-     * exactly one task on each active container instance that meets all of the task
-     * placement constraints that you specify in your cluster. When you are using this
-     * strategy, there is no need to specify a desired number of tasks, a task
-     * placement strategy, or use Service Auto Scaling policies.</p> <note> <p>Tasks
-     * using the Fargate launch type or the <code>CODE_DEPLOY</code> deploymenet
-     * controller do not support the <code>DAEMON</code> scheduling strategy.</p>
-     * </note> </li> </ul>
+     * is required if the service is using the <code>CODE_DEPLOY</code> or
+     * <code>EXTERNAL</code> deployment controller types.</p> </li> <li> <p>
+     * <code>DAEMON</code>-The daemon scheduling strategy deploys exactly one task on
+     * each active container instance that meets all of the task placement constraints
+     * that you specify in your cluster. When you're using this strategy, you don't
+     * need to specify a desired number of tasks, a task placement strategy, or use
+     * Service Auto Scaling policies.</p> <note> <p>Tasks using the Fargate launch type
+     * or the <code>CODE_DEPLOY</code> or <code>EXTERNAL</code> deployment controller
+     * types don't support the <code>DAEMON</code> scheduling strategy.</p> </note>
+     * </li> </ul>
      */
     inline CreateServiceRequest& WithSchedulingStrategy(const SchedulingStrategy& value) { SetSchedulingStrategy(value); return *this;}
 
     /**
      * <p>The scheduling strategy to use for the service. For more information, see <a
-     * href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_services.html">Services</a>.</p>
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_services.html">Services</a>.</p>
      * <p>There are two service scheduler strategies available:</p> <ul> <li> <p>
      * <code>REPLICA</code>-The replica scheduling strategy places and maintains the
      * desired number of tasks across your cluster. By default, the service scheduler
      * spreads tasks across Availability Zones. You can use task placement strategies
      * and constraints to customize task placement decisions. This scheduler strategy
-     * is required if using the <code>CODE_DEPLOY</code> deployment controller.</p>
-     * </li> <li> <p> <code>DAEMON</code>-The daemon scheduling strategy deploys
-     * exactly one task on each active container instance that meets all of the task
-     * placement constraints that you specify in your cluster. When you are using this
-     * strategy, there is no need to specify a desired number of tasks, a task
-     * placement strategy, or use Service Auto Scaling policies.</p> <note> <p>Tasks
-     * using the Fargate launch type or the <code>CODE_DEPLOY</code> deploymenet
-     * controller do not support the <code>DAEMON</code> scheduling strategy.</p>
-     * </note> </li> </ul>
+     * is required if the service is using the <code>CODE_DEPLOY</code> or
+     * <code>EXTERNAL</code> deployment controller types.</p> </li> <li> <p>
+     * <code>DAEMON</code>-The daemon scheduling strategy deploys exactly one task on
+     * each active container instance that meets all of the task placement constraints
+     * that you specify in your cluster. When you're using this strategy, you don't
+     * need to specify a desired number of tasks, a task placement strategy, or use
+     * Service Auto Scaling policies.</p> <note> <p>Tasks using the Fargate launch type
+     * or the <code>CODE_DEPLOY</code> or <code>EXTERNAL</code> deployment controller
+     * types don't support the <code>DAEMON</code> scheduling strategy.</p> </note>
+     * </li> </ul>
      */
     inline CreateServiceRequest& WithSchedulingStrategy(SchedulingStrategy&& value) { SetSchedulingStrategy(std::move(value)); return *this;}
 
@@ -1533,7 +1547,7 @@ namespace Model
     /**
      * <p>Specifies whether to enable Amazon ECS managed tags for the tasks within the
      * service. For more information, see <a
-     * href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging
      * Your Amazon ECS Resources</a> in the <i>Amazon Elastic Container Service
      * Developer Guide</i>.</p>
      */
@@ -1542,7 +1556,7 @@ namespace Model
     /**
      * <p>Specifies whether to enable Amazon ECS managed tags for the tasks within the
      * service. For more information, see <a
-     * href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging
      * Your Amazon ECS Resources</a> in the <i>Amazon Elastic Container Service
      * Developer Guide</i>.</p>
      */
@@ -1551,7 +1565,7 @@ namespace Model
     /**
      * <p>Specifies whether to enable Amazon ECS managed tags for the tasks within the
      * service. For more information, see <a
-     * href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging
      * Your Amazon ECS Resources</a> in the <i>Amazon Elastic Container Service
      * Developer Guide</i>.</p>
      */
@@ -1560,7 +1574,7 @@ namespace Model
     /**
      * <p>Specifies whether to enable Amazon ECS managed tags for the tasks within the
      * service. For more information, see <a
-     * href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html">Tagging
      * Your Amazon ECS Resources</a> in the <i>Amazon Elastic Container Service
      * Developer Guide</i>.</p>
      */

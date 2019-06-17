@@ -17,6 +17,7 @@
 #include <aws/awstransfer/Transfer_EXPORTS.h>
 #include <aws/core/utils/memory/stl/AWSString.h>
 #include <aws/awstransfer/model/IdentityProviderType.h>
+#include <aws/awstransfer/model/EndpointType.h>
 #include <aws/awstransfer/model/State.h>
 #include <utility>
 
@@ -138,6 +139,49 @@ namespace Model
      * <code>SERVICE_MANAGED</code> or <code>API_GATEWAY</code>.</p>
      */
     inline ListedServer& WithIdentityProviderType(IdentityProviderType&& value) { SetIdentityProviderType(std::move(value)); return *this;}
+
+
+    /**
+     * <p>The type of VPC endpoint that your SFTP server is connected to. If your SFTP
+     * server is connected to a VPC endpoint, your server isn't accessible over the
+     * public internet.</p>
+     */
+    inline const EndpointType& GetEndpointType() const{ return m_endpointType; }
+
+    /**
+     * <p>The type of VPC endpoint that your SFTP server is connected to. If your SFTP
+     * server is connected to a VPC endpoint, your server isn't accessible over the
+     * public internet.</p>
+     */
+    inline bool EndpointTypeHasBeenSet() const { return m_endpointTypeHasBeenSet; }
+
+    /**
+     * <p>The type of VPC endpoint that your SFTP server is connected to. If your SFTP
+     * server is connected to a VPC endpoint, your server isn't accessible over the
+     * public internet.</p>
+     */
+    inline void SetEndpointType(const EndpointType& value) { m_endpointTypeHasBeenSet = true; m_endpointType = value; }
+
+    /**
+     * <p>The type of VPC endpoint that your SFTP server is connected to. If your SFTP
+     * server is connected to a VPC endpoint, your server isn't accessible over the
+     * public internet.</p>
+     */
+    inline void SetEndpointType(EndpointType&& value) { m_endpointTypeHasBeenSet = true; m_endpointType = std::move(value); }
+
+    /**
+     * <p>The type of VPC endpoint that your SFTP server is connected to. If your SFTP
+     * server is connected to a VPC endpoint, your server isn't accessible over the
+     * public internet.</p>
+     */
+    inline ListedServer& WithEndpointType(const EndpointType& value) { SetEndpointType(value); return *this;}
+
+    /**
+     * <p>The type of VPC endpoint that your SFTP server is connected to. If your SFTP
+     * server is connected to a VPC endpoint, your server isn't accessible over the
+     * public internet.</p>
+     */
+    inline ListedServer& WithEndpointType(EndpointType&& value) { SetEndpointType(std::move(value)); return *this;}
 
 
     /**
@@ -342,6 +386,9 @@ namespace Model
 
     IdentityProviderType m_identityProviderType;
     bool m_identityProviderTypeHasBeenSet;
+
+    EndpointType m_endpointType;
+    bool m_endpointTypeHasBeenSet;
 
     Aws::String m_loggingRole;
     bool m_loggingRoleHasBeenSet;

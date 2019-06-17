@@ -39,7 +39,7 @@ namespace Model
   {
   public:
     ListReservationsRequest();
-    
+
     // Service request name is the Operation name which will send this request out,
     // each operation should has unique request name, so that we can get operation's name from this request.
     // Note: this is not true for response, multiple operations may have the same response name,
@@ -49,6 +49,55 @@ namespace Model
     Aws::String SerializePayload() const override;
 
     void AddQueryStringParameters(Aws::Http::URI& uri) const override;
+
+
+    /**
+     * Filter by channel class, 'STANDARD' or 'SINGLE_PIPELINE'
+
+     */
+    inline const Aws::String& GetChannelClass() const{ return m_channelClass; }
+
+    /**
+     * Filter by channel class, 'STANDARD' or 'SINGLE_PIPELINE'
+
+     */
+    inline bool ChannelClassHasBeenSet() const { return m_channelClassHasBeenSet; }
+
+    /**
+     * Filter by channel class, 'STANDARD' or 'SINGLE_PIPELINE'
+
+     */
+    inline void SetChannelClass(const Aws::String& value) { m_channelClassHasBeenSet = true; m_channelClass = value; }
+
+    /**
+     * Filter by channel class, 'STANDARD' or 'SINGLE_PIPELINE'
+
+     */
+    inline void SetChannelClass(Aws::String&& value) { m_channelClassHasBeenSet = true; m_channelClass = std::move(value); }
+
+    /**
+     * Filter by channel class, 'STANDARD' or 'SINGLE_PIPELINE'
+
+     */
+    inline void SetChannelClass(const char* value) { m_channelClassHasBeenSet = true; m_channelClass.assign(value); }
+
+    /**
+     * Filter by channel class, 'STANDARD' or 'SINGLE_PIPELINE'
+
+     */
+    inline ListReservationsRequest& WithChannelClass(const Aws::String& value) { SetChannelClass(value); return *this;}
+
+    /**
+     * Filter by channel class, 'STANDARD' or 'SINGLE_PIPELINE'
+
+     */
+    inline ListReservationsRequest& WithChannelClass(Aws::String&& value) { SetChannelClass(std::move(value)); return *this;}
+
+    /**
+     * Filter by channel class, 'STANDARD' or 'SINGLE_PIPELINE'
+
+     */
+    inline ListReservationsRequest& WithChannelClass(const char* value) { SetChannelClass(value); return *this;}
 
 
     /**
@@ -400,6 +449,9 @@ namespace Model
     inline ListReservationsRequest& WithVideoQuality(const char* value) { SetVideoQuality(value); return *this;}
 
   private:
+
+    Aws::String m_channelClass;
+    bool m_channelClassHasBeenSet;
 
     Aws::String m_codec;
     bool m_codecHasBeenSet;

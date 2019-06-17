@@ -17,6 +17,7 @@
 #include <aws/workspaces/WorkSpaces_EXPORTS.h>
 #include <aws/workspaces/WorkSpacesRequest.h>
 #include <aws/core/utils/memory/stl/AWSVector.h>
+#include <aws/core/utils/memory/stl/AWSString.h>
 #include <aws/workspaces/model/RebuildRequest.h>
 #include <utility>
 
@@ -33,7 +34,7 @@ namespace Model
   {
   public:
     RebuildWorkspacesRequest();
-    
+
     // Service request name is the Operation name which will send this request out,
     // each operation should has unique request name, so that we can get operation's name from this request.
     // Note: this is not true for response, multiple operations may have the same response name,
@@ -85,10 +86,54 @@ namespace Model
      */
     inline RebuildWorkspacesRequest& AddRebuildWorkspaceRequests(RebuildRequest&& value) { m_rebuildWorkspaceRequestsHasBeenSet = true; m_rebuildWorkspaceRequests.push_back(std::move(value)); return *this; }
 
+
+    /**
+     * <p>Reserved.</p>
+     */
+    inline const Aws::String& GetAdditionalInfo() const{ return m_additionalInfo; }
+
+    /**
+     * <p>Reserved.</p>
+     */
+    inline bool AdditionalInfoHasBeenSet() const { return m_additionalInfoHasBeenSet; }
+
+    /**
+     * <p>Reserved.</p>
+     */
+    inline void SetAdditionalInfo(const Aws::String& value) { m_additionalInfoHasBeenSet = true; m_additionalInfo = value; }
+
+    /**
+     * <p>Reserved.</p>
+     */
+    inline void SetAdditionalInfo(Aws::String&& value) { m_additionalInfoHasBeenSet = true; m_additionalInfo = std::move(value); }
+
+    /**
+     * <p>Reserved.</p>
+     */
+    inline void SetAdditionalInfo(const char* value) { m_additionalInfoHasBeenSet = true; m_additionalInfo.assign(value); }
+
+    /**
+     * <p>Reserved.</p>
+     */
+    inline RebuildWorkspacesRequest& WithAdditionalInfo(const Aws::String& value) { SetAdditionalInfo(value); return *this;}
+
+    /**
+     * <p>Reserved.</p>
+     */
+    inline RebuildWorkspacesRequest& WithAdditionalInfo(Aws::String&& value) { SetAdditionalInfo(std::move(value)); return *this;}
+
+    /**
+     * <p>Reserved.</p>
+     */
+    inline RebuildWorkspacesRequest& WithAdditionalInfo(const char* value) { SetAdditionalInfo(value); return *this;}
+
   private:
 
     Aws::Vector<RebuildRequest> m_rebuildWorkspaceRequests;
     bool m_rebuildWorkspaceRequestsHasBeenSet;
+
+    Aws::String m_additionalInfo;
+    bool m_additionalInfoHasBeenSet;
   };
 
 } // namespace Model

@@ -32,7 +32,7 @@ namespace Model
   {
   public:
     ListUsersRequest();
-    
+
     // Service request name is the Operation name which will send this request out,
     // each operation should has unique request name, so that we can get operation's name from this request.
     // Note: this is not true for response, multiple operations may have the same response name,
@@ -86,42 +86,50 @@ namespace Model
 
 
     /**
-     * <p>TBD</p>
+     * <p>The token to use to retrieve the next page of results. The first call does
+     * not contain any tokens.</p>
      */
     inline const Aws::String& GetNextToken() const{ return m_nextToken; }
 
     /**
-     * <p>TBD</p>
+     * <p>The token to use to retrieve the next page of results. The first call does
+     * not contain any tokens.</p>
      */
     inline bool NextTokenHasBeenSet() const { return m_nextTokenHasBeenSet; }
 
     /**
-     * <p>TBD</p>
+     * <p>The token to use to retrieve the next page of results. The first call does
+     * not contain any tokens.</p>
      */
     inline void SetNextToken(const Aws::String& value) { m_nextTokenHasBeenSet = true; m_nextToken = value; }
 
     /**
-     * <p>TBD</p>
+     * <p>The token to use to retrieve the next page of results. The first call does
+     * not contain any tokens.</p>
      */
     inline void SetNextToken(Aws::String&& value) { m_nextTokenHasBeenSet = true; m_nextToken = std::move(value); }
 
     /**
-     * <p>TBD</p>
+     * <p>The token to use to retrieve the next page of results. The first call does
+     * not contain any tokens.</p>
      */
     inline void SetNextToken(const char* value) { m_nextTokenHasBeenSet = true; m_nextToken.assign(value); }
 
     /**
-     * <p>TBD</p>
+     * <p>The token to use to retrieve the next page of results. The first call does
+     * not contain any tokens.</p>
      */
     inline ListUsersRequest& WithNextToken(const Aws::String& value) { SetNextToken(value); return *this;}
 
     /**
-     * <p>TBD</p>
+     * <p>The token to use to retrieve the next page of results. The first call does
+     * not contain any tokens.</p>
      */
     inline ListUsersRequest& WithNextToken(Aws::String&& value) { SetNextToken(std::move(value)); return *this;}
 
     /**
-     * <p>TBD</p>
+     * <p>The token to use to retrieve the next page of results. The first call does
+     * not contain any tokens.</p>
      */
     inline ListUsersRequest& WithNextToken(const char* value) { SetNextToken(value); return *this;}
 

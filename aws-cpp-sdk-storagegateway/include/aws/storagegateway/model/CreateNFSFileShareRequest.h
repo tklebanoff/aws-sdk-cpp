@@ -39,7 +39,7 @@ namespace Model
   {
   public:
     CreateNFSFileShareRequest();
-    
+
     // Service request name is the Operation name which will send this request out,
     // each operation should has unique request name, so that we can get operation's name from this request.
     // Note: this is not true for response, multiple operations may have the same response name,
@@ -508,73 +508,73 @@ namespace Model
 
 
     /**
-     * <p>Maps a user to anonymous user. Valid options are the following: </p> <ul>
-     * <li> <p> <code>RootSquash</code> - Only root is mapped to anonymous user.</p>
-     * </li> <li> <p> <code>NoSquash</code> - No one is mapped to anonymous user</p>
-     * </li> <li> <p> <code>AllSquash</code> - Everyone is mapped to anonymous
+     * <p>A value that maps a user to anonymous user. Valid options are the following:
+     * </p> <ul> <li> <p> <code>RootSquash</code> - Only root is mapped to anonymous
+     * user.</p> </li> <li> <p> <code>NoSquash</code> - No one is mapped to anonymous
+     * user</p> </li> <li> <p> <code>AllSquash</code> - Everyone is mapped to anonymous
      * user.</p> </li> </ul>
      */
     inline const Aws::String& GetSquash() const{ return m_squash; }
 
     /**
-     * <p>Maps a user to anonymous user. Valid options are the following: </p> <ul>
-     * <li> <p> <code>RootSquash</code> - Only root is mapped to anonymous user.</p>
-     * </li> <li> <p> <code>NoSquash</code> - No one is mapped to anonymous user</p>
-     * </li> <li> <p> <code>AllSquash</code> - Everyone is mapped to anonymous
+     * <p>A value that maps a user to anonymous user. Valid options are the following:
+     * </p> <ul> <li> <p> <code>RootSquash</code> - Only root is mapped to anonymous
+     * user.</p> </li> <li> <p> <code>NoSquash</code> - No one is mapped to anonymous
+     * user</p> </li> <li> <p> <code>AllSquash</code> - Everyone is mapped to anonymous
      * user.</p> </li> </ul>
      */
     inline bool SquashHasBeenSet() const { return m_squashHasBeenSet; }
 
     /**
-     * <p>Maps a user to anonymous user. Valid options are the following: </p> <ul>
-     * <li> <p> <code>RootSquash</code> - Only root is mapped to anonymous user.</p>
-     * </li> <li> <p> <code>NoSquash</code> - No one is mapped to anonymous user</p>
-     * </li> <li> <p> <code>AllSquash</code> - Everyone is mapped to anonymous
+     * <p>A value that maps a user to anonymous user. Valid options are the following:
+     * </p> <ul> <li> <p> <code>RootSquash</code> - Only root is mapped to anonymous
+     * user.</p> </li> <li> <p> <code>NoSquash</code> - No one is mapped to anonymous
+     * user</p> </li> <li> <p> <code>AllSquash</code> - Everyone is mapped to anonymous
      * user.</p> </li> </ul>
      */
     inline void SetSquash(const Aws::String& value) { m_squashHasBeenSet = true; m_squash = value; }
 
     /**
-     * <p>Maps a user to anonymous user. Valid options are the following: </p> <ul>
-     * <li> <p> <code>RootSquash</code> - Only root is mapped to anonymous user.</p>
-     * </li> <li> <p> <code>NoSquash</code> - No one is mapped to anonymous user</p>
-     * </li> <li> <p> <code>AllSquash</code> - Everyone is mapped to anonymous
+     * <p>A value that maps a user to anonymous user. Valid options are the following:
+     * </p> <ul> <li> <p> <code>RootSquash</code> - Only root is mapped to anonymous
+     * user.</p> </li> <li> <p> <code>NoSquash</code> - No one is mapped to anonymous
+     * user</p> </li> <li> <p> <code>AllSquash</code> - Everyone is mapped to anonymous
      * user.</p> </li> </ul>
      */
     inline void SetSquash(Aws::String&& value) { m_squashHasBeenSet = true; m_squash = std::move(value); }
 
     /**
-     * <p>Maps a user to anonymous user. Valid options are the following: </p> <ul>
-     * <li> <p> <code>RootSquash</code> - Only root is mapped to anonymous user.</p>
-     * </li> <li> <p> <code>NoSquash</code> - No one is mapped to anonymous user</p>
-     * </li> <li> <p> <code>AllSquash</code> - Everyone is mapped to anonymous
+     * <p>A value that maps a user to anonymous user. Valid options are the following:
+     * </p> <ul> <li> <p> <code>RootSquash</code> - Only root is mapped to anonymous
+     * user.</p> </li> <li> <p> <code>NoSquash</code> - No one is mapped to anonymous
+     * user</p> </li> <li> <p> <code>AllSquash</code> - Everyone is mapped to anonymous
      * user.</p> </li> </ul>
      */
     inline void SetSquash(const char* value) { m_squashHasBeenSet = true; m_squash.assign(value); }
 
     /**
-     * <p>Maps a user to anonymous user. Valid options are the following: </p> <ul>
-     * <li> <p> <code>RootSquash</code> - Only root is mapped to anonymous user.</p>
-     * </li> <li> <p> <code>NoSquash</code> - No one is mapped to anonymous user</p>
-     * </li> <li> <p> <code>AllSquash</code> - Everyone is mapped to anonymous
+     * <p>A value that maps a user to anonymous user. Valid options are the following:
+     * </p> <ul> <li> <p> <code>RootSquash</code> - Only root is mapped to anonymous
+     * user.</p> </li> <li> <p> <code>NoSquash</code> - No one is mapped to anonymous
+     * user</p> </li> <li> <p> <code>AllSquash</code> - Everyone is mapped to anonymous
      * user.</p> </li> </ul>
      */
     inline CreateNFSFileShareRequest& WithSquash(const Aws::String& value) { SetSquash(value); return *this;}
 
     /**
-     * <p>Maps a user to anonymous user. Valid options are the following: </p> <ul>
-     * <li> <p> <code>RootSquash</code> - Only root is mapped to anonymous user.</p>
-     * </li> <li> <p> <code>NoSquash</code> - No one is mapped to anonymous user</p>
-     * </li> <li> <p> <code>AllSquash</code> - Everyone is mapped to anonymous
+     * <p>A value that maps a user to anonymous user. Valid options are the following:
+     * </p> <ul> <li> <p> <code>RootSquash</code> - Only root is mapped to anonymous
+     * user.</p> </li> <li> <p> <code>NoSquash</code> - No one is mapped to anonymous
+     * user</p> </li> <li> <p> <code>AllSquash</code> - Everyone is mapped to anonymous
      * user.</p> </li> </ul>
      */
     inline CreateNFSFileShareRequest& WithSquash(Aws::String&& value) { SetSquash(std::move(value)); return *this;}
 
     /**
-     * <p>Maps a user to anonymous user. Valid options are the following: </p> <ul>
-     * <li> <p> <code>RootSquash</code> - Only root is mapped to anonymous user.</p>
-     * </li> <li> <p> <code>NoSquash</code> - No one is mapped to anonymous user</p>
-     * </li> <li> <p> <code>AllSquash</code> - Everyone is mapped to anonymous
+     * <p>A value that maps a user to anonymous user. Valid options are the following:
+     * </p> <ul> <li> <p> <code>RootSquash</code> - Only root is mapped to anonymous
+     * user.</p> </li> <li> <p> <code>NoSquash</code> - No one is mapped to anonymous
+     * user</p> </li> <li> <p> <code>AllSquash</code> - Everyone is mapped to anonymous
      * user.</p> </li> </ul>
      */
     inline CreateNFSFileShareRequest& WithSquash(const char* value) { SetSquash(value); return *this;}
@@ -635,37 +635,53 @@ namespace Model
 
 
     /**
-     * <p>A value that sets the access control list permission for objects in the
-     * Amazon S3 bucket that a file gateway puts objects into. The default value is
-     * <code>private</code>.</p>
+     * <p>A value that sets who pays the cost of the request and the cost associated
+     * with data download from the S3 bucket. If this value is set to true, the
+     * requester pays the costs. Otherwise the S3 bucket owner pays. However, the S3
+     * bucket owner always pays the cost of storing data.</p> <note> <p>
+     * <code>RequesterPays</code> is a configuration for the S3 bucket that backs the
+     * file share, so make sure that the configuration on the file share is the same as
+     * the S3 bucket configuration.</p> </note>
      */
     inline bool GetRequesterPays() const{ return m_requesterPays; }
 
     /**
-     * <p>A value that sets the access control list permission for objects in the
-     * Amazon S3 bucket that a file gateway puts objects into. The default value is
-     * <code>private</code>.</p>
+     * <p>A value that sets who pays the cost of the request and the cost associated
+     * with data download from the S3 bucket. If this value is set to true, the
+     * requester pays the costs. Otherwise the S3 bucket owner pays. However, the S3
+     * bucket owner always pays the cost of storing data.</p> <note> <p>
+     * <code>RequesterPays</code> is a configuration for the S3 bucket that backs the
+     * file share, so make sure that the configuration on the file share is the same as
+     * the S3 bucket configuration.</p> </note>
      */
     inline bool RequesterPaysHasBeenSet() const { return m_requesterPaysHasBeenSet; }
 
     /**
-     * <p>A value that sets the access control list permission for objects in the
-     * Amazon S3 bucket that a file gateway puts objects into. The default value is
-     * <code>private</code>.</p>
+     * <p>A value that sets who pays the cost of the request and the cost associated
+     * with data download from the S3 bucket. If this value is set to true, the
+     * requester pays the costs. Otherwise the S3 bucket owner pays. However, the S3
+     * bucket owner always pays the cost of storing data.</p> <note> <p>
+     * <code>RequesterPays</code> is a configuration for the S3 bucket that backs the
+     * file share, so make sure that the configuration on the file share is the same as
+     * the S3 bucket configuration.</p> </note>
      */
     inline void SetRequesterPays(bool value) { m_requesterPaysHasBeenSet = true; m_requesterPays = value; }
 
     /**
-     * <p>A value that sets the access control list permission for objects in the
-     * Amazon S3 bucket that a file gateway puts objects into. The default value is
-     * <code>private</code>.</p>
+     * <p>A value that sets who pays the cost of the request and the cost associated
+     * with data download from the S3 bucket. If this value is set to true, the
+     * requester pays the costs. Otherwise the S3 bucket owner pays. However, the S3
+     * bucket owner always pays the cost of storing data.</p> <note> <p>
+     * <code>RequesterPays</code> is a configuration for the S3 bucket that backs the
+     * file share, so make sure that the configuration on the file share is the same as
+     * the S3 bucket configuration.</p> </note>
      */
     inline CreateNFSFileShareRequest& WithRequesterPays(bool value) { SetRequesterPays(value); return *this;}
 
 
     /**
-     * <p>A list of up to ten (10) tags can be assigned to the NFS file share. Every
-     * tag is a key-value pair.</p> <note> <p>Valid characters for key and value are
+     * <p>A list of up to 50 tags that can be assigned to the NFS file share. Each tag
+     * is a key-value pair.</p> <note> <p>Valid characters for key and value are
      * letters, spaces, and numbers representable in UTF-8 format, and the following
      * special characters: + - = . _ : / @. The maximum length of a tag's key is 128
      * characters, and the maximum length for a tag's value is 256.</p> </note>
@@ -673,8 +689,8 @@ namespace Model
     inline const Aws::Vector<Tag>& GetTags() const{ return m_tags; }
 
     /**
-     * <p>A list of up to ten (10) tags can be assigned to the NFS file share. Every
-     * tag is a key-value pair.</p> <note> <p>Valid characters for key and value are
+     * <p>A list of up to 50 tags that can be assigned to the NFS file share. Each tag
+     * is a key-value pair.</p> <note> <p>Valid characters for key and value are
      * letters, spaces, and numbers representable in UTF-8 format, and the following
      * special characters: + - = . _ : / @. The maximum length of a tag's key is 128
      * characters, and the maximum length for a tag's value is 256.</p> </note>
@@ -682,8 +698,8 @@ namespace Model
     inline bool TagsHasBeenSet() const { return m_tagsHasBeenSet; }
 
     /**
-     * <p>A list of up to ten (10) tags can be assigned to the NFS file share. Every
-     * tag is a key-value pair.</p> <note> <p>Valid characters for key and value are
+     * <p>A list of up to 50 tags that can be assigned to the NFS file share. Each tag
+     * is a key-value pair.</p> <note> <p>Valid characters for key and value are
      * letters, spaces, and numbers representable in UTF-8 format, and the following
      * special characters: + - = . _ : / @. The maximum length of a tag's key is 128
      * characters, and the maximum length for a tag's value is 256.</p> </note>
@@ -691,8 +707,8 @@ namespace Model
     inline void SetTags(const Aws::Vector<Tag>& value) { m_tagsHasBeenSet = true; m_tags = value; }
 
     /**
-     * <p>A list of up to ten (10) tags can be assigned to the NFS file share. Every
-     * tag is a key-value pair.</p> <note> <p>Valid characters for key and value are
+     * <p>A list of up to 50 tags that can be assigned to the NFS file share. Each tag
+     * is a key-value pair.</p> <note> <p>Valid characters for key and value are
      * letters, spaces, and numbers representable in UTF-8 format, and the following
      * special characters: + - = . _ : / @. The maximum length of a tag's key is 128
      * characters, and the maximum length for a tag's value is 256.</p> </note>
@@ -700,8 +716,8 @@ namespace Model
     inline void SetTags(Aws::Vector<Tag>&& value) { m_tagsHasBeenSet = true; m_tags = std::move(value); }
 
     /**
-     * <p>A list of up to ten (10) tags can be assigned to the NFS file share. Every
-     * tag is a key-value pair.</p> <note> <p>Valid characters for key and value are
+     * <p>A list of up to 50 tags that can be assigned to the NFS file share. Each tag
+     * is a key-value pair.</p> <note> <p>Valid characters for key and value are
      * letters, spaces, and numbers representable in UTF-8 format, and the following
      * special characters: + - = . _ : / @. The maximum length of a tag's key is 128
      * characters, and the maximum length for a tag's value is 256.</p> </note>
@@ -709,8 +725,8 @@ namespace Model
     inline CreateNFSFileShareRequest& WithTags(const Aws::Vector<Tag>& value) { SetTags(value); return *this;}
 
     /**
-     * <p>A list of up to ten (10) tags can be assigned to the NFS file share. Every
-     * tag is a key-value pair.</p> <note> <p>Valid characters for key and value are
+     * <p>A list of up to 50 tags that can be assigned to the NFS file share. Each tag
+     * is a key-value pair.</p> <note> <p>Valid characters for key and value are
      * letters, spaces, and numbers representable in UTF-8 format, and the following
      * special characters: + - = . _ : / @. The maximum length of a tag's key is 128
      * characters, and the maximum length for a tag's value is 256.</p> </note>
@@ -718,8 +734,8 @@ namespace Model
     inline CreateNFSFileShareRequest& WithTags(Aws::Vector<Tag>&& value) { SetTags(std::move(value)); return *this;}
 
     /**
-     * <p>A list of up to ten (10) tags can be assigned to the NFS file share. Every
-     * tag is a key-value pair.</p> <note> <p>Valid characters for key and value are
+     * <p>A list of up to 50 tags that can be assigned to the NFS file share. Each tag
+     * is a key-value pair.</p> <note> <p>Valid characters for key and value are
      * letters, spaces, and numbers representable in UTF-8 format, and the following
      * special characters: + - = . _ : / @. The maximum length of a tag's key is 128
      * characters, and the maximum length for a tag's value is 256.</p> </note>
@@ -727,8 +743,8 @@ namespace Model
     inline CreateNFSFileShareRequest& AddTags(const Tag& value) { m_tagsHasBeenSet = true; m_tags.push_back(value); return *this; }
 
     /**
-     * <p>A list of up to ten (10) tags can be assigned to the NFS file share. Every
-     * tag is a key-value pair.</p> <note> <p>Valid characters for key and value are
+     * <p>A list of up to 50 tags that can be assigned to the NFS file share. Each tag
+     * is a key-value pair.</p> <note> <p>Valid characters for key and value are
      * letters, spaces, and numbers representable in UTF-8 format, and the following
      * special characters: + - = . _ : / @. The maximum length of a tag's key is 128
      * characters, and the maximum length for a tag's value is 256.</p> </note>

@@ -48,6 +48,13 @@ namespace Aws
         struct AWS_CORE_API ClientConfiguration
         {
             ClientConfiguration();
+
+            /**
+             * Create a configuration based on settings in the aws configuration file for the given profile name.
+             * The configuration file location can be set via the environment variable AWS_CONFIG_FILE
+             */
+            ClientConfiguration(const char* profileName);
+
             /**
              * User Agent string user for http calls. This is filled in for you in the constructor. Don't override this unless you have a really good reason.
              */
@@ -80,11 +87,12 @@ namespace Aws
             long connectTimeoutMs;
             /**
              * Enable TCP keep-alive. Default true;
-             * No-op for WinINet and IXMLHTTPRequest2 client.
+             * No-op for WinHTTP, WinINet and IXMLHTTPRequest2 client.
              */
             bool enableTcpKeepAlive;
             /**
-             * Interval to send a keep-alive packet over the connection. Default 30 s. Minimal 15 s.
+             * Interval to send a keep-alive packet over the connection. Default 30 seconds. Minimum 15 seconds.
+             * WinHTTP & libcurl support this option.
              * No-op for WinINet and IXMLHTTPRequest2 client.
              */
             unsigned long tcpKeepAliveIntervalMs;
@@ -121,6 +129,31 @@ namespace Aws
             * If you have users going through a proxy, set the password here.
             */
             Aws::String proxyPassword;
+            /**
+            * SSL Certificate file to use for connecting to an HTTPS proxy.
+            * Used to set CURLOPT_PROXY_SSLCERT in libcurl. Example: client.pem
+            */
+            Aws::String proxySSLCertPath;
+            /**
+            * Type of proxy client SSL certificate.
+            * Used to set CURLOPT_PROXY_SSLCERTTYPE in libcurl. Example: PEM
+            */
+            Aws::String proxySSLCertType;
+            /**
+            * Private key file to use for connecting to an HTTPS proxy.
+            * Used to set CURLOPT_PROXY_SSLKEY in libcurl. Example: key.pem
+            */
+            Aws::String proxySSLKeyPath;
+            /**
+            * Type of private key file used to connect to an HTTPS proxy.
+            * Used to set CURLOPT_PROXY_SSLKEYTYPE in libcurl. Example: PEM
+            */
+            Aws::String proxySSLKeyType;
+            /**
+            * Passphrase to the private key file used to connect to an HTTPS proxy.
+            * Used to set CURLOPT_PROXY_KEYPASSWD in libcurl. Example: password1 
+            */
+            Aws::String proxySSLKeyPassword;
             /**
             * Threading Executor implementation. Default uses std::thread::detach()
             */

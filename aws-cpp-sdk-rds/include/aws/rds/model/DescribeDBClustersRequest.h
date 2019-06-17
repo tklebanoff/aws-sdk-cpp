@@ -37,7 +37,7 @@ namespace Model
   {
   public:
     DescribeDBClustersRequest();
-    
+
     // Service request name is the Operation name which will send this request out,
     // each operation should has unique request name, so that we can get operation's name from this request.
     // Note: this is not true for response, multiple operations may have the same response name,
@@ -223,58 +223,66 @@ namespace Model
 
 
     /**
-     * <p>An optional pagination token provided by a previous <a>DescribeDBClusters</a>
-     * request. If this parameter is specified, the response includes only records
-     * beyond the marker, up to the value specified by <code>MaxRecords</code>. </p>
+     * <p>An optional pagination token provided by a previous
+     * <code>DescribeDBClusters</code> request. If this parameter is specified, the
+     * response includes only records beyond the marker, up to the value specified by
+     * <code>MaxRecords</code>. </p>
      */
     inline const Aws::String& GetMarker() const{ return m_marker; }
 
     /**
-     * <p>An optional pagination token provided by a previous <a>DescribeDBClusters</a>
-     * request. If this parameter is specified, the response includes only records
-     * beyond the marker, up to the value specified by <code>MaxRecords</code>. </p>
+     * <p>An optional pagination token provided by a previous
+     * <code>DescribeDBClusters</code> request. If this parameter is specified, the
+     * response includes only records beyond the marker, up to the value specified by
+     * <code>MaxRecords</code>. </p>
      */
     inline bool MarkerHasBeenSet() const { return m_markerHasBeenSet; }
 
     /**
-     * <p>An optional pagination token provided by a previous <a>DescribeDBClusters</a>
-     * request. If this parameter is specified, the response includes only records
-     * beyond the marker, up to the value specified by <code>MaxRecords</code>. </p>
+     * <p>An optional pagination token provided by a previous
+     * <code>DescribeDBClusters</code> request. If this parameter is specified, the
+     * response includes only records beyond the marker, up to the value specified by
+     * <code>MaxRecords</code>. </p>
      */
     inline void SetMarker(const Aws::String& value) { m_markerHasBeenSet = true; m_marker = value; }
 
     /**
-     * <p>An optional pagination token provided by a previous <a>DescribeDBClusters</a>
-     * request. If this parameter is specified, the response includes only records
-     * beyond the marker, up to the value specified by <code>MaxRecords</code>. </p>
+     * <p>An optional pagination token provided by a previous
+     * <code>DescribeDBClusters</code> request. If this parameter is specified, the
+     * response includes only records beyond the marker, up to the value specified by
+     * <code>MaxRecords</code>. </p>
      */
     inline void SetMarker(Aws::String&& value) { m_markerHasBeenSet = true; m_marker = std::move(value); }
 
     /**
-     * <p>An optional pagination token provided by a previous <a>DescribeDBClusters</a>
-     * request. If this parameter is specified, the response includes only records
-     * beyond the marker, up to the value specified by <code>MaxRecords</code>. </p>
+     * <p>An optional pagination token provided by a previous
+     * <code>DescribeDBClusters</code> request. If this parameter is specified, the
+     * response includes only records beyond the marker, up to the value specified by
+     * <code>MaxRecords</code>. </p>
      */
     inline void SetMarker(const char* value) { m_markerHasBeenSet = true; m_marker.assign(value); }
 
     /**
-     * <p>An optional pagination token provided by a previous <a>DescribeDBClusters</a>
-     * request. If this parameter is specified, the response includes only records
-     * beyond the marker, up to the value specified by <code>MaxRecords</code>. </p>
+     * <p>An optional pagination token provided by a previous
+     * <code>DescribeDBClusters</code> request. If this parameter is specified, the
+     * response includes only records beyond the marker, up to the value specified by
+     * <code>MaxRecords</code>. </p>
      */
     inline DescribeDBClustersRequest& WithMarker(const Aws::String& value) { SetMarker(value); return *this;}
 
     /**
-     * <p>An optional pagination token provided by a previous <a>DescribeDBClusters</a>
-     * request. If this parameter is specified, the response includes only records
-     * beyond the marker, up to the value specified by <code>MaxRecords</code>. </p>
+     * <p>An optional pagination token provided by a previous
+     * <code>DescribeDBClusters</code> request. If this parameter is specified, the
+     * response includes only records beyond the marker, up to the value specified by
+     * <code>MaxRecords</code>. </p>
      */
     inline DescribeDBClustersRequest& WithMarker(Aws::String&& value) { SetMarker(std::move(value)); return *this;}
 
     /**
-     * <p>An optional pagination token provided by a previous <a>DescribeDBClusters</a>
-     * request. If this parameter is specified, the response includes only records
-     * beyond the marker, up to the value specified by <code>MaxRecords</code>. </p>
+     * <p>An optional pagination token provided by a previous
+     * <code>DescribeDBClusters</code> request. If this parameter is specified, the
+     * response includes only records beyond the marker, up to the value specified by
+     * <code>MaxRecords</code>. </p>
      */
     inline DescribeDBClustersRequest& WithMarker(const char* value) { SetMarker(value); return *this;}
 

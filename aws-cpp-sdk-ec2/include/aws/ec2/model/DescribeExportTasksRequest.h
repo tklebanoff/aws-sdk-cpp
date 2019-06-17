@@ -37,7 +37,7 @@ namespace Model
   {
   public:
     DescribeExportTasksRequest();
-    
+
     // Service request name is the Operation name which will send this request out,
     // each operation should has unique request name, so that we can get operation's name from this request.
     // Note: this is not true for response, multiple operations may have the same response name,
@@ -52,47 +52,47 @@ namespace Model
   public:
 
     /**
-     * <p>One or more export task IDs.</p>
+     * <p>The export task IDs.</p>
      */
     inline const Aws::Vector<Aws::String>& GetExportTaskIds() const{ return m_exportTaskIds; }
 
     /**
-     * <p>One or more export task IDs.</p>
+     * <p>The export task IDs.</p>
      */
     inline bool ExportTaskIdsHasBeenSet() const { return m_exportTaskIdsHasBeenSet; }
 
     /**
-     * <p>One or more export task IDs.</p>
+     * <p>The export task IDs.</p>
      */
     inline void SetExportTaskIds(const Aws::Vector<Aws::String>& value) { m_exportTaskIdsHasBeenSet = true; m_exportTaskIds = value; }
 
     /**
-     * <p>One or more export task IDs.</p>
+     * <p>The export task IDs.</p>
      */
     inline void SetExportTaskIds(Aws::Vector<Aws::String>&& value) { m_exportTaskIdsHasBeenSet = true; m_exportTaskIds = std::move(value); }
 
     /**
-     * <p>One or more export task IDs.</p>
+     * <p>The export task IDs.</p>
      */
     inline DescribeExportTasksRequest& WithExportTaskIds(const Aws::Vector<Aws::String>& value) { SetExportTaskIds(value); return *this;}
 
     /**
-     * <p>One or more export task IDs.</p>
+     * <p>The export task IDs.</p>
      */
     inline DescribeExportTasksRequest& WithExportTaskIds(Aws::Vector<Aws::String>&& value) { SetExportTaskIds(std::move(value)); return *this;}
 
     /**
-     * <p>One or more export task IDs.</p>
+     * <p>The export task IDs.</p>
      */
     inline DescribeExportTasksRequest& AddExportTaskIds(const Aws::String& value) { m_exportTaskIdsHasBeenSet = true; m_exportTaskIds.push_back(value); return *this; }
 
     /**
-     * <p>One or more export task IDs.</p>
+     * <p>The export task IDs.</p>
      */
     inline DescribeExportTasksRequest& AddExportTaskIds(Aws::String&& value) { m_exportTaskIdsHasBeenSet = true; m_exportTaskIds.push_back(std::move(value)); return *this; }
 
     /**
-     * <p>One or more export task IDs.</p>
+     * <p>The export task IDs.</p>
      */
     inline DescribeExportTasksRequest& AddExportTaskIds(const char* value) { m_exportTaskIdsHasBeenSet = true; m_exportTaskIds.push_back(value); return *this; }
 

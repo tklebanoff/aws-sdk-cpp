@@ -18,6 +18,8 @@
 #include <aws/pinpoint-email/PinpointEmailRequest.h>
 #include <aws/core/utils/memory/stl/AWSString.h>
 #include <aws/pinpoint-email/model/EmailContent.h>
+#include <aws/core/utils/memory/stl/AWSVector.h>
+#include <aws/pinpoint-email/model/Tag.h>
 #include <utility>
 
 namespace Aws
@@ -44,7 +46,7 @@ namespace Model
   {
   public:
     CreateDeliverabilityTestReportRequest();
-    
+
     // Service request name is the Operation name which will send this request out,
     // each operation should has unique request name, so that we can get operation's name from this request.
     // Note: this is not true for response, multiple operations may have the same response name,
@@ -52,8 +54,6 @@ namespace Model
     inline virtual const char* GetServiceRequestName() const override { return "CreateDeliverabilityTestReport"; }
 
     Aws::String SerializePayload() const override;
-
-    Aws::Http::HeaderValueCollection GetRequestSpecificHeaders() const override;
 
 
     /**
@@ -190,6 +190,55 @@ namespace Model
      */
     inline CreateDeliverabilityTestReportRequest& WithContent(EmailContent&& value) { SetContent(std::move(value)); return *this;}
 
+
+    /**
+     * <p>An array of objects that define the tags (keys and values) that you want to
+     * associate with the predictive inbox placement test.</p>
+     */
+    inline const Aws::Vector<Tag>& GetTags() const{ return m_tags; }
+
+    /**
+     * <p>An array of objects that define the tags (keys and values) that you want to
+     * associate with the predictive inbox placement test.</p>
+     */
+    inline bool TagsHasBeenSet() const { return m_tagsHasBeenSet; }
+
+    /**
+     * <p>An array of objects that define the tags (keys and values) that you want to
+     * associate with the predictive inbox placement test.</p>
+     */
+    inline void SetTags(const Aws::Vector<Tag>& value) { m_tagsHasBeenSet = true; m_tags = value; }
+
+    /**
+     * <p>An array of objects that define the tags (keys and values) that you want to
+     * associate with the predictive inbox placement test.</p>
+     */
+    inline void SetTags(Aws::Vector<Tag>&& value) { m_tagsHasBeenSet = true; m_tags = std::move(value); }
+
+    /**
+     * <p>An array of objects that define the tags (keys and values) that you want to
+     * associate with the predictive inbox placement test.</p>
+     */
+    inline CreateDeliverabilityTestReportRequest& WithTags(const Aws::Vector<Tag>& value) { SetTags(value); return *this;}
+
+    /**
+     * <p>An array of objects that define the tags (keys and values) that you want to
+     * associate with the predictive inbox placement test.</p>
+     */
+    inline CreateDeliverabilityTestReportRequest& WithTags(Aws::Vector<Tag>&& value) { SetTags(std::move(value)); return *this;}
+
+    /**
+     * <p>An array of objects that define the tags (keys and values) that you want to
+     * associate with the predictive inbox placement test.</p>
+     */
+    inline CreateDeliverabilityTestReportRequest& AddTags(const Tag& value) { m_tagsHasBeenSet = true; m_tags.push_back(value); return *this; }
+
+    /**
+     * <p>An array of objects that define the tags (keys and values) that you want to
+     * associate with the predictive inbox placement test.</p>
+     */
+    inline CreateDeliverabilityTestReportRequest& AddTags(Tag&& value) { m_tagsHasBeenSet = true; m_tags.push_back(std::move(value)); return *this; }
+
   private:
 
     Aws::String m_reportName;
@@ -200,6 +249,9 @@ namespace Model
 
     EmailContent m_content;
     bool m_contentHasBeenSet;
+
+    Aws::Vector<Tag> m_tags;
+    bool m_tagsHasBeenSet;
   };
 
 } // namespace Model

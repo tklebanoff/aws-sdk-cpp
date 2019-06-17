@@ -34,7 +34,7 @@ namespace Model
   {
   public:
     CreatePresetRequest();
-    
+
     // Service request name is the Operation name which will send this request out,
     // each operation should has unique request name, so that we can get operation's name from this request.
     // Note: this is not true for response, multiple operations may have the same response name,
@@ -167,22 +167,34 @@ namespace Model
     inline CreatePresetRequest& WithName(const char* value) { SetName(value); return *this;}
 
 
-    
+    /**
+     * Settings for preset
+     */
     inline const PresetSettings& GetSettings() const{ return m_settings; }
 
-    
+    /**
+     * Settings for preset
+     */
     inline bool SettingsHasBeenSet() const { return m_settingsHasBeenSet; }
 
-    
+    /**
+     * Settings for preset
+     */
     inline void SetSettings(const PresetSettings& value) { m_settingsHasBeenSet = true; m_settings = value; }
 
-    
+    /**
+     * Settings for preset
+     */
     inline void SetSettings(PresetSettings&& value) { m_settingsHasBeenSet = true; m_settings = std::move(value); }
 
-    
+    /**
+     * Settings for preset
+     */
     inline CreatePresetRequest& WithSettings(const PresetSettings& value) { SetSettings(value); return *this;}
 
-    
+    /**
+     * Settings for preset
+     */
     inline CreatePresetRequest& WithSettings(PresetSettings&& value) { SetSettings(std::move(value)); return *this;}
 
 

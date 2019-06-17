@@ -44,9 +44,13 @@ VpcEndpoint::VpcEndpoint() :
     m_groupsHasBeenSet(false),
     m_privateDnsEnabled(false),
     m_privateDnsEnabledHasBeenSet(false),
+    m_requesterManaged(false),
+    m_requesterManagedHasBeenSet(false),
     m_networkInterfaceIdsHasBeenSet(false),
     m_dnsEntriesHasBeenSet(false),
-    m_creationTimestampHasBeenSet(false)
+    m_creationTimestampHasBeenSet(false),
+    m_tagsHasBeenSet(false),
+    m_ownerIdHasBeenSet(false)
 {
 }
 
@@ -64,9 +68,13 @@ VpcEndpoint::VpcEndpoint(const XmlNode& xmlNode) :
     m_groupsHasBeenSet(false),
     m_privateDnsEnabled(false),
     m_privateDnsEnabledHasBeenSet(false),
+    m_requesterManaged(false),
+    m_requesterManagedHasBeenSet(false),
     m_networkInterfaceIdsHasBeenSet(false),
     m_dnsEntriesHasBeenSet(false),
-    m_creationTimestampHasBeenSet(false)
+    m_creationTimestampHasBeenSet(false),
+    m_tagsHasBeenSet(false),
+    m_ownerIdHasBeenSet(false)
 {
   *this = xmlNode;
 }
@@ -155,6 +163,12 @@ VpcEndpoint& VpcEndpoint::operator =(const XmlNode& xmlNode)
       m_privateDnsEnabled = StringUtils::ConvertToBool(StringUtils::Trim(privateDnsEnabledNode.GetText().c_str()).c_str());
       m_privateDnsEnabledHasBeenSet = true;
     }
+    XmlNode requesterManagedNode = resultNode.FirstChild("requesterManaged");
+    if(!requesterManagedNode.IsNull())
+    {
+      m_requesterManaged = StringUtils::ConvertToBool(StringUtils::Trim(requesterManagedNode.GetText().c_str()).c_str());
+      m_requesterManagedHasBeenSet = true;
+    }
     XmlNode networkInterfaceIdsNode = resultNode.FirstChild("networkInterfaceIdSet");
     if(!networkInterfaceIdsNode.IsNull())
     {
@@ -184,6 +198,24 @@ VpcEndpoint& VpcEndpoint::operator =(const XmlNode& xmlNode)
     {
       m_creationTimestamp = DateTime(StringUtils::Trim(creationTimestampNode.GetText().c_str()).c_str(), DateFormat::ISO_8601);
       m_creationTimestampHasBeenSet = true;
+    }
+    XmlNode tagsNode = resultNode.FirstChild("tagSet");
+    if(!tagsNode.IsNull())
+    {
+      XmlNode tagsMember = tagsNode.FirstChild("item");
+      while(!tagsMember.IsNull())
+      {
+        m_tags.push_back(tagsMember);
+        tagsMember = tagsMember.NextNode("item");
+      }
+
+      m_tagsHasBeenSet = true;
+    }
+    XmlNode ownerIdNode = resultNode.FirstChild("ownerId");
+    if(!ownerIdNode.IsNull())
+    {
+      m_ownerId = StringUtils::Trim(ownerIdNode.GetText().c_str());
+      m_ownerIdHasBeenSet = true;
     }
   }
 
@@ -256,6 +288,11 @@ void VpcEndpoint::OutputToStream(Aws::OStream& oStream, const char* location, un
       oStream << location << index << locationValue << ".PrivateDnsEnabled=" << std::boolalpha << m_privateDnsEnabled << "&";
   }
 
+  if(m_requesterManagedHasBeenSet)
+  {
+      oStream << location << index << locationValue << ".RequesterManaged=" << std::boolalpha << m_requesterManaged << "&";
+  }
+
   if(m_networkInterfaceIdsHasBeenSet)
   {
       unsigned networkInterfaceIdsIdx = 1;
@@ -279,6 +316,22 @@ void VpcEndpoint::OutputToStream(Aws::OStream& oStream, const char* location, un
   if(m_creationTimestampHasBeenSet)
   {
       oStream << location << index << locationValue << ".CreationTimestamp=" << StringUtils::URLEncode(m_creationTimestamp.ToGmtString(DateFormat::ISO_8601).c_str()) << "&";
+  }
+
+  if(m_tagsHasBeenSet)
+  {
+      unsigned tagsIdx = 1;
+      for(auto& item : m_tags)
+      {
+        Aws::StringStream tagsSs;
+        tagsSs << location << index << locationValue << ".TagSet." << tagsIdx++;
+        item.OutputToStream(oStream, tagsSs.str().c_str());
+      }
+  }
+
+  if(m_ownerIdHasBeenSet)
+  {
+      oStream << location << index << locationValue << ".OwnerId=" << StringUtils::URLEncode(m_ownerId.c_str()) << "&";
   }
 
 }
@@ -339,6 +392,10 @@ void VpcEndpoint::OutputToStream(Aws::OStream& oStream, const char* location) co
   {
       oStream << location << ".PrivateDnsEnabled=" << std::boolalpha << m_privateDnsEnabled << "&";
   }
+  if(m_requesterManagedHasBeenSet)
+  {
+      oStream << location << ".RequesterManaged=" << std::boolalpha << m_requesterManaged << "&";
+  }
   if(m_networkInterfaceIdsHasBeenSet)
   {
       unsigned networkInterfaceIdsIdx = 1;
@@ -360,6 +417,20 @@ void VpcEndpoint::OutputToStream(Aws::OStream& oStream, const char* location) co
   if(m_creationTimestampHasBeenSet)
   {
       oStream << location << ".CreationTimestamp=" << StringUtils::URLEncode(m_creationTimestamp.ToGmtString(DateFormat::ISO_8601).c_str()) << "&";
+  }
+  if(m_tagsHasBeenSet)
+  {
+      unsigned tagsIdx = 1;
+      for(auto& item : m_tags)
+      {
+        Aws::StringStream tagsSs;
+        tagsSs << location <<  ".TagSet." << tagsIdx++;
+        item.OutputToStream(oStream, tagsSs.str().c_str());
+      }
+  }
+  if(m_ownerIdHasBeenSet)
+  {
+      oStream << location << ".OwnerId=" << StringUtils::URLEncode(m_ownerId.c_str()) << "&";
   }
 }
 

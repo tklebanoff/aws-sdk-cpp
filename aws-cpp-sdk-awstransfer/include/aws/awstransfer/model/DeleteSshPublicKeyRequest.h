@@ -32,7 +32,7 @@ namespace Model
   {
   public:
     DeleteSshPublicKeyRequest();
-    
+
     // Service request name is the Operation name which will send this request out,
     // each operation should has unique request name, so that we can get operation's name from this request.
     // Note: this is not true for response, multiple operations may have the same response name,
@@ -94,42 +94,42 @@ namespace Model
 
 
     /**
-     * <p>A unique identifier used to reference your user’s specific SSH key.</p>
+     * <p>A unique identifier used to reference your user's specific SSH key.</p>
      */
     inline const Aws::String& GetSshPublicKeyId() const{ return m_sshPublicKeyId; }
 
     /**
-     * <p>A unique identifier used to reference your user’s specific SSH key.</p>
+     * <p>A unique identifier used to reference your user's specific SSH key.</p>
      */
     inline bool SshPublicKeyIdHasBeenSet() const { return m_sshPublicKeyIdHasBeenSet; }
 
     /**
-     * <p>A unique identifier used to reference your user’s specific SSH key.</p>
+     * <p>A unique identifier used to reference your user's specific SSH key.</p>
      */
     inline void SetSshPublicKeyId(const Aws::String& value) { m_sshPublicKeyIdHasBeenSet = true; m_sshPublicKeyId = value; }
 
     /**
-     * <p>A unique identifier used to reference your user’s specific SSH key.</p>
+     * <p>A unique identifier used to reference your user's specific SSH key.</p>
      */
     inline void SetSshPublicKeyId(Aws::String&& value) { m_sshPublicKeyIdHasBeenSet = true; m_sshPublicKeyId = std::move(value); }
 
     /**
-     * <p>A unique identifier used to reference your user’s specific SSH key.</p>
+     * <p>A unique identifier used to reference your user's specific SSH key.</p>
      */
     inline void SetSshPublicKeyId(const char* value) { m_sshPublicKeyIdHasBeenSet = true; m_sshPublicKeyId.assign(value); }
 
     /**
-     * <p>A unique identifier used to reference your user’s specific SSH key.</p>
+     * <p>A unique identifier used to reference your user's specific SSH key.</p>
      */
     inline DeleteSshPublicKeyRequest& WithSshPublicKeyId(const Aws::String& value) { SetSshPublicKeyId(value); return *this;}
 
     /**
-     * <p>A unique identifier used to reference your user’s specific SSH key.</p>
+     * <p>A unique identifier used to reference your user's specific SSH key.</p>
      */
     inline DeleteSshPublicKeyRequest& WithSshPublicKeyId(Aws::String&& value) { SetSshPublicKeyId(std::move(value)); return *this;}
 
     /**
-     * <p>A unique identifier used to reference your user’s specific SSH key.</p>
+     * <p>A unique identifier used to reference your user's specific SSH key.</p>
      */
     inline DeleteSshPublicKeyRequest& WithSshPublicKeyId(const char* value) { SetSshPublicKeyId(value); return *this;}
 
