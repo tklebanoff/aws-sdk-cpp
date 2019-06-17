@@ -1,7 +1,7 @@
 execute_process(COMMAND sh -c "${CMAKE_SOURCE_DIR}/../get_my_os" OUTPUT_VARIABLE MYOS)
 message(STATUS "MYOS: X${MYOS}X") #why the fuck cant I string compare this
 
-if(${TARGET_ARCH} STREQUAL ANDROID)
+if(TARGET_ARCH STREQUAL "ANDROID")
     ExternalProject_Add(AwsCCommon
         PREFIX ${AWS_DEPS_BUILD_DIR}
         GIT_REPOSITORY ${AWS_C_COMMON_URL}
