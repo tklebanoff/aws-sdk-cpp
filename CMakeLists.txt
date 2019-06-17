@@ -199,6 +199,8 @@ endif()
 # build the sdk targets
 project("aws-cpp-sdk-all" VERSION "${PROJECT_VERSION}" LANGUAGES CXX)
 
+include(CTest)
+
 # http client, encryption, zlib
 include(external_dependencies)
 
