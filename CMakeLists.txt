@@ -38,7 +38,6 @@ get_filename_component(AWS_NATIVE_SDK_ROOT "${CMAKE_CURRENT_SOURCE_DIR}" ABSOLUT
 # git is required for Android builds and building third-party dependencies
 find_package(Git)
 
-include(CTest)
 
 # Cmake invocation variables:
 #   CUSTOM_MEMORY_MANAGEMENT - if set to 1, generates the sdk project files with custom memory management enabled, otherwise disables it
@@ -187,6 +186,8 @@ endif()
 
 # build the sdk targets
 project("aws-cpp-sdk-all" VERSION "${PROJECT_VERSION}" LANGUAGES CXX)
+
+include(CTest)
 
 # http client, encryption, zlib
 include(external_dependencies)
