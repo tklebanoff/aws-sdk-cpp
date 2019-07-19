@@ -60,8 +60,7 @@ elseif(MYOS STREQUAL "Alpine_Linux")
             -DCMAKE_INSTALL_PREFIX=${AWS_DEPS_INSTALL_DIR}
             -DCMAKE_PREFIX_PATH=${AWS_DEPS_INSTALL_DIR}
             -DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE}
-            -DCMAKE_C_STANDARD_LIBRARIES="/usr/lib/libexecinfo.a"
-            -DCMAKE_STANDARD_LIBRARIES="/usr/lib/libexecinfo.a"
+            -DCMAKE_C_STANDARD_LIBRARIES=/usr/lib/libexecinfo.a
             -DBUILD_SHARED_LIBS=OFF 
             -DCMAKE_INSTALL_RPATH=${DEPS_RPATH}
             -DCMAKE_TOOLCHAIN_FILE=${CMAKE_TOOLCHAIN_FILE}
